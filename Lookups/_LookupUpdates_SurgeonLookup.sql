@@ -3629,3 +3629,31 @@ insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, p
        values ('Sanjay Misra, M.D.','Neurodiagnostics & Neuromonitoring Institute, Inc.','2014-09-01','2020-12-31','Orthopedic Surgeon','* ANY *','ALL','1','','13340')
 select * from surgeonlookup2 where surgeonid = 2000
 update surgeonlookup2 set surgeonno = '10031' where surgeonid = 2000
+
+--ticket #3 JTB
+SELECT * FROM surgeonlookup2 WHERE surgeon IN ('Jeffrey Shall, M.D.','Kevin James',
+		'Matthew Trovato, M.D.','Melvin Wahl','Nathan Compton, M.D.','Raymond Fulp III, D.O.','Stephen Esses, M.D.','Thomas Loftus M.D.')
+
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking, SurgeonContract, surgeonno)
+       values ('Jeffrey Shall, M.D.','One Care Monitoring, LLC','2017-12-18','2020-12-31','Orthopedic Surgeon','* ANY *','Ohio','1','House','20478')
+
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking, SurgeonContract, surgeonno)
+       values ('Kevin James','Sansome, PLLC','2017-11-29','2020-12-31','Spine Surgeon','* ANY *','ANES-DFW','1','IOM','20114')
+       
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking, SurgeonContract, surgeonno)
+       values ('Matthew Trovato, M.D.','Granite Anesthesia','2017-08-01','2020-12-31','Plastic Surgeon','* ANY *','ANES-DFW','1','House','20480')
+
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking, SurgeonContract, surgeonno)
+       values ('Melvin Wahl','Granite Anesthesia','2017-08-01','2020-12-31','Spine Surgeon','* ANY *','ANES-DFW','1','House','10276')
+
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking, SurgeonContract, surgeonno)
+       values ('Nathan Compton, M.D.','Neuroplexus, LLC','2017-04-01','2020-12-31','Thoracic & Cardiac Surgery','* ANY *','Mississippi - South','1','House','20482')
+
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking, SurgeonContract, surgeonno)
+       values ('Raymond Fulp III, D.O.','Neurodiagnostics & Neuromonitoring Institute, Inc.','2014-09-01','2020-12-31','Orthopaedics','* ANY *','Ohio','1','ALL','20484')
+
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking, SurgeonContract, surgeonno)
+       values ('Jeffrey Shall, M.D.','Neurodiagnostics & Neuromonitoring Institute, Inc.','2014-09-01','2020-12-31','Orthopedic Surgeon','* ANY *','Ohio','1','ALL','20886')
+
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking, SurgeonContract, surgeonno)
+       values ('Thomas Loftus M.D.','Granite Anesthesia','2017-08-01','2020-12-31','Spine Surgeon','* ANY *','ANES-DFW','1','IOM','20162')
