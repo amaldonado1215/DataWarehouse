@@ -772,3 +772,9 @@ insert into PASurgeonLookup	(surgeon, entity, startdate, enddate, region, surgeo
 				firstdos,firstcollection)
 	values ('Troy Thompson, M.D.', 'NPPA Services', '2015-07-23', '2020-12-31','PA - Austin', 'No','Troy Thompson, M.D.',
 			30064,'NPP','2015-07-23',.35,.08,'2015-07-24','2015-12-04')
+			
+			
+-- ticket #1 JTB
+select * from pasurgeonlookup where surgeon like '%dryer%'
+select * from pasurgeonlookup where surgeonid = 101
+UPDATE PASurgeonlookup SET startdate = '2017-11-28' where surgeonid = 101

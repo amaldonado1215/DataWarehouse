@@ -24,6 +24,11 @@ update pasurgeonlookup set surgeon = ltrim(rtrim(surgeon))
 Randall Dryer, M.D.
 
 select * from vwpavalidationcheckunmatchedsurgeons
+
+select * from vwvalidationcheckunmatchedsurgeons
+vwValidationCheckUnMatchedSurgeons
+
+
 -- 10/27/17
 select * from vwTechProductivitycombined where tech like '%voss%'
 
