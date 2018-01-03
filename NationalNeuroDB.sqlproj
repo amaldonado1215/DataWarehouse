@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>NationalNeuroDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{ec336323-01fe-4107-8b7a-9889c109e1b9}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>NationalNeuroDB</RootNamespace>
+    <AssemblyName>NationalNeuroDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DacApplicationName>USMON_Local</DacApplicationName>
+    <GenerateCreateScript>True</GenerateCreateScript>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Lookups" />
+    <Folder Include="Emailed Reports" />
+    <Folder Include="PA" />
+    <Folder Include="OnlineReports" />
+    <Folder Include="Core-IOM" />
+    <Folder Include="_Documentation" />
+    <Folder Include="Billing Queues" />
+    <Folder Include="DataImports" />
+    <Folder Include="Lookups\Templates" />
+    <Folder Include="NNHIS Interface" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Script1.sql" />
+    <None Include="ReceivablesDistribution.sql" />
+    <None Include="vwChargesAndReceiptsOverTime.sql" />
+    <None Include="vwIOMEntityAgingbyDOS.sql" />
+    <None Include="vwWeeklyCaseVolumeByEntity.sql" />
+    <None Include="vwCPTCollectionDetail.sql" />
+    <None Include="vwDenialsOvertuned.sql" />
+    <None Include="vwAppealNotes.sql" />
+    <None Include="vwChargesByInsuranceType.sql" />
+    <None Include="vwClaimEntity.sql" />
+    <None Include="vwProPACombined.sql" />
+    <None Include="vwIOMEntityAgingNewInsurance.sql" />
+    <None Include="vwPAEntityAgingNewInsurance.sql" />
+    <None Include="Emailed Reports\spEmailUnMatchedReaders.sql" />
+    <None Include="_Documentation\NN Client Reports Data Sources.docx" />
+    <None Include="Emailed Reports\spEmailCurrentMonthEntitiesWithoutPayroll.sql" />
+    <None Include="Lookups\_LookupUpdates_EntityLookup.sql" />
+    <None Include="Lookups\_LookupUpdates_ReaderFees.sql" />
+    <None Include="Emailed Reports\spEmailPAUnMatchedSurgeonReport.sql" />
+    <None Include="PA\vwPACPTCollectionDetail.sql" />
+    <None Include="PA\PAAgentHistory.sql" />
+    <None Include="PA\PAAgents.sql" />
+    <None Include="vwTechProductivityCombined.sql" />
+    <None Include="Emailed Reports\spEmailMisBilledClaimsIOMABS_DFW.sql" />
+    <None Include="Billing Queues\vwBillingQueueVIP.sql" />
+    <None Include="vwBillingClaimsByEntity.sql" />
+    <None Include="DataImports\spRefreshDepositData.sql" />
+    <None Include="DataImports\spRefreshDataFTP1_Afternoon.sql" />
+    <None Include="Lookups\_LookupUpdates_TechRegionLookup.sql" />
+    <None Include="PA\vwPAValidationCheckUnMatchedSurgeons.sql" />
+    <None Include="vwHospitalTechBillingValidation.sql" />
+    <None Include="Emailed Reports\spEmailHospitalTechBillingValidation.sql" />
+    <None Include="Emailed Reports\vwLatePatientInsuranceChanges.sql" />
+    <None Include="vwHospitalBillingsStatus.sql" />
+    <None Include="vwIOMEntityAging_All.sql" />
+    <None Include="Lookups\Templates\ReaderFeesUpdate.xlsx" />
+    <None Include="Lookups\Templates\Entity lookup.xlsx" />
+    <None Include="Lookups\Templates\hospital lookup new.xlsx" />
+    <None Include="Lookups\Templates\Surgeon lookup.xlsx" />
+    <None Include="Lookups\Templates\Insurance group update.xlsx" />
+    <None Include="Lookups\RegionTechEntityLookup.sql" />
+    <None Include="DataImports\spCreateTempTables.sql" />
+    <None Include="Lookups\_LookupUpdates_InsuranceTypeLookup.sql" />
+    <None Include="laurensscript.sql" />
+    <None Include="vwVOB.sql" />
+    <None Include="Lookups\_LookupUpdates_TechCompanyLookup.sql" />
+    <None Include="Lookups\_LookupUpdates_DefaultEntities.sql" />
+    <None Include="Lookups\_LookupUpdates_UserLookup.sql" />
+    <None Include="Lookups\_LookupUpdates_EntityLookup2.sql" />
+    <None Include="vwTechProductivityDaily.sql" />
+    <None Include="vwCheckInTheMailIOM.sql" />
+    <None Include="vwCheckInTheMailTech.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="SurgeonLookupDataLoad.sql" />
+    <None Include="vwAuditorNotes.sql" />
+    <Build Include="vwAuditorSignOff.sql" />
+    <None Include="vwCollectionsReportTechNNS.sql" />
+    <None Include="vwCollectionsReportTechSurgeonEntity.sql" />
+    <None Include="vwCollectionSummary.sql" />
+    <None Include="vwContractInsuranceMatrix.sqp.sql" />
+    <None Include="vwCPTClaimDetail.sql" />
+    <None Include="vwEntityMonthEndSummary.sql" />
+    <None Include="vwEntityPriorMonthEndSummary.sql" />
+    <None Include="vwHL7_Raw.sql" />
+    <None Include="vwHospitalBillings.sql" />
+    <None Include="vwInsuranceDeposits.sql" />
+    <None Include="vwInsuranceDeposits2.sql" />
+    <None Include="vwIOMEntityAging.sql" />
+    <None Include="vwNewClaimsBilled.sql" />
+    <None Include="vwPatientInjuryRisk.sql" />
+    <None Include="vwReaderBillableCasesByMonth.sql" />
+    <None Include="vwReaderPayroll.sql" />
+    <None Include="vwTechProductivity.sql" />
+    <None Include="vwTechProductivity_SecondaryTech.sql" />
+    <None Include="vwUnbilledPAClaims.sql" />
+    <None Include="vwUnbilledProClaims.sql" />
+    <None Include="vwUnbilledTechClaims.sql" />
+    <None Include="PA\vwPAMaster.sql" />
+    <Build Include="PA\vwPA_HL7_Raw.sql" />
+    <None Include="PA\vwPACases.sql" />
+    <None Include="PA\vwPAChargesAndReceiptsOverTime.sql" />
+    <None Include="PA\vwPACollectionSummary.sql" />
+    <None Include="PA\vwPACPTClaimDetail.sql" />
+    <None Include="PA\vwPAEntityPriorMonthEndSummary.sql" />
+    <None Include="PA\vwPAInsuranceDeposits2.sql" />
+    <None Include="OnlineReports\agenthistory.sql" />
+    <None Include="OnlineReports\Agents.sql" />
+    <Build Include="OnlineReports\vwAgentActivity.sql" />
+    <None Include="OnlineReports\view_billingcount.sql" />
+    <None Include="OnlineReports\View_PayerMix.sql" />
+    <Build Include="Emailed Reports\vwIncorrectBillings.sql" />
+    <None Include="Emailed Reports\vwValidationChecks.sql" />
+    <None Include="Core-IOM\vwCases.sql" />
+    <None Include="Core-IOM\vwMaster2.sql" />
+    <None Include="Core-IOM\vwBillableCasesCalculation.sql" />
+    <None Include="DataImports\spRefreshDataDB1FromFTP.sql" />
+    <None Include="DataImports\spRefreshDataFTP1.sql" />
+    <None Include="OnlineReports\view_DashClaimStatus.sql" />
+    <None Include="PA\vwPADenialsOverturnedDetail.sql" />
+    <Build Include="Emailed Reports\spEmailDuplicateClaimIDs.sql" />
+    <Build Include="Emailed Reports\spEmailDuplicatePIDs.sql" />
+    <None Include="PA\vwPATechProductivity.sql" />
+    <None Include="PA\vwPATechProductivity_SecondaryTech.sql" />
+    <None Include="PA\vwPATechProductivityCombined.sql" />
+    <Build Include="NNHIS Interface\vwSHS_ClaimCharges.sql" />
+    <None Include="Lookups\_LookupUpdates_Exceptions_CorrectEntity.sql" />
+    <None Include="vwHospInsTypeChanges.sql" />
+    <None Include="Lookups\_LookupUpdates_PARegionLookup.sql" />
+    <None Include="Permissions.sql" />
+    <None Include="TablesToViews.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClaimDateHistory.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Lookups\_LookupUpdates.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Lookups\_LookupUpdates_HospitalLookup.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Lookups\_LookupUpdates_InsuranceLookup.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Lookups\_LookupUpdates_PASurgeon.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Lookups\_LookupUpdates_SurgeonLookup.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Emailed Reports\spEmailMisBilledClaims.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Emailed Reports\spEmailMisBilledTechClaims.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Emailed Reports\spEmailPAMisBilledClaims.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Emailed Reports\spEmailUnmatchedHospitalLookups.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Emailed Reports\spEmailUnmatchedInsuranceLookup.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Emailed Reports\spEmailUnMatchedPASurgeonReport.sql" />
+    <None Include="Emailed Reports\spEmailUnMatchedSurgeonReport.sql" />
+    <None Include="Emailed Reports\spEmailUnmatchedTechRegionLookup.sql" />
+    <Build Include="Emailed Reports\spLogError.sql" />
+    <Build Include="Emailed Reports\spSendFormattedEmail.sqp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="OnlineReports\view_DashAnnualCumulativeCollections.sql" />
+    <None Include="OnlineReports\view_DashAvgCollectionByPayor.sql" />
+    <None Include="OnlineReports\view_DashAvgPrevPatientInjuryRisk.sql" />
+    <None Include="OnlineReports\view_DashEntityAnnualCumulativeCollections.sql" />
+    <None Include="OnlineReports\view_DashEntityAvgCollectionByPayor.sql" />
+    <None Include="OnlineReports\view_DashEntityAvgPrevPatientInjuryRisk.sql" />
+    <None Include="OnlineReports\view_DashEntityClaimStatus.sql" />
+    <None Include="OnlineReports\view_DashEntityMonthlyCollections.sql" />
+    <None Include="OnlineReports\view_DashEntityReaderDaysSignOff.sql" />
+    <None Include="OnlineReports\view_DashEntityRecentReceipts.sql" />
+    <None Include="OnlineReports\view_DashEntityTotalCaseVolume_1.sql" />
+    <None Include="OnlineReports\view_DashMonthlyCollections.sql" />
+    <None Include="OnlineReports\view_DashReaderDaysSignOff.sql" />
+    <None Include="OnlineReports\view_DashRecentReceipts.sql" />
+    <None Include="OnlineReports\view_DashTechAvgPrevPatientInjuryRisk.sql" />
+    <None Include="OnlineReports\view_DashTotalCaseVolume.sql" />
+    <None Include="OnlineReports\view_Entities.sql" />
+    <None Include="OnlineReports\view_InsuranceDeposits.sql" />
+    <None Include="OnlineReports\view_PADashEntityTotalCaseVolume.sql" />
+    <None Include="OnlineReports\view_PADashTotalCaseVolume.sql" />
+    <None Include="OnlineReports\view_PatientInjuryRisk.sql" />
+    <None Include="OnlineReports\view_ReaderSignOffDays.sql" />
+    <None Include="OnlineReports\view_TechDashClaimStatus.sql" />
+    <None Include="OnlineReports\view_TechDashEntityAvgPrevPatientInjuryRisk.sql" />
+    <None Include="OnlineReports\view_TechDashEntityClaimStatus.sql" />
+    <None Include="OnlineReports\view_TechDashEntityReaderDaysSignOff.sql" />
+    <None Include="OnlineReports\view_TechDashEntityTotalCaseVolume.sql" />
+    <None Include="OnlineReports\view_TechEntities.sql" />
+  </ItemGroup>
+</Project>
