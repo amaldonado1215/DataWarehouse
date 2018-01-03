@@ -778,3 +778,8 @@ insert into PASurgeonLookup	(surgeon, entity, startdate, enddate, region, surgeo
 select * from pasurgeonlookup where surgeon like '%dryer%'
 select * from pasurgeonlookup where surgeonid = 101
 UPDATE PASurgeonlookup SET startdate = '2017-11-28' where surgeonid = 101
+
+-- ticket #5 JTB
+select surgeonid, surgeon, coabbr, mngfee from pasurgeonlookup where surgeonid in (110,111)
+update pasurgeonlookup set coabbr = 'NHA', MngFee = .35 where surgeonid in (110,111)
+
