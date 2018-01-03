@@ -1,3 +1,29 @@
+-- 1/2/18
+select * from vwpavalidationcheckunmatchedsurgeons
+select * from vwpacases where surgeon like '%dryer%'
+select * from pasurgeonlookup
+Randall Dryer, M.D.
+Randall Dryer, M.D.
+
+select * from vwPAMaster where defaultentity is null and dos > '2015-01-01'
+select * from pasurgeonlookup where surgeon like '%dryer%'
+
+spEmailPAMisBilledClaims
+spEmailUnmatchedHospitalLookups
+spEmailUnMatchedInsuranceLookup
+
+select * from vwpacases where surgeon like '%dryer%'
+select * from vwpavalidationcheckunmatchedsurgeons
+select * from pasurgeonlookup where surgeon like '%dryer%'
+Randall Dryer, M.D.
+Randall Dryer, M.D.
+Randall Dryer, M.D.
+Randall Dryer, M.D.                               
+Randall Dryer, M.D.                               
+update pasurgeonlookup set surgeon = ltrim(rtrim(surgeon))
+Randall Dryer, M.D.
+
+select * from vwpavalidationcheckunmatchedsurgeons
 -- 10/27/17
 select * from vwTechProductivitycombined where tech like '%voss%'
 
@@ -11,7 +37,7 @@ select * from history_3300 where date_changed > '2017-03-01'and field_changed li
 
 --- *****
 select * from entitylookup
-select * from surgeonlookup2
+select * from surgeonlookup2 order by surgeonid asc
 
 
 select 

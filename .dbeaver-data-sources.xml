@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="mssql_ms-160b990d0fa-1ef78d17fe27487f" provider="generic" driver="mssql_ms" name="SQLVM - USMON_Local" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="nationalneurodw.southcentralus.cloudapp.azure.com" port="1433" server="" database="USMON_Local" url="jdbc:sqlserver://nationalneurodw.southcentralus.cloudapp.azure.com:1433;databaseName=USMON_Local" user="DwSqlVmSA" password="B1IMdGZnVz4UCiwLLgFdDwoiJENoYxoDCHUdJSMdPzQANDVXAXsYHF7J" type="dev">
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="false">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="authType" value="PASSWORD"/>
+				<property name="port" value="22"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="false">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+		</connection>
+	</data-source>
+	<filters/>
+</data-sources>
