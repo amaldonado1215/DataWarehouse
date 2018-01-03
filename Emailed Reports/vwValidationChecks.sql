@@ -2,7 +2,7 @@
 --- Unmatching Surgeons (no valid surgeon and/or Valid Dates in SurgeonLookup)
 alter view vwValidationCheckUnMatchedSurgeons as 
 /*select distinct surgeon from vwCases where defaultentity is null and dos > '2015-01-01' */
-select distinct vwcases.surgeon --, vwcases.region_short_name, vwcases.surgeon, vwcases.specialty, dos, defaultentity, [consolidated payor] 
+select distinct vwcases.surgeon, vwcases.region_short_name as region --, vwcases.region_short_name, vwcases.surgeon, vwcases.specialty, dos, defaultentity, [consolidated payor] 
 		from vwcases 
 					LEFT OUTER JOIN
 						dbo.surgeonlookup2 sl1 on vwcases.surgeon = sl1.surgeon 

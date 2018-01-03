@@ -11,7 +11,7 @@ DECLARE @subjectline NVARCHAR(50)
 SET @subjectline = 'UnMatched Surgeons Report'
 
 
-SET @xml = CAST(( SELECT [Surgeon] AS 'td'
+SET @xml = CAST(( SELECT [Surgeon] AS 'td','',region AS 'td'
 	FROM  vwValidationCheckUnmatchedSurgeons ORDER BY surgeon
 	FOR XML PATH('tr'), ELEMENTS ) AS NVARCHAR(MAX))
 if len(@xml) > 0
@@ -20,7 +20,7 @@ BEGIN
 SET @body ='<html><body><H3>Unmatched Surgeons Report</H3>
 <table border = 1> 
 <tr>
-<th> Surgeon </th> </tr>'    
+<th> Surgeon </th> <th>Region </th></tr>'    
 
  
 SET @body = @body + @xml +'</table></body></html>'
@@ -35,6 +35,7 @@ EXEC msdb.dbo.sp_send_dbmail
 @profile_name = 'SendGrid', -- replace with your SQL Database Mail Profile 
 @body = @body,
 @body_format ='HTML',
+--@recipients = 'john.baldwin@mpowerpractice.net',
 @recipients = 'Deborah.Reinagel@md-management.net;allie.robert@nationalneuro.net;lizette.morin@md-management.net;Bobby.Smith2@md-management.net;Henry.Hays@md-management.net;Angela.Leigh@nationalneuro.net;Brandi.Milligan@mpowerpractice.net', 
 @subject = @subjectline;
 
