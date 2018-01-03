@@ -3657,3 +3657,7 @@ insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, p
 
 insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking, SurgeonContract, surgeonno)
        values ('Thomas Loftus M.D.','Granite Anesthesia','2017-08-01','2020-12-31','Spine Surgeon','* ANY *','ANES-DFW','1','IOM','20162')
+      
+ -- Fix duplicate ID
+   select * from surgeonlookup2 where surgeon like '%jeffrey shall%'
+   update surgeonlookup2 set surgeon = 'Stephen Esses, M.D.' where surgeonid = 2014

@@ -1,3 +1,9 @@
+-- 1/3/18
+select * from vw_validationVwMaster2DuplicatesClaimids
+
+select * from vwmaster2 where claim_id = 1033560
+select * from surgeonlookup2 where surgeon like '%jeffrey shall%'
+
 -- 1/2/18
 select * from vwpavalidationcheckunmatchedsurgeons
 select * from vwpacases where surgeon like '%dryer%'
