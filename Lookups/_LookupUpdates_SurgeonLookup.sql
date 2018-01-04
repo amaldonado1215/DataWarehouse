@@ -3661,3 +3661,11 @@ insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, p
  -- Fix duplicate ID
    select * from surgeonlookup2 where surgeon like '%jeffrey shall%'
    update surgeonlookup2 set surgeon = 'Stephen Esses, M.D.' where surgeonid = 2014
+
+ -- Change requested by Deborah 1/3/2018
+ select * from surgeonlookup2 where surgeonid  = 2014
+ update surgeonlookup2 set proentity = '' ,startdate = '2017-12-20' where surgeonid = 2014
+   
+SurgeonID           Surgeon               ProEntity                                                                       StartDate
+2014            Stephen Esses, M.D. DASO Neuromonitoring, PLLC                                   12/20/2017
+ 
