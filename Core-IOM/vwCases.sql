@@ -54,6 +54,8 @@ SELECT
 		WHEN case_report_3300.[1st Insurance Category] = 'Blue Cross Blue Shield' AND case_report_3300.SURGEON = 'Samir Parikh, M.D.' AND case_report_3300.DOS >= '2016-10-03' AND SL1.proentity IS NOT NULL THEN SL1.ProEntity -- Ticket #1401
 		WHEN case_report_3300.[1st Insurance Category] = 'Blue Cross Blue Shield' AND case_report_3300.SURGEON = 'Kendall Carll, M.D.' and case_report_3300.DOS >= '2017-07-01' THEN SL1.Proentity -- Ticket #2209
 		WHEN case_report_3300.[1st Insurance Category] = 'Blue Cross Blue Shield' AND case_report_3300.SURGEON = 'Lewis Frazier, M.D.' and case_report_3300.DOS >= '2017-07-01' THEN SL1.Proentity -- Ticket #2209
+		WHEN case_report_3300.[1st Insurance Category] = 'Blue Cross Blue Shield' AND case_report_3300.Surgeon = 'Richard Westmark, M.D.' AND case_report_3300.DOS >= '2017-12-01' THEN SL1.Proentity  -- 2018-01-03 JTB Per #6 Github Issue
+
 		--ticket 2469
 		--WHEN case_report_3300.[1st Insurance Category] = 'Blue Cross Blue Shield' AND case_report_3300.Surgeon IN ('Dr. C Gilberto Brito, M.D.', 'Kendrick Thomas, M.D.', 'Joshua Levy, D.O.', 'Jeffrey Wingate, M.D.')	AND SL1.proentity IS NOT NULL AND case_report_3300.DOS < '2017-08-30' THEN SL1.ProEntity -- (Grand Canyon Neurology, PLLC)  Ticket #1652 and Ticket #2411
 		--WHEN case_report_3300.[1st Insurance Category] = 'Blue Cross Blue Shield' AND case_report_3300.Surgeon IN ('Dr. C Gilberto Brito, M.D.', 'Kendrick Thomas, M.D.', 'Joshua Levy, D.O.', 'Jeffrey Wingate, M.D.')	AND SL1.proentity IS NOT NULL AND case_report_3300.DOS >= '2017-08-30' THEN 'AccuZone Diagnostics, LLC' -- Ticket #2411

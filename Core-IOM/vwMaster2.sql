@@ -229,7 +229,9 @@ SELECT      CR.PID,
 					
 					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.SURGEON = 'Kendall Carll, M.D.' and CR.DOS >= '2017-07-01' THEN SL1.Proentity -- Ticket #2209
 					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.SURGEON = 'Lewis Frazier, M.D.' and CR.DOS >= '2017-07-01' THEN SL1.Proentity -- Ticket #2209
-					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND Region_Short_Name = 'Maryland' then SL1.ProEntity					
+					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.Surgeon = 'Richard Westmark, M.D.' AND CR.DOS >= '2017-12-01' THEN SL1.Proentity  -- 2018-01-03 JTB Per #6 Github Issue
+					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND Region_Short_Name = 'Maryland' then SL1.ProEntity
+
 					WHEN Region_Short_Name in ('Maryland', 'California') AND SL1.Proentity is not null THEN SL1.ProEntity
 					WHEN Region_short_name in ('Maryland', 'California') AND SL2.Proentity is not null then SL2.ProEntity
 					
