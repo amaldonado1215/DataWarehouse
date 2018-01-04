@@ -3664,8 +3664,5 @@ insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, p
 
  -- Change requested by Deborah 1/3/2018
  select * from surgeonlookup2 where surgeonid  = 2014
- update surgeonlookup2 set proentity = '' ,startdate = '2017-12-20' where surgeonid = 2014
-   
-SurgeonID           Surgeon               ProEntity                                                                       StartDate
-2014            Stephen Esses, M.D. DASO Neuromonitoring, PLLC                                   12/20/2017
+ update surgeonlookup2 set proentity = 'DASO Neuromonitoring, PLLC ' ,startdate = '2017-12-20' where surgeonid = 2014
  
