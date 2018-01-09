@@ -1,0 +1,2 @@
+create view vwClaimCount as
+select count(*) from vwmaster2
