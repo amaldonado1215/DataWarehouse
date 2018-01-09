@@ -32,11 +32,10 @@ SET @subjectline = @subjectline + ' - NONE'
 END
 
 EXEC msdb.dbo.sp_send_dbmail
-@profile_name = 'SendGrid', -- replace with your SQL Database Mail Profile 
+@profile_name = 'SendGrid', 
 @body = @body,
 @body_format ='HTML',
-@recipients = 'Deborah.Reinagel@md-management.net;Angelica.Maldonado@md-management.net;Kim.Anderson@md-management.net;Roshan.Shah@precisionassist.us', --;Alissa.Fisher@md-management.net;allie.robert@nationalneuro.net', 
+@recipients = 'Deborah.Reinagel@md-management.net;Angelica.Maldonado@md-management.net;Kim.Anderson@md-management.net;Roshan.Shah@precisionassist.us;Matthew.Nartz@md-management.net', 
 @subject = @subjectline;
 
 GO
---ticket 2382 remove rodrigo, ryan, christy and add kim and roshan

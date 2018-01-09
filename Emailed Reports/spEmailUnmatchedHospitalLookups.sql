@@ -1,10 +1,5 @@
 ﻿
-
---<<<<<<< HEAD
---Alter PROCEDURE spEmailUnmatchedHospitalLookups
---=======
 ALter PROCEDURE spEmailUnmatchedHospitalLookups
--->>>>>>> origin/Modifications
 
 AS 
 
@@ -36,11 +31,10 @@ SET @subjectline = @subjectline + ' - NONE'
 END
 
 EXEC msdb.dbo.sp_send_dbmail
-@profile_name = 'SendGrid', -- replace with your SQL Database Mail Profile 
+@profile_name = 'SendGrid', 
 @body = @body,
 @body_format ='HTML',
---<<<<<<< HEAD
-@recipients = 'Deborah.Reinagel@md-management.net; Kim.Anderson@md-management.net; Angelica.Maldonado@md-management.net; Cynthia.Ramirez@md-management.net', 
+@recipients = 'Deborah.Reinagel@md-management.net; Kim.Anderson@md-management.net; Angelica.Maldonado@md-management.net; Cynthia.Ramirez@md-management.net;Matthew.Nartz@md-management.net', 
 @subject = @subjectline;
 
 GO

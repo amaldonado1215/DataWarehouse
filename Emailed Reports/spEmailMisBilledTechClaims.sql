@@ -33,7 +33,7 @@ EXEC msdb.dbo.sp_send_dbmail
 @profile_name = 'SendGrid', -- replace with your SQL Database Mail Profile 
 @body = @body,
 @body_format ='HTML',
-@recipients = 'Deborah.Reinagel@md-management.net', -- replace with your email address
+@recipients = 'Deborah.Reinagel@md-management.net;Matthew.Nartz@md-management.net', -- replace with your email address
 @subject = @subjectline ;
 
 

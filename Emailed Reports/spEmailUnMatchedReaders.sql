@@ -29,7 +29,7 @@ SET @xml = CAST(( SELECT reader AS 'td', '', PID as 'td','', CONVERT(VARCHAR(10)
 			@profile_name = 'SendGrid', -- replace with your SQL Database Mail Profile 
 			@body = @body,
 			@body_format ='HTML',
-			@recipients = 'Deborah.Reinagel@md-management.net;Angelica.Maldonado@md-management.net', 
+			@recipients = 'Deborah.Reinagel@md-management.net;Angelica.Maldonado@md-management.net;Matthew.Nartz@md-management.net', 
 			@subject = @subjectline;
 
 			GO

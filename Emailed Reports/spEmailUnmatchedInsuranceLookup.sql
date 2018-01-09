@@ -32,11 +32,10 @@ SET @subjectline = @subjectline + ' - NONE'
 END
 
 EXEC msdb.dbo.sp_send_dbmail
-@profile_name = 'SendGrid', -- replace with your SQL Database Mail Profile 
+@profile_name = 'SendGrid',
 @body = @body,
 @body_format ='HTML',
---@recipients = 'johnb@simplicityhealthsystems.com',
-@recipients = 'Deborah.Reinagel@md-management.net;Timothy.DeLong@Acquisitionbilling.com;Angelica.Maldonado@md-management.net;michelle.silva@acquisitionbilling.com', 
+@recipients = 'Deborah.Reinagel@md-management.net;Timothy.DeLong@Acquisitionbilling.com;Angelica.Maldonado@md-management.net;michelle.silva@acquisitionbilling.com;Matthew.Nartz@md-management.net', 
 @subject = @subjectline;
 
 GO
