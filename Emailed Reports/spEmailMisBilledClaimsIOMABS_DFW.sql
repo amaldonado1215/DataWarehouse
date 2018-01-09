@@ -33,7 +33,7 @@ EXEC msdb.dbo.sp_send_dbmail
 @profile_name = 'SendGrid', -- replace with your SQL Database Mail Profile 
 @body = @body,
 @body_format ='HTML',
-@recipients = 'Deborah.Reinagel@md-management.net;angelica.maldonado@md-management.net;terry.lee@acquisitionbilling.com;Timothy.DeLong@Acquisitionbilling.com;michelle.silva@Acquisitionbilling.com;lisa.mitchell@acquisitionbilling.com', -- replace with your email address
+@recipients = 'Deborah.Reinagel@md-management.net;angelica.maldonado@md-management.net;terry.lee@acquisitionbilling.com;Timothy.DeLong@Acquisitionbilling.com;michelle.silva@Acquisitionbilling.com;lisa.mitchell@acquisitionbilling.com;Matthew.Nartz@md-management.net', -- replace with your email address
 @subject = @subjectline ;
 
 --ticket 1936, add kierra.baker@acquisitionbilling.com
