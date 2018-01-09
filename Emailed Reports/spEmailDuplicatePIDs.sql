@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE spEmailDuplicatePIDs
+﻿ALTER PROCEDURE spEmailDuplicatePIDs
 
 AS 
 
@@ -33,7 +33,7 @@ EXEC msdb.dbo.sp_send_dbmail
 @profile_name = 'SendGrid', -- replace with your SQL Database Mail Profile 
 @body = @body,
 @body_format ='HTML',
-@recipients = 'Deborah.Reinagel@md-management.net;Angelica.Maldonado@md-management.net', 
+@recipients = 'Deborah.Reinagel@md-management.net;Angelica.Maldonado@md-management.net;Matthew.Nartz@md-management.net', 
 @subject = @subjectline;
 
 GO
