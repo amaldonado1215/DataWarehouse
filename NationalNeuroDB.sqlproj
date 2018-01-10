@@ -180,8 +180,8 @@
     <None Include="Lookups\_LookupUpdates_Exceptions_CorrectEntity.sql" />
     <None Include="vwHospInsTypeChanges.sql" />
     <None Include="Lookups\_LookupUpdates_PARegionLookup.sql" />
-    <None Include="Permissions.sql" />
     <None Include="TablesToViews.sql" />
+    <None Include="PA\Permissions.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClaimDateHistory.sql" />

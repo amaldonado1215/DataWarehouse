@@ -1376,3 +1376,26 @@ INSERT INTO TechRegionLookup (TECH, [Assigned Region], TechName, TechStatus, sta
 	Values('Valerie Newton','Ohio','Valerie Newton','Active', '2017-03-12','2099-12-31')
 INSERT INTO TechRegionLookup (TECH, [Assigned Region], TechName, TechStatus, startdate, enddate)
 	Values('Valerie Newton, CNIM','Ohio','Valerie Newton','Active', '2017-03-12','2099-12-31')
+
+INSERT INTO dbo.TechRegionLookup (Tech, [ASSIGNED REGION], TechName, TechStatus, StartDate, EndDate) 
+VALUES
+	('Alec Purser, M.S.- IONM', 'Texas - DFW', 'Alec Purser', 'Active', '2017-07-26', '12/31/2099'),
+	('Andrew Neckar, CNIM', 'Oklahoma', 'Andrew Neckar',	'Active', '2017-06-22',	'2099-12-31'),
+	('Emily Smith, B.S., CNIM', 'Texas - DFW', 'Emily Smith', 'Active', '2017-05-17', '2099-12-31'),
+	('Gregory Arellanes, CNIM', 'Oklahoma', 'Gregory Arellanes', 'Active', '2017-06-22', '2099-12-31'),
+	('Josh Zwosta, BS, CNIM', 'Oklahoma', 'Josh Zwosta', 'Active', '2016-10-19', '2099-12-31'),
+	('Joshua Summers, CNIM', 'Oklahoma', 'Joshua Summers', 'Active', '2017-10-08', '2099-12-31'),
+	('Laura Baxter, B.S., CNIM', 'Texas - DFW', 'Laura Baxter', 'Active', '2017-06-19', '2099-12-31'),
+	('Robert Valenzuela, IOM','Texas - West Texas',	'Robert Valenzuela','Active', '2016-06-16','2099-12-31'),
+	('Satin Bibbs, M.S., IOMN','Texas - South Texas','Satin Bibbs',	'Active', '2017-07-02',	'2099-12-31'),
+	('Victoria Ranson, M.S -IONM','Texas - DFW','Victoria Ranson','Active', '2017-07-09','2099-12-31'),
+	('Alec Purser, M.S.- IONM','Texas - DFW','Alec Purser','Active', '2017-07-26','2099-12-31'),
+	('Marla Losornio, IOMN', 'Texas - DFW', 'Marla Losornio', 'Active', '2017-07-02', '2099-12-31')
+
+UPDATE dbo.TechRegionLookup
+SET EndDate = '12/31/2099'
+WHERE TechName = 'Jessica Schmeets' and [ASSIGNED REGION] = 'Texas - DFW'
+
+UPDATE dbo.TechRegionLookup
+SET [ASSIGNED REGION] = 'Alaska'
+WHERE TechName = 'Joshua Shumen'
