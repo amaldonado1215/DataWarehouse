@@ -1,5 +1,5 @@
 select * from pasurgeonlookup
-
+select count(*) from vwmaster2 --test
 -- 1/8/18
 select count(*) from vwmaster2 where [Claim Date] >= '2017-01-01' and [claim Date] < '2018-01-01'
 
