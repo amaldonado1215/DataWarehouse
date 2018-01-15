@@ -1311,3 +1311,16 @@ UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Cynthia Ramirez'  WHERE HOSPITAL_I
 --ticket 2410 lauren
 select * from hospitallookup where Hospital_ID = 562
 update HospitalLookup set hospital_nbr = 50130 where Hospital_ID = 562
+
+-- #10 
+select * from hospitallookup where hospital like '%merit%'
+select * from hospitallookup where hospital_id = 395
+select * from hospitallookup where hospital like '%Heritage Park%'
+select * from hospitallookup where hospital like '%Baylor%'
+INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist])
+		VALUES((select max(hospital_id) from hospitallookup) + 1,'Merit Health Central','','5635','50682','Cynthia Ramirez')
+update HospitalLookup set hospital = 'Bayor Scott & White Surgical Hospital at Sherman' where Hospital_ID = 395
+update HOSPITALLOOKUP set leadsourcecommission = 'Novation/Vizient/MedAssets' where Hospital_ID = 395
+
+update HospitalLookup set hospital = 'Baylor Scott & White Surgical Hospital at Sherman', 
+		leadsourcecommission =  'Novation/Vizient/MedAssets'  where Hospital_ID = 395

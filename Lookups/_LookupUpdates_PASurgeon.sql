@@ -783,3 +783,14 @@ UPDATE PASurgeonlookup SET startdate = '2017-11-28' where surgeonid = 101
 select surgeonid, surgeon, coabbr, mngfee from pasurgeonlookup where surgeonid in (110,111)
 update pasurgeonlookup set coabbr = 'NHA', MngFee = .35 where surgeonid in (110,111)
 
+-- ticket #11 JTB/DR
+insert into PASurgeonLookup (surgeon, entity, startdate, enddate, region, surgeonownd, IOMSurgeonName,SurgeonNo,CoAbbr,sos_date,mngfee,billingfee, firstdos,firstcollection)
+	values ('Brian Snell, M.D.', 'Assist Services, PLLC', '2017-11-27', '2020-12-31','Oklahoma', 'Yes','Brian Snell, M.D.', 40070,'ASS','2017-11-27',.35,.08,' ',' ')
+ 
+insert into PASurgeonLookup (surgeon, entity, startdate, enddate, region, surgeonownd, IOMSurgeonName,SurgeonNo,CoAbbr,sos_date,mngfee,billingfee, firstdos,firstcollection)
+	values ('Thomas Raley, M.D.', 'ASAP Surgical Assistants, PC', '2017-10-01', '2020-12-31','Maryland', 'Yes','Thomas Raley, M.D.', 40072,'ASP','2017-10-10',.0,.23,'2017-10-24',' ')
+ 
+insert into PASurgeonLookup (surgeon, entity, startdate, enddate, region, surgeonownd, IOMSurgeonName,SurgeonNo,CoAbbr,sos_date,mngfee,billingfee, firstdos,firstcollection)
+	values ('Lance Lackson, M.D.', 'Astute Assistants, PLLC', '2017-12-01', '2020-12-31','PA - South Texas', 'Yes','Lance Jackson, M.D.', 40066,'ATA','2017-11-22',.35,.08,'2017-12-18',' ')
+
+select * from PASUrgeonlookup where surgeon like '%snell%' or surgeon like '%raley%' or surgeon like '%lackson%'

@@ -1,16 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DataImports",
-    "\\DataWarehouse",
-    "\\DataWarehouse\\DataImports",
-    "\\DataWarehouse\\Lookups",
-    "\\DataWarehouse\\OnlineReports",
-    "\\DataWarehouse\\PA",
-    "\\Emailed Reports",
-    "\\Lookups",
-    "\\OnlineReports",
-    "\\PA"
+    "\\Lookups"
   ],
+  "SelectedNode": "\\Lookups\\RegionTechEntityLookup.sql",
   "PreviewInSolutionExplorer": false
 }
