@@ -82,7 +82,8 @@ select CR.PID,
 				when cr.tech = 'Jose Fuentez, PA-C'and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity) --ticket 2375 lauren
 		--ticket 2271 lauren: For all encounters in this year, when the surgeon is Adam Bruggeman, M.D. 
 		--and the Tech is Kim Stewart, and the 1st ins type = BCBS then the case defers to SL  else NPPA (current default)
-				when cr.dos > '2016-12-31' and cr.tech in ('Steve Greer, LSA','Jerold Greer') then 'Precision Assist of Dallas'--ticket 2373 lauren
+				--when cr.dos > '2016-12-31' and cr.tech in ('Steve Greer, LSA','Jerold Greer') then 'Precision Assist of Dallas'--ticket 2373 lauren --removed ticket 18 kta
+				when cr.dos > '2016-12-31' and (cr.tech like '%CSFA%' or cr.tech like '%CSFA%') then 'Precision Assist of Dallas'--ticket 18 kta
 				when CR.DOS >= '2017-01-01' and CR.Surgeon = 'Adam Bruggeman, M.D.' and cr.tech in ('Kim Stewart, PA-C','Kimberly Stewart, MPAS, PA-C') and CR.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity) --ticket 2402
 				when cr.dos < '2017-01-01' and CR.Surgeon = 'Adam Bruggeman, M.D.' and CR.[1st Insurance Category] = 'Blue Cross Blue Shield' then SL.Entity --ticket 2491 lauren
 				when CR.Surgeon = 'Mark Parrella, M.D.' and CR.[1st Insurance Category] = 'Blue Cross Blue Shield' then SL.Entity
