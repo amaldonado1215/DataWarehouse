@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\DataImports",
+    "\\DataWarehouse",
+    "\\DataWarehouse\\DataImports",
+    "\\DataWarehouse\\Lookups",
+    "\\DataWarehouse\\OnlineReports",
+    "\\DataWarehouse\\PA",
+    "\\Emailed Reports",
+    "\\Lookups",
+    "\\OnlineReports",
+    "\\PA"
+  ],
+  "PreviewInSolutionExplorer": false
+}
