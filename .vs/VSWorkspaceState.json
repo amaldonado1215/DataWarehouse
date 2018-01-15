@@ -1,8 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Lookups"
+    "\\Billing Queues",
+    "\\Core-IOM",
+    "\\Emailed Reports",
+    "\\Lookups",
+    "\\NNHIS Interface",
+    "\\OnlineReports",
+    "\\PA"
   ],
-  "SelectedNode": "\\Lookups\\RegionTechEntityLookup.sql",
   "PreviewInSolutionExplorer": false
 }
