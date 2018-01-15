@@ -376,3 +376,5 @@ WHERE        (CR.DOS > '2013-01-01')
 				AND (CR.Deleted <> 'Yes') 
 				AND (CE.ins_folder <> 'Deleted Claims' 
 				OR CE.ins_folder IS NULL)
+
+				-- Test change.
