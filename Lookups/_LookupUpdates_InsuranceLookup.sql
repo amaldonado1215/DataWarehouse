@@ -2314,3 +2314,29 @@ INSERT INTO insurancelookup (InsuranceCompany,InsuranceGroup) VALUES ('W/C 
 INSERT INTO insurancelookup (InsuranceCompany,InsuranceGroup) VALUES ('WELL CARE','Misc Payor')
 select * from insurancelookup where insurancecompany = 'DUNCAN LAW FIRM'
 update insurancelookup set insurancegroup = 'Attorney Office' where insurancecompany = 'DUNCAN LAW FIRM'
+
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES	('ACCEL','Misc Payor'),
+	('ATTORNEY GARY GLICK','Attorney Office'),
+	('BUCKEYE HEALTH PLAN','Misc Payor'),
+	('CITY OF TORRANCE','Misc Payor'),
+	('CLAIMEDIX','Misc Payor'),
+	('FOX EVERETT, INC.','Misc Payor'),
+	('GREGORY L GOWAN ( GOWAN ELIZONDO)','Attorney Office'),
+	('HEALHTNET LIFE INS.','Misc Payor'),
+	('HEALTH CHOICE','Misc Payor'),
+	('HEALTH NET COMMERCIAL CLAIMS','Misc Payor'),
+	('IMAGINE HEALTH','Misc Payor'),
+	('JEFFREY BELTZ (THE BELTZ LAW FIRM )','Attorney Office'),
+	('MEMORIAL CARE/ IRVINE','Blue Cross Blue Shield'),
+	('MONARCH HEALTHCARE MEDICAL GROUP','Misc Payor'),
+	('NORTH KION','Misc Payor'),
+	('NORTH TEXAS SPECIALTY PHYSICIANS','Misc Payor'),
+	('ROPER & WHITE INC','Attorney Office'),
+	('SIMON GREENSTONE','PANATIER BARTLETT	Attorney Office'),
+	('UC HEALTH PLAN','Misc Payor'),
+	('UHC/ OPTUM CARE','United Health Care'),
+	('United Healthcare Medicaid KANCARE','United Health Care'),
+	('UPMC HEALTH PLAN','Misc Payor'),
+	('VOCATIONAL REHABILITATION','Misc Payor')
+
