@@ -25,4 +25,4 @@ LEFT OUTER JOIN
 LEFT OUTER JOIN
 	vwHospitalBillings hp ON hp.PID = h.patient_id 
 --WHERE LTRIM(RTRIM(h.field_changed)) = 'Insurance Type' AND h.old_val <> '0' AND YEAR(h.date_changed) = YEAR(GETDATE())
-WHERE LTRIM(RTRIM(h.field_changed)) = 'Insurance Type' AND h.old_val <> '0' AND YEAR(h.date_changed) = YEAR(GETDATE())-1
+WHERE LTRIM(RTRIM(h.field_changed)) = 'Insurance Type' AND h.old_val <> '0' AND YEAR(h.date_changed) >= YEAR(GETDATE())-1
