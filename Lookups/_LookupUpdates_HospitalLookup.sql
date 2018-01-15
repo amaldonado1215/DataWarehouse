@@ -1324,3 +1324,5 @@ update HOSPITALLOOKUP set leadsourcecommission = 'Novation/Vizient/MedAssets' wh
 
 update HospitalLookup set hospital = 'Baylor Scott & White Surgical Hospital at Sherman', 
 		leadsourcecommission =  'Novation/Vizient/MedAssets'  where Hospital_ID = 395
+
+delete from [dbo].[HospitalLookup] where Hospital_ID = 147
