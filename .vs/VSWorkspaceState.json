@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DataWarehouse",
-    "\\DataWarehouse\\PA",
-    "\\PA"
+    "\\Emailed Reports",
+    "\\Lookups"
   ],
-  "SelectedNode": "\\DataWarehouse\\PA\\vwPAMaster.sql",
-  "PreviewInSolutionExplorer": false
+  "SelectedNode": "\\Emailed Reports\\spEmailUnMatchedPASurgeonReport.sql",
+  "PreviewInSolutionExplorer": true
 }
