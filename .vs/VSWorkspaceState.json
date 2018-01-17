@@ -1,10 +1,17 @@
 {
   "ExpandedNodes": [
     "",
+    "\\DataImports",
     "\\DataWarehouse",
-    "\\DataWarehouse\\PA",
-    "\\PA"
+    "\\DataWarehouse\\DataImports",
+    "\\DataWarehouse\\Emailed Reports",
+    "\\DataWarehouse\\Lookups",
+    "\\DataWarehouse\\Lookups\\Templates",
+    "\\DataWarehouse\\OnlineReports",
+    "\\Emailed Reports",
+    "\\Lookups",
+    "\\Lookups\\Templates",
+    "\\OnlineReports"
   ],
-  "SelectedNode": "\\DataWarehouse\\PA\\vwPAMaster.sql",
   "PreviewInSolutionExplorer": false
 }

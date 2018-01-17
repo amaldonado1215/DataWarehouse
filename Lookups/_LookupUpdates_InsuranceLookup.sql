@@ -2340,7 +2340,7 @@ VALUES	('ACCEL','Misc Payor'),
 	('UPMC HEALTH PLAN','Misc Payor'),
 	('VOCATIONAL REHABILITATION','Misc Payor')
 
--- ticket #20 kta
+	--ticket #20 kta
 UPDATE dbo.InsuranceLookup
 SET InsuranceCompany = 'HEALHTNET  LIFE INS.' WHERE InsuranceCompany = 'HEALHTNET LIFE INS.'
 
