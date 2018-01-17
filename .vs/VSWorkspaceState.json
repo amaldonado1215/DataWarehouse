@@ -1,7 +1,17 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DataWarehouse",
+    "\\DataWarehouse\\Emailed Reports",
+    "\\DataWarehouse\\Lookups",
+    "\\DataWarehouse\\NNHIS Interface",
+    "\\DataWarehouse\\OnlineReports",
+    "\\DataWarehouse\\PA",
+    "\\Emailed Reports",
+    "\\Lookups",
+    "\\NNHIS Interface",
+    "\\OnlineReports",
+    "\\PA"
   ],
-  "SelectedNode": "\\Lookups",
   "PreviewInSolutionExplorer": true
 }
