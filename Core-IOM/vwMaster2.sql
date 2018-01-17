@@ -267,7 +267,8 @@ SELECT      CR.PID,
 					WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital'  AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case' 
 					WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case'
 					WHEN CR.hospital = 'Dublin Surgery Center' THEN 'Unbillable: Bundled Case'
-					WHEN CR.[1st Insurance Category] = 'Medicare Replacement Plan' AND CR.Reader IN ('William High, M.D.', 'William High, M.D., Ph.D.') and cr.dos >= '2016-06-01' THEN 'Unbillable' 
+					WHEN CR.[1st Insurance Category] = 'Medicare Replacement Plan' AND CR.Reader IN ('William High, M.D.', 'William High, M.D., Ph.D.') and cr.dos >= '2016-06-01' THEN 'Unbillable'
+					WHEN HL7.[SecondaryGroupID] = 'PB' AND  CR.Reader = 'William VanNess, M.D.' THEN 'Unbillable' -- ticket #22 kta
 					WHEN (Select top 1 BillingCompany from readerfees as rf where rf.readername = CR.Reader and rf.[1st Insurance Category] = CR.[1st Insurance Category] and CR.DOS >= startdate and CR.DOS <= enddate) <> 'ABS' THEN 'Unbillable'	
 					WHEN ins_folder NOT IN ('New Insurance Billing') AND (PIC.clm_billing_type = 'Tech Only' OR EL.clm_billing_type = 'Tech Only') THEN 'Unbillable' 
 					WHEN CE.ins_folder = 'Closed Billing Claims' THEN 'Closed' 
