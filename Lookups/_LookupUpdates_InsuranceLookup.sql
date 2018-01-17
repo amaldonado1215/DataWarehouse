@@ -2346,3 +2346,10 @@ SET InsuranceCompany = 'HEALHTNET  LIFE INS.' WHERE InsuranceCompany = 'HEALHTNE
 
 INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
 VALUES ('SIMON GREENSTONE PANATIER BARTLETT', 'Attorney Office') 
+
+	--ticket #20 kta
+UPDATE dbo.InsuranceLookup
+SET InsuranceCompany = 'HEALHTNET  LIFE INS.' WHERE InsuranceCompany = 'HEALHTNET LIFE INS.'
+
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES ('SIMON GREENSTONE PANATIER BARTLETT', 'Attorney Office') 

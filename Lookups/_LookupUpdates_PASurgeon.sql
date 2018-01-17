@@ -794,3 +794,7 @@ insert into PASurgeonLookup (surgeon, entity, startdate, enddate, region, surgeo
 	values ('Lance Lackson, M.D.', 'Astute Assistants, PLLC', '2017-12-01', '2020-12-31','PA - South Texas', 'Yes','Lance Jackson, M.D.', 40066,'ATA','2017-11-22',.35,.08,'2017-12-18',' ')
 
 select * from PASUrgeonlookup where surgeon like '%snell%' or surgeon like '%raley%' or surgeon like '%lackson%'
+
+ticket #12 DR
+insert into PASurgeonLookup (surgeon, entity, startdate, enddate, region, surgeonownd, IOMSurgeonName,SurgeonNo,CoAbbr,sos_date,mngfee,billingfee, firstdos,firstcollection)
+	values ('George Tipton, M.D.', 'NPPA Services', '2018-01-01', '2020-12-31','PA - Austin', 'No','George Tipton, M.D.', 40074,'NPP','2015-07-25',.35,.08,'2018-01-09',' ')
