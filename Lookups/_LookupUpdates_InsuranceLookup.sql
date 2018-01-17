@@ -2345,4 +2345,4 @@ UPDATE dbo.InsuranceLookup
 SET InsuranceCompany = 'HEALHTNET  LIFE INS.' WHERE InsuranceCompany = 'HEALHTNET LIFE INS.'
 
 INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
-VALUES ('SIMON GREENSTONE PANATIER BARTLETT', 'Attorney Office')
+VALUES ('SIMON GREENSTONE PANATIER BARTLETT', 'Attorney Office') 
