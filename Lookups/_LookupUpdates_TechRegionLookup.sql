@@ -1402,3 +1402,6 @@ WHERE TechName = 'Joshua Shumen'
 
 INSERT INTO [dbo].[TechRegionLookup] ('TECH', 'ASSIGNED REGION', 'TechName', 'TechStatus', 'StartDate', 'EndDate')
 Values ('Jose Sala', 'Texas - South Texas', 'Jose Sala', 'Active', '2017-07-02', '2099-12-31')
+
+INSERT INTO dbo.TechRegionLookup (Tech, [ASSIGNED REGION], TechName, TechStatus, StartDate, EndDate) 
+Values ('Hugo Vasquez, MD', 'ANES-DFW', 'Hugo Vasquez', 'Active', '2018-01-07', '2099-12-31')
