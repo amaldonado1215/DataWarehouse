@@ -3665,4 +3665,24 @@ insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, p
  -- Change requested by Deborah 1/3/2018
  select * from surgeonlookup2 where surgeonid  = 2014
  update surgeonlookup2 set proentity = 'DASO Neuromonitoring, PLLC ' ,startdate = '2017-12-20' where surgeonid = 2014
+
+ # 1603 DR
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ('Frank E. Fumich, M.D.','F&S Neuromonitoring, LLC', '2017-01-01', '2020-12-31', 'Spine Surgeon','*ANY*', 'Ohio','1','20486')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ('Selvon F. St. Clair, M.D.','F&S Neuromonitoring, LLC', '2017-01-01', '2020-12-31', 'Orthopedic Surgeon','*ANY*', 'Ohio','1','20488')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ('Thomas J. Perlewitz, M.D.','Blackhawk IOM, LLC', '2017-12-01', '2020-12-31', 'Orthopedic Surgeon','*ANY*', 'Wisconsin','1','20490')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ('Jon Krumerman, M.D.','Lagdob Medical, PLLC', '2017-08-01', '2020-12-31', 'Spine Surgeon','*ANY*', 'ANES-DFW','1','60008')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ( 'Francisco Batlle, M.D.', 'INF Anesthesia, PLLC','2017-12-31','2020-12-31','Spine Surgeon','*ANY*','ANES-DFW','1','60010')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ('Lewis Frazier, M.D.','Rehabilitation 469, PLLC','2017-12-01','2020-12-31','Spine Surgeon','*ANY*','ANES-DFW','1','60012')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ('Melanie Kinchen, M.D.','Camden Anesthesia, PLLC','2017-12-01','2020-12-31','Spine Surgeon','*ANY*,'ANES-DFW','1','60014')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ('Brian Snell, M.D.','Integrated Anesthesia Services, PLLC', '2017-12-01','2020-12-31', 'Spine Surgeon', '*ANY*','1','60016')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ('David DeWitt, M.D.','Midwest Monitoring, LLC', '2018-01-01','2020-12-31','Orthodedic Surgeon', '*ANY*,'Wisconsin','20492')
+
+update surgeonlookup2 set SurgeonNo = '60000' where surgeonid in (2011)
+update surgeonlookup2 set SurgeonNo = '60002' where surgeonid in (2009)
+update surgeonlookup2 set SurgeonNo = '60004' where surgeonid in (2015)
+update surgeonlookup2 set SurgeonNo = '60006' where surgeonid in (2010)
+update surgeonlookup2 set specialty = 'Cardiothoracic Surgeon' where surgeonid in (1963)
+update surgeonlookup2 set specialty = 'Orthopedic Surgeon' where surgeonid in  (2013)
+update surgeonlookup2 set specialty = 'Thoracic & Cardiac Surgeon' where surgeonid in (1951)
+update surgeonlookup2 set specialty = 'Thoracic & Cardiac Surgeon' where surgeonid in (2012)
  

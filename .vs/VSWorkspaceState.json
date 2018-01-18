@@ -1,14 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Billing Queues",
-    "\\Core-IOM",
-    "\\Emailed Reports",
     "\\Lookups",
-    "\\NNHIS Interface",
-    "\\OnlineReports",
-    "\\PA"
+    "\\Lookups\\Templates",
+    "\\NNHIS Interface"
   ],
-  "SelectedNode": "\\Lookups\\_LookupUpdates_HospitalLookup.sql",
+  "SelectedNode": "\\Lookups\\_LookupUpdates_SurgeonLookup_REMOTE_1912.sql",
   "PreviewInSolutionExplorer": false
 }
