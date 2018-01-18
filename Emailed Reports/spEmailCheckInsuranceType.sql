@@ -42,8 +42,8 @@ EXEC msdb.dbo.sp_send_dbmail
 @profile_name = 'SendGrid', 
 @body = @body,
 @body_format ='HTML',
---@recipients = 'Deborah.Reinagel@md-management.net;Kim.Anderson@md-management.net;Matthew.Nartz@md-management.net',
-@recipients = 'Deborah.Reinagel@md-management.net;Kim.Anderson@md-management.net',
+--@recipients = 'Deborah.Reinagel@md-management.net;Kim.Anderson@md-management.net',
+@recipients = 'cynthia.yanez@acquisitionbilling.com;michelle.silva@acquisitionbilling.com;thomas.herrera@acquisitionbilling.com;Matthew.Nartz@mpowerpractice.net;Angelica.Maldonado@mpowerpractice.net',
 @subject = @subjectline ;
 	
 END
