@@ -38,17 +38,18 @@ SELECT DISTINCT
 	
 	CASE 
 		WHEN CR.DOS > getdate() THEN 'Future Case' 
-		WHEN CR.PID IN (652556) THEN 'Unbillable: Pro Bono'
-		WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Medicaid Advantage Plan', 'Uninsured', 'Self Pay') THEN 'Unbillable: Insurance' 
+		WHEN CR.PID IN (652556,679177) THEN 'Unbillable: Pro Bono' --#26 kta added 679177
+		WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Medicaid Advantage Plan', 'Uninsured', 'Self Pay','Federal Plan') THEN 'Unbillable: Insurance' --#26 kta added federal plan 
 		WHEN CR.Reader IN ('* Unassigned *', 'Jane Doe') THEN 'Unbillable: Reader' 
 		
 		-- Replace with Neuro Fee Table calculation
 		WHEN READERFEES.Fee1 = 0 THEN 'Unbillable: ReaderFee'
-		WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital'  AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case' 
-		WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case'
-		WHEN CR.hospital = 'Dublin Surgery Center' THEN 'Unbillable: Bundled Case' 
-
-		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan','Federal Plan') AND DOS >= '2017-01-01' THEN 'Unbillable: TRI-MRP-CHAMPVA'
+		--WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case' --#26 kta commented out, joined on hospitalID below
+		WHEN CR.hospital_ID = 3403 AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case' 
+		--WHEN CR.hospital = 'Dublin Surgery Center' THEN 'Unbillable: Bundled Case'  --#26 kta commented out, joined on hospitalID below
+		WHEN CR.hospital_ID in (4457,4550) THEN 'Unbillable: Bundled Case' --#26 added 4450
+		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND DOS >= '2017-01-01' THEN 'Unbillable: TRI-MRP-CHAMPVA' --#26 kta removed federal plan
+		WHEN HL7.[SecondaryGroupID] = 'PB' AND  CR.Reader = 'William VanNess, M.D.' THEN 'Unbillable' -- ticket #22 kta
 	/*	WHEN CR.[1st Insurance Category] = 'TRICARE' AND CR.Reader NOT IN ('Bjorn Krane, M.D.', 'Bruce Katuna, M.D.', 'Badreldin Ibrahim, M.D.', 
 					'Chuong Le, M.D.', 'Peter Tarbox, M.D.', 'Craig Carroll, D.O.') THEN 'Unbillable: TRICARE/Docs' 
 		WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.Reader IN ('William High, M.D.', 'William High, M.D., Ph.D.') THEN 'Unbillable: BCBS/High' 
@@ -101,6 +102,7 @@ FROM            dbo.case_report_3300 AS CR
 				AND CR.[1st Insurance Category] = READERFEES.[1st Insurance Category]
 				AND Cr.DOS > READERFEES.startdate 
 				and CR.DOS < READERFEES.enddate
+		LEFT OUTER JOIN dbo.vwHL7_Raw AS HL7 ON HL7.patient_id = CR.PID -- ticket #22 kta
 
 
 
