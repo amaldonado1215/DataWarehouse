@@ -798,3 +798,5 @@ select * from PASUrgeonlookup where surgeon like '%snell%' or surgeon like '%ral
 ticket #12 DR
 insert into PASurgeonLookup (surgeon, entity, startdate, enddate, region, surgeonownd, IOMSurgeonName,SurgeonNo,CoAbbr,sos_date,mngfee,billingfee, firstdos,firstcollection)
 	values ('George Tipton, M.D.', 'NPPA Services', '2018-01-01', '2020-12-31','PA - Austin', 'No','George Tipton, M.D.', 40074,'NPP','2015-07-25',.35,.08,'2018-01-09',' ')
+
+UPDATE PASurgeonLookup SET Enddate = '2017-11-30' WHERE SurgeonID in (79,107) --ticket 29 kta
