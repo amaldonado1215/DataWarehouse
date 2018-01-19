@@ -53,6 +53,11 @@ select CR.PID,
 			end
 			as [2017 PYMT],
 		case
+			when (select sum(ID.Payment_Collected) from Insurance_deposits_3350 as ID where ID.Claim_id=PIC.claim_ID and year(ID.Date_Collected) = 2018) =0 then null  -- ticket 28 kta
+			else (select sum(ID.Payment_Collected) from Insurance_deposits_3350 as ID where ID.Claim_id=PIC.claim_ID and year(ID.Date_Collected) = 2018)
+			end
+			as [2018 PYMT],
+		case
 			when (select sum(ID.Payment_Collected) from Insurance_Deposits_3350 as ID where ID.Claim_id=PIC.claim_ID) = 0 then null
 			else (select sum(ID.Payment_Collected) from Insurance_Deposits_3350 as ID where ID.Claim_id=PIC.claim_ID)
 			end
@@ -166,7 +171,7 @@ from case_report_3350 as CR
 	LEFT OUTER JOIN notes_3350 as nt2 on nt.billing_notes_id = 
 		(select top 1 billing_notes_id from notes_3350 where notes_3350.patient_id = ce.patient_id order by initialdate desc)
 */
-where CR.dos > '2013-01-01' 
+where CR.dos > '2015-01-01' 
 	and CR.Cancelled <> 'Yes'
 	and CR.Deleted <> 'Yes'
 	and ( CE.ins_folder <> 'Deleted Claims' or CE.ins_folder is null)
