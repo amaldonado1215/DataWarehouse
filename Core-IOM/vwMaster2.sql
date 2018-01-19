@@ -239,8 +239,8 @@ SELECT      CR.PID,
 					WHEN IL.InsuranceGroup = 'Blue Cross Blue Shield' AND  CR.hospital IN ('The Spine Hospital of Louisiana ', 'Cypress Pointe Surgical Hospital ') AND Reader IN('David Adams, M.D.') THEN 'Pro Read, LLC'
 					WHEN CR.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance', 'Aetna') AND SL1.Proentity is not null THEN SL1.Proentity -- Ticket #2186 added Aetna
 					WHEN CR.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance', 'Aetna') AND SL2.Proentity is not null THEN SL2.Proentity -- Ticket #2186 added Aetna
-					WHEN [1st Insurance Category] IN ('Workmans Comp') AND Region_short_name IN ('Louisiana') AND SL1.Proentity is not null THEN SL1.Proentity 
-					WHEN [1st Insurance Category] IN ('Workmans Comp') AND Region_short_name IN ('Louisiana') AND SL2.Proentity is not null THEN SL2.Proentity	
+					WHEN CR.[1st Insurance Category] IN ('Workmans Comp') AND Region_short_name IN ('Louisiana') AND SL1.Proentity is not null THEN SL1.Proentity 
+					WHEN CR.[1st Insurance Category] IN ('Workmans Comp') AND Region_short_name IN ('Louisiana') AND SL2.Proentity is not null THEN SL2.Proentity	
 					WHEN Region_short_name in ('Louisiana', 'Mississippi - South') AND CE.ins_folder not in ('Closed Billing Claims') AND CE.claim_date >'2017-04-01' THEN 'Neuroplexus, LLC'	
 					WHEN CR.Region_Short_Name IN ('Louisiana', 'Mississippi - South') AND CE.ins_folder IN ('New Insurance') THEN 'Neuroplexus, LLC'
 					WHEN Region_short_name in ('Arizona') AND ins_folder not in ('Closed Billing Claims') and CE.claim_date > '2017-06-01' Then 'AccuZone Diagnostics, LLC'
@@ -273,7 +273,7 @@ SELECT      CR.PID,
 					WHEN READERFEES.Fee1 = 0 THEN 'Unbillable: ReaderFee' -- ticket #26 kta
 
 					WHEN HL7.[SecondaryGroupID] = 'PB' AND  CR.Reader = 'William VanNess, M.D.' THEN 'Unbillable' -- ticket #22 kta
-					WHEN (Select top 1 BillingCompany from readerfees as rf where rf.readername = CR.Reader and rf.[1st Insurance Category] = CR.[1st Insurance Category] and CR.DOS >= startdate and CR.DOS <= enddate) <> 'ABS' THEN 'Unbillable'	
+					--WHEN (Select top 1 BillingCompany from readerfees as rf where rf.readername = CR.Reader and rf.[1st Insurance Category] = CR.[1st Insurance Category] and CR.DOS >= startdate and CR.DOS <= enddate) <> 'ABS' THEN 'Unbillable'	
 					WHEN ins_folder NOT IN ('New Insurance Billing') AND (PIC.clm_billing_type = 'Tech Only' OR EL.clm_billing_type = 'Tech Only') THEN 'Unbillable' 
 					WHEN CE.ins_folder = 'Closed Billing Claims' THEN 'Closed' 
 					WHEN CR.biller = '' AND CE.biller IS NULL AND CE.ins_folder = 'Ongoing Insurance Billing' THEN 'Closed' 
