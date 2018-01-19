@@ -257,17 +257,21 @@ SELECT      CR.PID,
 			CE.ins_folder AS Folder, 
 			HL.contract_status as ContractType, 
 		CASE	
-					WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Uninsured', 'Self Pay') THEN 'Unbillable' 
+					WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Uninsured', 'Self Pay','Federal Plan', 'Medicaid Advantage Plan') THEN 'Unbillable' --#26 kta added federal plan, map
 					WHEN CR.PID IN (652556,679177) THEN 'Unbillable: Pro Bono'
 					WHEN CR.DOS < '2013-05-01' THEN 'Appealed' 
 					WHEN CR.Reader IN ('* Unassigned *', 'Jane Doe') THEN 'Unbillable' 
 					WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND CR.DOS >= '2017-01-01' THEN 'Unbillable'
-					WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' and CR.[Primary Insurance] like '%Health Choice%' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable'
-					WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' and CR.[Primary Insurance] like '%kempton%' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable'
-					WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital'  AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case' 
-					WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case'
-					WHEN CR.hospital = 'Dublin Surgery Center' THEN 'Unbillable: Bundled Case'
-					WHEN CR.[1st Insurance Category] = 'Medicare Replacement Plan' AND CR.Reader IN ('William High, M.D.', 'William High, M.D., Ph.D.') and cr.dos >= '2016-06-01' THEN 'Unbillable'
+					--WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' and CR.[Primary Insurance] like '%Health Choice%' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable' -- ticket #26 kta
+					--WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' and CR.[Primary Insurance] like '%kempton%' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable'       -- commenting out
+					--WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital'  AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case'                                    -- these 4 lines
+					--WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case'                                     -- replace w/ 1 below
+					WHEN CR.hospital_ID = 3403 AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable Bundled Case' --ticket #26 kta
+					--WHEN CR.hospital = 'Dublin Surgery Center' THEN 'Unbillable: Bundled Case' -- kta see line below
+					WHEN CR.hospital_ID in (4457,4550) THEN 'Unbillable: Bundled Case' --#26 added 4450 kta
+					--WHEN CR.[1st Insurance Category] = 'Medicare Replacement Plan' AND CR.Reader IN ('William High, M.D.', 'William High, M.D., Ph.D.') and cr.dos >= '2016-06-01' THEN 'Unbillable' -- #26 kta see line below
+					WHEN READERFEES.Fee1 = 0 THEN 'Unbillable: ReaderFee' -- ticket #26 kta
+
 					WHEN HL7.[SecondaryGroupID] = 'PB' AND  CR.Reader = 'William VanNess, M.D.' THEN 'Unbillable' -- ticket #22 kta
 					WHEN (Select top 1 BillingCompany from readerfees as rf where rf.readername = CR.Reader and rf.[1st Insurance Category] = CR.[1st Insurance Category] and CR.DOS >= startdate and CR.DOS <= enddate) <> 'ABS' THEN 'Unbillable'	
 					WHEN ins_folder NOT IN ('New Insurance Billing') AND (PIC.clm_billing_type = 'Tech Only' OR EL.clm_billing_type = 'Tech Only') THEN 'Unbillable' 
@@ -372,6 +376,10 @@ FROM            dbo.case_report_3300 AS CR
 			LEFT OUTER JOIN DefaultEntityLookup as DEL on CR.Region_Short_Name = DEL.Region
 			LEFT OUTER JOIN ENTITYLOOKUP2 on CD.Box33 = EntityLookup2.entity
 			LEFT OUTER JOIN correctentityexceptions as CEE on PIC.claim_id = CEE.claimid
+			LEFT OUTER JOIN READERFEES ON 	CR.Reader = READERFEES.ReaderName 
+				AND CR.[1st Insurance Category] = READERFEES.[1st Insurance Category]
+				AND Cr.DOS > READERFEES.startdate 
+				and CR.DOS < READERFEES.enddate
 WHERE        (CR.DOS > '2013-01-01') 
 				AND (CR.Cancelled <> 'Yes') 
 				AND (CR.Deleted <> 'Yes') 
