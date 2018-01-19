@@ -1770,3 +1770,83 @@ insert into entitylookup (client_name,entity,S#C,Region,clm_billing_type,status,
 alter table entitylookup
 	add [Entity_ID]  INT IDENTITY (1, 1) NOT NULL
 select * from entitylookup
+
+--ticket 24 kta
+UPDATE dbo.EntityLookup SET MgmtFee = .3 WHERE client_name = 'OLJ IOM, PLLC'
+UPDATE dbo.EntityLookup SET MgmtFee = .3 WHERE client_name = 'Spring IOM, PLLC'
+UPDATE dbo.EntityLookup SET CoAbbr = 'Pending' WHERE client_name = 'CareSource IOM, LLC'
+UPDATE dbo.EntityLookup SET CoAbbr = 'CDG' WHERE client_name = 'Colony Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET CoAbbr = 'Pending' WHERE client_name = 'Illuminate Monitoring Resources, LLC'
+UPDATE dbo.EntityLookup SET CoAbbr = 'NEO' WHERE client_name = 'Neon Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET CoAbbr = 'NRT' WHERE client_name = 'Neurite Monitoring, LLC'
+UPDATE dbo.EntityLookup SET status = 'Inactive' WHERE client_name = 'Clan IOM, PLLC'
+UPDATE dbo.EntityLookup SET status = 'Inactive' WHERE client_name = 'JJDNM, PLLC'
+UPDATE dbo.EntityLookup SET status = 'Active' WHERE client_name = 'ABK Monitoring Inc., PLLC'
+UPDATE dbo.EntityLookup SET FirstDOS = '12/7/2015' WHERE client_name = 'RRV Neuromonitoring PLLC'
+UPDATE dbo.EntityLookup SET FirstDOS = '3/20/2017' WHERE client_name = 'One Care Monitoring, LLC'
+UPDATE dbo.EntityLookup SET FirstDOS = '12/22/2016' WHERE client_name = 'Grand Canyon Neurology, PLLC'
+UPDATE dbo.EntityLookup SET FirstDOS = '7/10/2014' WHERE client_name = 'Alamo City Neurodiagnostics, PLLC'
+UPDATE dbo.EntityLookup SET FirstDOS = NULL WHERE client_name = 'Willamette Valley IOM, LLC'
+UPDATE dbo.EntityLookup SET FirstDOS = NULL WHERE client_name = 'SPC Horizons, PLLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2009-07-29' WHERE client_name = 'National Neuromonitoring Services'
+UPDATE dbo.EntityLookup SET BillingDate = '2013-04-17' WHERE client_name = 'Physiologic Diagnostic Services'
+UPDATE dbo.EntityLookup SET BillingDate = '2014-12-23' WHERE client_name = 'Cortico Spinal Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2015-03-27' WHERE client_name = 'Red River Neurodiagnostics, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2015-11-02' WHERE client_name = 'ABK Monitoring Inc., PLLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2015-11-04' WHERE client_name = 'Northwest Integer, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2015-11-12' WHERE client_name = 'Synergy Neuromonitoring LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-02-16' WHERE client_name = 'LoneStar Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-03-04' WHERE client_name = 'OKC Synapses, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-03-29' WHERE client_name = 'Neurospine Monitoring, PLLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-04-21' WHERE client_name = 'Neurassure, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-07-19' WHERE client_name = 'AccuZone Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-07-19' WHERE client_name = 'Neon Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-11-26' WHERE client_name = 'Illuminate Monitoring Resources, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-11-29' WHERE client_name = 'Allegiant Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-11-29' WHERE client_name = 'Alpha Monitoring, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-11-29' WHERE client_name = 'CareSource IOM, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-11-29' WHERE client_name = 'Core Neurodiagnostics, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-11-29' WHERE client_name = 'Frontline Healthcare, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-11-29' WHERE client_name = 'Gemini Health, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-11-29' WHERE client_name = 'One Care Monitoring, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2016-11-29' WHERE client_name = 'Radiant Neuromonitoring, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-03-29' WHERE client_name = 'Laser Accurate IOM, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-04-18' WHERE client_name = 'Cerebri Monitoring, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-04-18' WHERE client_name = 'Delta Neuromonitoring, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-04-18' WHERE client_name = 'Flexion Neuromonitoring, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-04-18' WHERE client_name = 'Hypnic Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-04-18' WHERE client_name = 'Mission Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-04-18' WHERE client_name = 'Neurite Monitoring, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-05-04' WHERE client_name = 'Cortex Neuromonitoring, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-05-04' WHERE client_name = 'Monument Diagnosotics, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-05-12' WHERE client_name = 'Shortwave Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-05-16' WHERE client_name = 'Apex Health Monitoring, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-07-31' WHERE client_name = 'Arch Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-07-31' WHERE client_name = 'Colony Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET BillingDate = '2017-10-31' WHERE client_name = 'JB IOM, PLLC'
+UPDATE dbo.EntityLookup SET FirstCollection = '9/26/2017' WHERE client_name = 'AccuZone Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET FirstCollection = '1/10/2018' WHERE client_name = 'Arch Diagnostics, LLC'
+UPDATE dbo.EntityLookup SET FirstCollection = '12/20/2017' WHERE client_name = 'Axon Protective Services, PLLC'
+UPDATE dbo.EntityLookup SET FirstCollection = '11/30/2017' WHERE client_name = 'Delta Neuromonitoring, LLC'
+UPDATE dbo.EntityLookup SET FirstCollection = '11/22/2017' WHERE client_name = 'Facilitate Therapeutics, PLLC'
+UPDATE dbo.EntityLookup SET FirstCollection = '12/1/2017' WHERE client_name = 'Neurite Monitoring, LLC'
+UPDATE dbo.EntityLookup SET FirstCollection = '6/30/2017' WHERE client_name = 'Neuroservice of Virginia, PC'
+UPDATE dbo.EntityLookup SET FirstCollection = '10/10/2017' WHERE client_name = 'Pro Read, LLC'
+UPDATE dbo.EntityLookup SET FirstCollection = '10/25/2017' WHERE client_name = 'Radiant Neuromonitoring, LLC'
+UPDATE dbo.EntityLookup SET FirstCollection = '11/2/2016' WHERE client_name = 'Tempered Medical Holdings, PLLC'
+
+INSERT INTO EntityLookup (client_name, Entity, S#C,	Region,	clm_billing_type, [status], MgmtFee, CoAbbr, SOS_Date, BillingDate, BillingFee, SurgeonOwners, FirstDOS)
+VALUES	('Great Lakes Neuromonitoring, PLLC', 'Great Lakes Neuromonitoring, PLLC', 'Yes', 'Michigan', 'Pro Only', 'Active', 0.3, 'GLN', '11/22/2017', '11/1/2017', 0.08, 'Michael Donahue, D.O.', NULL),
+		('Nostromo, PLLC', 'Nostromo, PLLC', 'Yes', 'Texas - DFW', 'Pro Only', 'Active', 0.3, 'NSO', '12/11/2017', '12/1/2017', 0.08, 'Robert Owens, M.D.', '12/12/2017'),
+		('Greene Neuromonitoring, PLLC', 'Greene Neuromonitoring, PLLC', 'Yes', 'Texas - DFW', 'Pro Only', 'Active', NULL, 'GNM', NULL, NULL, NULL, NULL, '12/22/2017'),
+		('Blackhawk IOM, LLC', 'Blackhawk IOM, LLC', 'Yes', 'Wisconsin', 'Pro Only', 'Active', NULL, 'Pending', NULL, NULL, NULL, 'Thomas J. Perlewitz, M.D', NULL),
+		('Sansome, PLLC', 'Sansome, PLLC', 'No', 'ANES-DFW', 'Anesthesia', 'Active', 0.3, 'SSM', '11/29/2017', '11/29/2017', NULL, 'Kevin James', NULL),
+		('Granite Anesthesia', 'Granite Anesthesia', 'No', 'ANES-DFW', 'Anesthesia', 'Active', NULL, 'Pending', NULL, NULL, NULL, 'Matthew Trovato, M.D.', '8/28/2017'),
+		('INF Anesthesia, PLLC', 'INF Anesthesia, PLLC', 'No', 'ANES-DFW', 'Anesthesia', 'Active', NULL, 'Pending', '9/21/2017', '9/1/2017', NULL, 'Francisco Batlle, M.D.', NULL),
+		('Lagdob Medical, PLLC', 'Lagdob Medical, PLLC', 'No', 'ANES-DFW', 'Anesthesia', 'Active', 0.3, 'LDM', '8/25/2017', '8/25/2017', NULL, 'Jon Krumerman, M.D.', NULL),
+		('Advanced Neuro Monitoring, LLC', 'Advanced Neuro Monitoring, LLC', 'No', 'Louisiana', 'Tech Only', 'Active', NULL, 'ANM', '2/7/2008', '2/7/2008', 0.08, NULL, NULL),
+		('Rehabilitation 469, PLLC', 'Rehabilitation 469, PLLC', 'No', 'ANES-DFW', 'Anesthesia', 'Active', 0.32, 'RHB', '12/15/2017', '12/1/2017', NULL, 'Lewis Frazier, M.D.', NULL),
+		('Camden Anesthesia, PLLC', 'Camden Anesthesia, PLLC', 'No', 'ANES-DFW', 'Anesthesia', 'Active', 0.32, 'CAM', '12/19/2017', '12/1/2017', NULL, 'Melanie Kinchen, M.D.', NULL),
+		('Integrated Anesthesia Services, PLLC', 'Integrated Anesthesia Services, PLLC', 'No', 'ANES-DFW', 'Anesthesia', 'Active', 0.32, 'IAS', '12/11/2017', '12/1/2017', NULL, 'Brian Snell, M.D.', NULL)
+
+
