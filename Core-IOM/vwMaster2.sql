@@ -210,7 +210,8 @@ SELECT      CR.PID,
 
 					WHEN CEE.claimID is not null then CEE.CorrectEntity
 					
-					WHEN CR.surgeon = 'Kevin James, M.D.' and IL.InsuranceGroup = 'Aetna' and CR.[1st Insurance Category]  = 'Private Insurance' and CR.surgeon = 'Kevin James, M.D.' and cr.dos > '2016-04-22' THEN 'Andaz Monitoring, PLLC' 
+		-- #30	kta	WHEN CR.surgeon = 'Kevin James, M.D.' and IL.InsuranceGroup = 'Aetna' and CR.[1st Insurance Category]  = 'Private Insurance' and CR.surgeon = 'Kevin James, M.D.' and cr.dos > '2016-04-22' THEN 'Andaz Monitoring, PLLC' 
+					WHEN CR.surgeon = 'Kevin James, M.D.' and IL.InsuranceGroup = 'Aetna' and CR.[1st Insurance Category]  in ('Private Insurance', 'Aetna') and CR.surgeon = 'Kevin James, M.D.' and cr.dos > '2016-04-22' THEN 'Andaz Monitoring, PLLC' 
 					WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' and CR.[Primary Insurance] like '%kempton%' then 'Neurodiagnostics & Neuromonitoring Institute, Inc.'
 		--			WHEN CR.surgeon = 'Melanie Kinchen, M.D.' and IL.InsuranceGroup = 'Aetna' and CR.DOS >= '2016-06-28' then  'Wilcox Neuromonitoring, PLLC'
 		--			WHEN CR.surgeon = 'Sean Jones-Quaidoo, M.D.' and IL.InsuranceGroup = 'Blue Cross Blue Shield' and CR.DOS >='2016-07-07' then 'Cerebral Axis, PLLC'
