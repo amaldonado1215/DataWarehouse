@@ -2353,3 +2353,22 @@ SET InsuranceCompany = 'HEALHTNET  LIFE INS.' WHERE InsuranceCompany = 'HEALHTNE
 
 INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
 VALUES ('SIMON GREENSTONE PANATIER BARTLETT', 'Attorney Office') 
+
+--ticket #33 kta
+DELETE FROM [dbo].[InsuranceLookup]
+WHERE InsuranceCompany = 'SIMON GREENSTONE'
+
+UPDATE [dbo].[InsuranceLookup]
+SET InsuranceGroup = 'United Healthcare'
+WHERE InsuranceCompany = 'UHC/ OPTUM CARE'
+
+UPDATE [dbo].[InsuranceLookup]
+SET InsuranceGroup = 'United Healthcare'
+WHERE InsuranceCompany = 'United Healthcare Medicaid KANCARE'
+
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('FEDERAL BCBS Of Alaska', 'Blue Cross Blue Shield'),
+		('HSLI', 'Misc Payor'),
+		('LIBERTY HEALTH SHARE', 'Misc Payor'),
+		('MARKEL', 'Misc Payor')
