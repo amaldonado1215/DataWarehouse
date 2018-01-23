@@ -2347,14 +2347,14 @@ SET InsuranceCompany = 'HEALHTNET  LIFE INS.' WHERE InsuranceCompany = 'HEALHTNE
 INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
 VALUES ('SIMON GREENSTONE PANATIER BARTLETT', 'Attorney Office') 
 
-	--ticket #20 kta
+--ticket #20 kta
 UPDATE dbo.InsuranceLookup
 SET InsuranceCompany = 'HEALHTNET  LIFE INS.' WHERE InsuranceCompany = 'HEALHTNET LIFE INS.'
 
 INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
 VALUES ('SIMON GREENSTONE PANATIER BARTLETT', 'Attorney Office') 
 
---ticket #33 kta
+--ticket #35 kta
 DELETE FROM [dbo].[InsuranceLookup]
 WHERE InsuranceCompany = 'SIMON GREENSTONE'
 
