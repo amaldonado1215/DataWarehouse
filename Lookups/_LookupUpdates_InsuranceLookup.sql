@@ -2340,3 +2340,42 @@ VALUES	('ACCEL','Misc Payor'),
 	('UPMC HEALTH PLAN','Misc Payor'),
 	('VOCATIONAL REHABILITATION','Misc Payor')
 
+	--ticket #20 kta
+UPDATE dbo.InsuranceLookup
+SET InsuranceCompany = 'HEALHTNET  LIFE INS.' WHERE InsuranceCompany = 'HEALHTNET LIFE INS.'
+
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES ('SIMON GREENSTONE PANATIER BARTLETT', 'Attorney Office') 
+
+--ticket #20 kta
+UPDATE dbo.InsuranceLookup
+SET InsuranceCompany = 'HEALHTNET  LIFE INS.' WHERE InsuranceCompany = 'HEALHTNET LIFE INS.'
+
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES ('SIMON GREENSTONE PANATIER BARTLETT', 'Attorney Office') 
+
+--ticket #35 kta
+DELETE FROM [dbo].[InsuranceLookup]
+WHERE InsuranceCompany = 'SIMON GREENSTONE'
+
+UPDATE [dbo].[InsuranceLookup]
+SET InsuranceGroup = 'United Healthcare'
+WHERE InsuranceCompany = 'UHC/ OPTUM CARE'
+
+UPDATE [dbo].[InsuranceLookup]
+SET InsuranceGroup = 'United Healthcare'
+WHERE InsuranceCompany = 'United Healthcare Medicaid KANCARE'
+
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('FEDERAL BCBS Of Alaska', 'Blue Cross Blue Shield'),
+		('HSLI', 'Misc Payor'),
+		('LIBERTY HEALTH SHARE', 'Misc Payor'),
+		('MARKEL', 'Misc Payor')
+
+--ticket $36 kta
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('AMBETTER MAGNOLIA HEALTH', 'Misc Payor'),
+		('SPENCER CALAHAN', 'Attorney Office'),
+		('VA-CC CLAIMS-BIG SPRING', 'CHAMPVA')

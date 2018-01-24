@@ -1,14 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Billing Queues",
-    "\\Core-IOM",
+    "\\DataImports",
+    "\\DataWarehouse",
+    "\\DataWarehouse\\DataImports",
+    "\\DataWarehouse\\Emailed Reports",
+    "\\DataWarehouse\\Lookups",
+    "\\DataWarehouse\\Lookups\\Templates",
     "\\Emailed Reports",
-    "\\Lookups",
-    "\\NNHIS Interface",
-    "\\OnlineReports",
-    "\\PA"
+    "\\Lookups"
   ],
-  "SelectedNode": "\\Lookups\\_LookupUpdates_HospitalLookup.sql",
-  "PreviewInSolutionExplorer": false
+  "PreviewInSolutionExplorer": true
 }

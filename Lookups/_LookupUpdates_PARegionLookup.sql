@@ -29,6 +29,8 @@ INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) VALUES ('Toni Wel
 INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) VALUES ('Helena Bruce','PA - Austin','Helena Bruce','PA Active')
 --End Ticket #2376
 
+Update PARegionLookup set Status = 'Not Active' where PA = 'Steve Greer, LSA'		--#30 kta
+
 
 
 

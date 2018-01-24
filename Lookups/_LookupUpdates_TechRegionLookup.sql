@@ -1399,3 +1399,12 @@ WHERE TechName = 'Jessica Schmeets' and [ASSIGNED REGION] = 'Texas - DFW'
 UPDATE dbo.TechRegionLookup
 SET [ASSIGNED REGION] = 'Alaska'
 WHERE TechName = 'Joshua Shumen'
+
+INSERT INTO [dbo].[TechRegionLookup] ('TECH', 'ASSIGNED REGION', 'TechName', 'TechStatus', 'StartDate', 'EndDate')
+Values ('Jose Sala', 'Texas - South Texas', 'Jose Sala', 'Active', '2017-07-02', '2099-12-31')
+
+INSERT INTO dbo.TechRegionLookup (Tech, [ASSIGNED REGION], TechName, TechStatus, StartDate, EndDate) 
+Values ('Hugo Vasquez, MD', 'ANES-DFW', 'Hugo Vasquez', 'Active', '2018-01-07', '2099-12-31')
+
+insert into [dbo].[TechRegionLookup] ( [TECH],[ASSIGNED REGION],[TechName],[TechStatus],[StartDate],[EndDate]) --#31 kta
+values('Stacey Darnley, B.S., CNIM', 'Texas - Austin', 'Stacey Darnley', 'Active', '2017-05-30', '2099-12-31')

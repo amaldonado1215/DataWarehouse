@@ -53,6 +53,11 @@ select CR.PID,
 			end
 			as [2017 PYMT],
 		case
+			when (select sum(ID.Payment_Collected) from Insurance_deposits_3350 as ID where ID.Claim_id=PIC.claim_ID and year(ID.Date_Collected) = 2018) =0 then null  -- ticket 28 kta
+			else (select sum(ID.Payment_Collected) from Insurance_deposits_3350 as ID where ID.Claim_id=PIC.claim_ID and year(ID.Date_Collected) = 2018)
+			end
+			as [2018 PYMT],
+		case
 			when (select sum(ID.Payment_Collected) from Insurance_Deposits_3350 as ID where ID.Claim_id=PIC.claim_ID) = 0 then null
 			else (select sum(ID.Payment_Collected) from Insurance_Deposits_3350 as ID where ID.Claim_id=PIC.claim_ID)
 			end
@@ -77,13 +82,22 @@ select CR.PID,
 				WHEN PIC.claim_id = 832753 THEN 'NPPA Services' -- Ticket 2319 lauren
 				WHEN PIC.claim_id in( 715321,838148, 842859) then 'NPPA Services'
 				WHEN PIC.claim_id in (842862) THEN 'Facilitate Surgical, PLLC'
+				WHEN PIC.claim_id in (421133,434599,421134,424849,424854,424857,424858,436028,447142,447148,447149,447152,
+										447684,458992,459036,460676,460678,460682,460690,460694,460713,460796,460802,473130,
+										473128,473125,473123,473119) THEN 'NPPA Services'	-- added w/ DR no ticket
+
+				when cr.dos > '2016-12-31' and (cr.tech like '%CSFA%' or cr.tech like '%LSA%') then 'Precision Assist of Dallas'--ticket 18 kta  
+				when cr.DOS > '2016-12-31'  and cr.Tech like 'Steve Greer%' or cr.Tech like 'Jerold Greer%' then 'Precision Assist of Dallas'
+
+				WHEN sl.ContractType = 'Hybrid' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield'  and RL.Status = 'SurgeonPA' then rtrim(SL.Entity)  --#30 kta
+				
 				when cr.surgeon = 'Sean Jones-Quaidoo, M.D.' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity)
 				When cr.surgeon = 'Josue Gabriel, M.D.' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity)
 				when cr.tech = 'Jose Fuentez, PA-C'and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity) --ticket 2375 lauren
 		--ticket 2271 lauren: For all encounters in this year, when the surgeon is Adam Bruggeman, M.D. 
 		--and the Tech is Kim Stewart, and the 1st ins type = BCBS then the case defers to SL  else NPPA (current default)
-				when cr.dos > '2016-12-31' and cr.tech in ('Steve Greer, LSA','Jerold Greer') then 'Precision Assist of Dallas'--ticket 2373 lauren
-				when CR.DOS >= '2017-01-01' and CR.Surgeon = 'Adam Bruggeman, M.D.' and cr.tech in ('Kim Stewart, PA-C','Kimberly Stewart, MPAS, PA-C') and CR.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity) --ticket 2402
+	
+		--#30 kta		when CR.DOS >= '2017-01-01' and CR.Surgeon = 'Adam Bruggeman, M.D.' and cr.tech in ('Kim Stewart, PA-C','Kimberly Stewart, MPAS, PA-C') and CR.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity) --ticket 2402
 				when cr.dos < '2017-01-01' and CR.Surgeon = 'Adam Bruggeman, M.D.' and CR.[1st Insurance Category] = 'Blue Cross Blue Shield' then SL.Entity --ticket 2491 lauren
 				when CR.Surgeon = 'Mark Parrella, M.D.' and CR.[1st Insurance Category] = 'Blue Cross Blue Shield' then SL.Entity
 				when ins_charged < 100 and box33 = 'Acquisition Billing Services' then 'Acquisition Billing Services'
@@ -159,13 +173,14 @@ from case_report_3350 as CR
 	LEFT OUTER JOIN PAsurgeonlookup as SL on CR.surgeon = SL.Surgeon and CR.dos >= sl.startdate and CR.dos<= sl.enddate
 	LEFT OUTER JOIN vwPA_hl7_Raw as HL7 on HL7.patient_id = CR.PID
 	LEFT OUTER JOIN (select claim_seq, min(claim_date) as claim_date from claimdatehistorypa group by  claim_seq) cdh on cdh.claim_seq =  CE.claim_seq 
+	LEFT OUTER JOIN PARegionLookup as RL on RL.PA = CR.Tech  --#30 kta
 
 /*	LEFT OUTER JOIN notes_3350 as nt on nt.billing_notes_id = 
 		(select top 1 billing_notes_id from notes_3350 where notes_3350.clm = ce.claim_seq order by initialdate desc)
 	LEFT OUTER JOIN notes_3350 as nt2 on nt.billing_notes_id = 
 		(select top 1 billing_notes_id from notes_3350 where notes_3350.patient_id = ce.patient_id order by initialdate desc)
 */
-where CR.dos > '2013-01-01' 
+where CR.dos > '2015-01-01' 
 	and CR.Cancelled <> 'Yes'
 	and CR.Deleted <> 'Yes'
 	and ( CE.ins_folder <> 'Deleted Claims' or CE.ins_folder is null)

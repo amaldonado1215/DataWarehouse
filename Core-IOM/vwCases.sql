@@ -140,6 +140,7 @@ SELECT
 	dbo.case_report_3300.[Primary Insurance],
 	dbo.case_report_3300.[1st Insurance Category],
 	dbo.case_report_3300.[Secondary Insurance],
+	r.[Secondary Policy, Group ID/Secondary ID No] as [Secondary Insurance Group ID], -- ticket #22 kta
 	dbo.case_report_3300.[2nd Insurance Category],
 	dbo.case_report_3300.Biller,
 	dbo.case_report_3300.[Second Biller],
@@ -244,4 +245,5 @@ FROM dbo.case_report_3300
                             AND sl2.region = Region_Short_Name
                             AND sl2.payor = IL.InsuranceGroup
 	LEFT OUTER JOIN vwCorrectEntityExceptionsByPID as CEE on dbo.case_report_3300.PID = CEE.pid
+	LEFT OUTER JOIN dbo.hl7_raw_data_3300 r on r.patient_id = dbo.case_report_3300.PID -- ticket #22 kta
 WHERE (dbo.case_report_3300.Deleted <> 'Yes') AND (dbo.case_report_3300.Cancelled <> 'Yes')
