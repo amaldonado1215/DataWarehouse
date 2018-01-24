@@ -2372,3 +2372,10 @@ VALUES
 		('HSLI', 'Misc Payor'),
 		('LIBERTY HEALTH SHARE', 'Misc Payor'),
 		('MARKEL', 'Misc Payor')
+
+--ticket $36 kta
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('AMBETTER MAGNOLIA HEALTH', 'Misc Payor'),
+		('SPENCER CALAHAN', 'Attorney Office'),
+		('VA-CC CLAIMS-BIG SPRING', 'CHAMPVA')
