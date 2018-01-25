@@ -37,14 +37,25 @@ SELECT
 		dbo.vwPAMaster.BillStatus AS PABillStatus,
 		dbo.vwPAMaster.GroupID
 FROM  dbo.vwMaster2 
-		LEFT OUTER JOIN dbo.vwPAMaster ON dbo.vwMaster2.Surgeon = dbo.vwPAMaster.iomsurgeonname 
-				AND dbo.vwMaster2.DOS = dbo.vwPAMaster.DOS 
-				AND dbo.vwPAMaster.Patient = dbo.vwMaster2.Patient
-WHERE        
-		(dbo.vwPAMaster.PID IS NOT NULL) 
-				AND (dbo.vwMaster2.clm_billing_type = 'Pro Only') 
-				AND (dbo.vwPAMaster.CorrectEntity IN
-                             (SELECT        Entity
-                               FROM            dbo.PASurgeonLookup
-                               WHERE        (SurgeonOwnd = 'Yes'))) AND (dbo.vwMaster2.Folder NOT IN ('New Insurance Billing')) AND 
-                         (dbo.vwPAMaster.Folder NOT IN ('New Insurance Billing'))
+	INNER JOIN dbo.vwPAMaster ON dbo.vwMaster2.Surgeon = dbo.vwPAMaster.iomsurgeonname				--
+									AND dbo.vwMaster2.DOS = dbo.vwPAMaster.DOS						--
+									AND dbo.vwPAMaster.Patient = dbo.vwMaster2.Patient				--		ticket #40
+WHERE dbo.vwMaster2.clm_billing_type = 'Pro Only'													--		see below
+	AND dbo.vwPAMaster.CorrectEntity IN (	SELECT Entity											--
+											FROM  dbo.PASurgeonLookup								--
+											WHERE SurgeonOwnd = 'Yes')								--
+	AND dbo.vwMaster2.Folder <> 'New Insurance Billing'												--
+	AND dbo.vwPAMaster.Folder <> 'New Insurance Billing'											--
+
+--		LEFT OUTER JOIN dbo.vwPAMaster ON dbo.vwMaster2.Surgeon = dbo.vwPAMaster.iomsurgeonname		=
+--				AND dbo.vwMaster2.DOS = dbo.vwPAMaster.DOS											=
+--				AND dbo.vwPAMaster.Patient = dbo.vwMaster2.Patient									=		looked at query 
+--WHERE																								=		for ticket #40
+--		(dbo.vwPAMaster.PID IS NOT NULL)															=		working as ex-
+--				AND (dbo.vwMaster2.clm_billing_type = 'Pro Only')									=		pected but very
+--				AND (dbo.vwPAMaster.CorrectEntity IN												=		slow. General 
+--                             (SELECT        Entity												=		cleanup and
+--                               FROM            dbo.PASurgeonLookup								=		optimization
+--                               WHERE        (SurgeonOwnd = 'Yes')))								=
+				--AND (dbo.vwMaster2.Folder NOT IN ('New Insurance Billing')) AND					=
+--                         (dbo.vwPAMaster.Folder NOT IN ('New Insurance Billing'))					=
