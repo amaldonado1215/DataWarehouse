@@ -85,12 +85,12 @@ select CR.PID,
 				WHEN PIC.claim_id in (421133,434599,421134,424849,424854,424857,424858,436028,447142,447148,447149,447152,
 										447684,458992,459036,460676,460678,460682,460690,460694,460713,460796,460802,473130,
 										473128,473125,473123,473119) THEN 'NPPA Services'	-- added w/ DR no ticket
-
+				WHEN PIC.claim_id = 1026774 THEN 'NPPA Services' -- Ticket 43 kta
 				when cr.dos > '2016-12-31' and (cr.tech like '%CSFA%' or cr.tech like '%LSA%') then 'Precision Assist of Dallas'--ticket 18 kta  
 				when cr.DOS > '2016-12-31'  and cr.Tech like 'Steve Greer%' or cr.Tech like 'Jerold Greer%' then 'Precision Assist of Dallas'
 
 				WHEN sl.ContractType = 'Hybrid' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield'  and RL.Status = 'SurgeonPA' then rtrim(SL.Entity)  --#30 kta
-				
+				when cr.surgeon = 'Desh Sahni, M.D.' and cr.[1st Insurance Category] = 'Self Pay' then rtrim(SL.Entity)				-- #43 kta
 				when cr.surgeon = 'Sean Jones-Quaidoo, M.D.' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity)
 				When cr.surgeon = 'Josue Gabriel, M.D.' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity)
 				when cr.tech = 'Jose Fuentez, PA-C'and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity) --ticket 2375 lauren
