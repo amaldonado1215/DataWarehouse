@@ -1,3 +1,20 @@
+
+grant insert,update,delete on entitylookup to [STXN\Angelica.maldonado]
+grant insert,update,delete on DefaultEntityLookup to [STXN\Angelica.maldonado]
+grant insert,update,delete on DenialCodeLookup to [STXN\Angelica.maldonado]
+grant insert,update,delete on Holidaylookup to [STXN\Angelica.maldonado]
+grant insert,update,delete on InsuranceLookup to [STXN\Angelica.maldonado]
+grant insert,update,delete on InsuranceTypeLookup to [STXN\Angelica.maldonado]
+grant insert,update,delete on PARegionLookup to [STXN\Angelica.maldonado]
+grant insert,update,delete on SurgeonLookup2 to [STXN\Angelica.maldonado]
+grant insert,update,delete on PASurgeonLookup to [STXN\Angelica.maldonado]
+grant insert,update,delete on READERS to [STXN\Angelica.maldonado]
+grant insert,update,delete on ReaderFees to [STXN\Angelica.maldonado]
+grant insert,update,delete on RegionLookup to [STXN\Angelica.maldonado]
+grant insert,update,delete on RegionTechEntityLookup to [STXN\Angelica.maldonado]
+grant insert,update,delete on UserLookup to [STXN\Angelica.maldonado]
+
+
 select * from pasurgeonlookup
 select count(*) from vwmaster2 --test
 -- 1/8/18
