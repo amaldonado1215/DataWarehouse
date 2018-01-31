@@ -2392,3 +2392,12 @@ VALUES
 --contained duplicates amm
 DELETE FROM [dbo].[InsuranceLookup]
 WHERE InsuranceCompany IN ('ACCLAIM RISK MANAGEMENT, INC.','G. A. TEETER ATTORNEY','Gordon McKernan Attorneys','MSAS','STEWART J GUSS ATTORNEY')
+
+--unmatched insurancelookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('ACCLAIM RISK MANAGEMENT, INC.', 'Misc Payor'),
+		('G. A. TEETER ATTORNEY', 'Attorney Office'),
+		('Gordon McKernan Attorneys', 'Attorney Office'),
+		('MSAS', 'Misc Payor'),
+		('STEWART J GUSS ATTORNEY', 'Attorney Office')
