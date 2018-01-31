@@ -3671,3 +3671,6 @@ insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, p
 insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ('Peter Grays, M.D.','Neurodiagnostics & Neuromonitoring Institute, Inc.', '2014-09-01', '2020-12-31','General Surgeon','*ANY*','ALL','3','13348')
 
 Update surgeonlookup2 set Surgeon = 'Joseph Boucree, M.D.' where SurgeonID = 1982
+-- DR 1/31/18
+update surgeonlookup2 set EndDate = '2017-10-31' where SurgeonID = 451
+update surgeonlookup2 set EndDate = '2017-10-31' where SurgeonID = 450
