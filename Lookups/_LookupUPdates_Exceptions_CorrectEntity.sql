@@ -159,3 +159,8 @@ select claimid, count(*) from correctentityexceptions group by claimid order by 
 select * from CorrectEntityExceptions where PID = '930530'
 insert into CorrectEntityExceptions (ClaimID,PID,CorrectEntity) values ('930530','763797','Ahai, PLLC')
 
+--DR	
+insert into CorrectEntityExceptions (ClaimID,PID,CorrectEntity) values ('969160','766899','Pro Read, LLC')
+
+
+
