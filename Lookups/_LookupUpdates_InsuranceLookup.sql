@@ -2388,3 +2388,7 @@ VALUES
 		('Gordon McKernan Attorneys', 'Attorney Office'),
 		('MSAS', 'Misc Payor'),
 		('STEWART J GUSS ATTORNEY', 'Attorney Office')
+
+--contained duplicates amm
+DELETE FROM [dbo].[InsuranceLookup]
+WHERE InsuranceCompany IN ('ACCLAIM RISK MANAGEMENT, INC.','G. A. TEETER ATTORNEY','Gordon McKernan Attorneys','MSAS','STEWART J GUSS ATTORNEY')
