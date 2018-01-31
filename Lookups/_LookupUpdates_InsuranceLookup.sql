@@ -2379,3 +2379,12 @@ VALUES
 		('AMBETTER MAGNOLIA HEALTH', 'Misc Payor'),
 		('SPENCER CALAHAN', 'Attorney Office'),
 		('VA-CC CLAIMS-BIG SPRING', 'CHAMPVA')
+
+--unmatched insurancelookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('ACCLAIM RISK MANAGEMENT, INC.', 'Misc Payor'),
+		('G. A. TEETER ATTORNEY', 'Attorney Office'),
+		('Gordon McKernan Attorneys', 'Attorney Office'),
+		('MSAS', 'Misc Payor'),
+		('STEWART J GUSS ATTORNEY', 'Attorney Office')
