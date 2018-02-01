@@ -1,6 +1,5 @@
-﻿--ALTER PROCEDURE spEmailUnMatchedPASurgeons
-
-AS 
+﻿ALTER PROCEDURE spEmailUnMatchedPASurgeons
+AS
 
 
 DECLARE @xml NVARCHAR(MAX)
