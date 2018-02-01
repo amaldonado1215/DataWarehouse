@@ -1,14 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Core-IOM",
     "\\DataWarehouse",
-    "\\DataWarehouse\\DataImports",
+    "\\DataWarehouse\\Core-IOM",
     "\\DataWarehouse\\Emailed Reports",
-    "\\DataWarehouse\\Lookups",
-    "\\DataWarehouse\\Lookups\\Templates",
-    "\\Emailed Reports",
-    "\\PA"
+    "\\DataWarehouse\\NNHIS Interface",
+    "\\DataWarehouse\\obj",
+    "\\DataWarehouse\\obj\\Debug",
+    "\\DataWarehouse\\OnlineReports",
+    "\\Emailed Reports"
   ],
-  "SelectedNode": "\\Lookups\\_LookupUpdates_PARegionLookup.sql",
   "PreviewInSolutionExplorer": true
 }
