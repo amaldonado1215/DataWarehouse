@@ -1,15 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Core-IOM",
     "\\DataWarehouse",
     "\\DataWarehouse\\Core-IOM",
     "\\DataWarehouse\\Emailed Reports",
+    "\\DataWarehouse\\Lookups",
     "\\DataWarehouse\\NNHIS Interface",
     "\\DataWarehouse\\obj",
     "\\DataWarehouse\\obj\\Debug",
     "\\DataWarehouse\\OnlineReports",
-    "\\Emailed Reports"
+    "\\Lookups"
   ],
   "PreviewInSolutionExplorer": true
 }
