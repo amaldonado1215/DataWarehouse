@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\DataWarehouse",
+    "\\DataWarehouse\\DataImports",
+    "\\DataWarehouse\\Emailed Reports",
+    "\\DataWarehouse\\Lookups",
+    "\\DataWarehouse\\Lookups\\Templates",
     "\\Emailed Reports",
-    "\\Lookups"
+    "\\PA"
   ],
   "SelectedNode": "\\Lookups\\_LookupUpdates_PARegionLookup.sql",
   "PreviewInSolutionExplorer": true
