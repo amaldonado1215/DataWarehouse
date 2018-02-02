@@ -3674,3 +3674,7 @@ Update surgeonlookup2 set Surgeon = 'Joseph Boucree, M.D.' where SurgeonID = 198
 -- DR 1/31/18
 update surgeonlookup2 set EndDate = '2017-10-31' where SurgeonID = 451
 update surgeonlookup2 set EndDate = '2017-10-31' where SurgeonID = 450
+
+ -- changed column to varchar kim 2/2/2018
+  alter table [dbo].[SurgeonLookup2]
+  alter column [Ranking] varchar(50)
