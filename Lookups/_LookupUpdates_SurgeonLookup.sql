@@ -3666,3 +3666,15 @@ insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, p
  select * from surgeonlookup2 where surgeonid  = 2014
  update surgeonlookup2 set proentity = 'DASO Neuromonitoring, PLLC ' ,startdate = '2017-12-20' where surgeonid = 2014
  
+ --DR 1/24/18
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ('Huay-Zong Law, M.D.','Granite Anesthesia', '2017-08-01','2020-12-31','Plastic Surgeon', '*ANY*','ANES-DFW','1','60018')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ('Peter Grays, M.D.','Neurodiagnostics & Neuromonitoring Institute, Inc.', '2014-09-01', '2020-12-31','General Surgeon','*ANY*','ALL','3','13348')
+
+Update surgeonlookup2 set Surgeon = 'Joseph Boucree, M.D.' where SurgeonID = 1982
+-- DR 1/31/18
+update surgeonlookup2 set EndDate = '2017-10-31' where SurgeonID = 451
+update surgeonlookup2 set EndDate = '2017-10-31' where SurgeonID = 450
+
+ -- changed column to varchar kim 2/2/2018
+  alter table [dbo].[SurgeonLookup2]
+  alter column [Ranking] varchar(50)

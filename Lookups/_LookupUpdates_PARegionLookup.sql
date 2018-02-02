@@ -31,6 +31,24 @@ INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) VALUES ('Helena B
 
 Update PARegionLookup set Status = 'Not Active' where PA = 'Steve Greer, LSA'		--#30 kta
 
+--dr 1/24/18
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) VALUES ('Nickolas Garcia, PA-C','PA - South Texas','Nickolas Garcia','PA ActiveT')
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) VALUES ('Jose Fuentez, PA-C','PA - South Texas', 'Jose Fuentez', 'SurgeonPA')  
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) VALUES ('Scott Naples, PA-C', 'Ohio', 'Scott Naples','SurgeonPA')  
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) VALUES ('William Gronberg, PA-C', 'Arizona','William Gronberg','SurgeonPA')
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) Values ('Bridget Karl Haslam, PA-C','Maryland','Bridget Karl Haslam','SurgeonPA')
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) Values ('Christie Robbins, NP','Maryland','Christi Robbins','SurgeonPA')
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) Values ('Lesli Bullock, NP', 'Oklahoma','Lesli Bullock','SurgeonPA')                         
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) Values ('Vanessa Scialom, PA-C','PA - Austin','Vanessa Scialom','SurgeonPA')                                       
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) Values ('Michael Craig, PA-C','Alaska','Michael Craig','SurgeonPA')
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) Values ('Darren Richards, PA-C','California''Darren Richards','PA Active')
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) Values ('Sandra Ballehr, PA-C','Arizona','Sandra Ballehr','PA Active')
+
+Update PARegionLookup set Status = 'Not Active' where PAName = 'Jeffery Perkins'
+Update PARegionLookup set Status = 'Not Active' where PAName = 'Kimmy Nguyen'
+
+
+
 
 
 

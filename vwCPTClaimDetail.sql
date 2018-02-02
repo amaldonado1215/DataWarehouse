@@ -43,7 +43,8 @@ select CC.patient_id,
 	VM2.[Procedure Type]
 
 from claim_charges_3300 as CC
-INNER JOIN vwmaster2 as VM2 on CC.patient_id = VM2.PID and CC.claim_seq = vm2.claim_id
+--INNER JOIN vwmaster2 as VM2 on CC.patient_id = VM2.PID and CC.claim_seq = vm2.claim_id
+INNER JOIN vwmaster2 as VM2 on /* CC.patient_id = VM2.PID and */ CC.claim_seq = vm2.claim_id   --#
 --INNER JOIN 
 			-- (select claim_seq, min(claim_date) as claim_date, patient_id from claimdatehistory group by  claim_seq, patient_id) cdh on cdh.claim_seq = CC.claim_seq and cdh.patient_id = CC.patient_id
 
