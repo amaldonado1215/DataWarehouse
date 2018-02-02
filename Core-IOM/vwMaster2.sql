@@ -333,11 +333,11 @@ SELECT      CR.PID,
 					WHEN CR.[1st Insurance Category] = 'OTHER' AND  CE.ins_folder = 'Ongoing Insurance Billing' THEN 'Not Billed' 
 					ELSE 'Not Billed' 
 					END AS BillStatusTech,
-			CASE 
+			CAST(CASE													--added cast on Surgeon Ranking due to change on surgeonlookup2
 				WHEN SL1.Ranking is not null then SL1.Ranking
 				WHEN SL2.Ranking is not null then SL2.Ranking
-				ELSE 0
-				END AS SurgeonRanking,
+				ELSE '' 
+				END  as varchar(50)) AS SurgeonRanking,
 			DEL.proentitydefault,
 			DEL.techentitydefault,
 			TCL.Techentity as SurgeonLookupTechEntity,
