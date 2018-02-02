@@ -3,12 +3,9 @@
     "",
     "\\DataImports",
     "\\DataWarehouse",
-    "\\DataWarehouse\\DataImports",
-    "\\DataWarehouse\\Emailed Reports",
-    "\\DataWarehouse\\Lookups",
-    "\\DataWarehouse\\Lookups\\Templates",
     "\\Emailed Reports",
     "\\Lookups"
   ],
+  "SelectedNode": "\\Lookups\\_LookupUpdates_SurgeonLookup.sql",
   "PreviewInSolutionExplorer": true
 }

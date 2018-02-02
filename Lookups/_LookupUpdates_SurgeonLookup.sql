@@ -3666,3 +3666,694 @@ insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, p
  select * from surgeonlookup2 where surgeonid  = 2014
  update surgeonlookup2 set proentity = 'DASO Neuromonitoring, PLLC ' ,startdate = '2017-12-20' where surgeonid = 2014
  
+ -- Tckt 46 closed AM
+insert into surgeonlookup2 (Surgeon, ProEntity, StartDate, EndDate, Specialty, Payor, Region, Ranking, SurgeonContract, SurgeonNo) values ('Kade Huntsman, M.D.','KKMMCB Meidcal, PLLC','2017-12-01','2020-12-31','Orthopedic Surgeon','* ANY*','Utah','','Standard Surgeon',20888)
+insert into surgeonlookup2 (Surgeon, ProEntity, StartDate, EndDate, Specialty, Payor, Region, Ranking, SurgeonContract, SurgeonNo) values ('Kendall Carll, M.D.','TWHS, PLLC','2017-11-01','2020-12-31','Urology','* ANY*','Texas - DFW','','Referring Surgeon',20040)
+insert into surgeonlookup2 (Surgeon, ProEntity, StartDate, EndDate, Specialty, Payor, Region, Ranking, SurgeonContract, SurgeonNo) values ('Lewis Frazier, M.D.','TWHS, PLLC','2017-11-01','2020-12-31','Urology','* ANY*','Texas - DFW','','Referring Surgeon',20082)
+insert into surgeonlookup2 (Surgeon, ProEntity, StartDate, EndDate, Specialty, Payor, Region, Ranking, SurgeonContract, SurgeonNo) values ('Andrew Morchower, M.D.','Greene Monitoring, PLLC','2017-12-01','2020-12-31','Pain Medicine','* ANY*','Texas - DFW','','Referring Surgeon',20890
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=365
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=468
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=336
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=802
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1905
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=337
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=357
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=532
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1894
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=811
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1913
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=814
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=343
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=649
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=344
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=670
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1867
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=351
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=419
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=360
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=590
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1868
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=363
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Hanover' where surgeonid=793
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1850
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=364
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=746
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=383
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=785
+update surgeonlookup2 set Ranking='General', SurgeonContract='JV' where surgeonid=822
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=384
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=784
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=385
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=348
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=459
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=386
+update surgeonlookup2 set Ranking='General', SurgeonContract='Elite' where surgeonid=685
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=387
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=427
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=390
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=2000
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=379
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=481
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=561
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1870
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=393
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=770
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=396
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1917
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Spine Institute of LA' where surgeonid=752
+update surgeonlookup2 set Ranking='General', SurgeonContract='Spine Institute of LA' where surgeonid=1871
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=373
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Spine Institute of LA' where surgeonid=796
+update surgeonlookup2 set Ranking='General', SurgeonContract='Spine Institute of LA' where surgeonid=1864
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=494
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=839
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=560
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=826
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=1847
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=594
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1866
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=492
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=394
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=490
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Hanover' where surgeonid=799
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1851
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=366
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=469
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=367
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=470
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=846
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=798
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=588
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=369
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=472
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=677
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=370
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=473
+update surgeonlookup2 set Ranking='General', SurgeonContract='Elite' where surgeonid=765
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=371
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=474
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=391
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=488
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=613
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1869
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=414
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=355
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=462
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=358
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=463
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=372
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=625
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=707
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=356
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=518
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=745
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=353
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=599
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=349
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=526
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=830
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=833
+update surgeonlookup2 set Ranking='General', SurgeonContract='Hanover' where surgeonid=1856
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Hanover' where surgeonid=821
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=836
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=346
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=457
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=749
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=816
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=501
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=389
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=487
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=834
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=684
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=426
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=533
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=554
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=312
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=535
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=542
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=794
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=341
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=455
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=742
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=493
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=680
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=803
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=307
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=308
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=537
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=538
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Spine Institute of LA' where surgeonid=748
+update surgeonlookup2 set Ranking='General', SurgeonContract='Spine Institute of LA' where surgeonid=1865
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=479
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=345
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=508
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1916
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=764
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=340
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=454
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=744
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=347
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=458
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=572
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=575
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=812
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=810
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=585
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=311
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=519
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=541
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=377
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=478
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=612
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=354
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=818
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=672
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=582
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Elite' where surgeonid=543
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Elite' where surgeonid=1942
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=815
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=428
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=471
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=361
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=465
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=446
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=690
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=570
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=573
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=660
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=571
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=574
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Spine Institute of LA' where surgeonid=753
+update surgeonlookup2 set Ranking='General', SurgeonContract='Spine Institute of LA' where surgeonid=1872
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Hanover' where surgeonid=809
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1860
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=342
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=456
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=611
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=691
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=430
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=497
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=676
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=754
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=309
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=516
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=539
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=838
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Hanover' where surgeonid=805
+update surgeonlookup2 set Ranking='General', SurgeonContract='Hanover' where surgeonid=1857
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Hanover' where surgeonid=800
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1852
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1853
+update surgeonlookup2 set Ranking='General', SurgeonContract='Hanover' where surgeonid=1855
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1903
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=578
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=768
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=586
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=587
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=831
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=777
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=653
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=415
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=350
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=835
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=460
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=335
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=534
+update surgeonlookup2 set Ranking='General', SurgeonContract='Elite' where surgeonid=692
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=525
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1906
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=801
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=657
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=797
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=2001
+update surgeonlookup2 set Ranking='', SurgeonContract='Standard Surgeon' where surgeonid=1997
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=780
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=375
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=476
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=392
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=489
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Hanover' where surgeonid=808
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1859
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=556
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=819
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=681
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=758
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=666
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=447
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=555
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=421
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Spine Institute of LA' where surgeonid=741
+update surgeonlookup2 set Ranking='General', SurgeonContract='Spine Institute of LA' where surgeonid=1863
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=751
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=536
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=495
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=423
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=651
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=475
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=380
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=381
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=482
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=467
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=422
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=338
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=527
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=417
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=605
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1941
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=757
+update surgeonlookup2 set Ranking='', SurgeonContract='Standard Surgeon' where surgeonid=1967
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=395
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=491
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=700
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=825
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=388
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=486
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=683
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=429
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=804
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=418
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1920
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1915
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1890
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1873
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1874
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=843
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=500
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=847
+update surgeonlookup2 set Ranking='General', SurgeonContract='Massoudi ' where surgeonid=1861
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1922
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=844
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1909
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1892
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=374
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=378
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=397
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1999
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1998
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=2003
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=2026
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=531
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=399
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=301
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1910
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=319
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=352
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=806
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=729
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=461
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=334
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1911
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=688
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=760
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=661
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=548
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=659
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=592
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Elite' where surgeonid=817
+update surgeonlookup2 set Ranking='General', SurgeonContract='Elite' where surgeonid=1893
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=445
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=621
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=331
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=514
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Elite' where surgeonid=602
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Elite' where surgeonid=609
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1978
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=832
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=795
+update surgeonlookup2 set Ranking='', SurgeonContract='Referring Surgeon' where surgeonid=1980
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=738
+update surgeonlookup2 set Ranking='General', SurgeonContract='Includes BCBS' where surgeonid=788
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=577
+update surgeonlookup2 set Ranking='Triple VIP', SurgeonContract='Standard Surgeon' where surgeonid=300
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=511
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=506
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=783
+update surgeonlookup2 set Ranking='Triple VIP', SurgeonContract='Standard Surgeon' where surgeonid=792
+update surgeonlookup2 set Ranking='General', SurgeonContract='Inactive' where surgeonid=450
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=376
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=477
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=743
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=841
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=663
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=656
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=439
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=441
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=598
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=622
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=521
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=603
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=606
+update surgeonlookup2 set Ranking='Triple VIP', SurgeonContract='Standard Surgeon' where surgeonid=671
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=619
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1977
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=829
+update surgeonlookup2 set Ranking='', SurgeonContract='Referring Surgeon' where surgeonid=1979
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=773
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=774
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=731
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=761
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=699
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=517
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=407
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=398
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=322
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=509
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=498
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=639
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=569
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=303
+update surgeonlookup2 set Ranking='General', SurgeonContract='Inactive' where surgeonid=451
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=480
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='JV' where surgeonid=718
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Ohio Health' where surgeonid=627
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=401
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=425
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=402
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=406
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1983
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=329
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=628
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=637
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=324
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=837
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=484
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=382
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=614
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=523
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=778
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=781
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=420
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=736
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=725
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=696
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=302
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1918
+update surgeonlookup2 set Ranking='General', SurgeonContract='Aetna Only' where surgeonid=695
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=512
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Excludes Aetna' where surgeonid=404
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=440
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=368
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=448
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=449
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Elite' where surgeonid=604
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=694
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Elite' where surgeonid=790
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1943
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=444
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=408
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=641
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=635
+update surgeonlookup2 set Ranking='General', SurgeonContract='Excludes Aetna' where surgeonid=600
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=499
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=545
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=550
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Ohio Health' where surgeonid=728
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=679
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Excludes Aetna' where surgeonid=823
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Excludes Aetna' where surgeonid=824
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Excludes Aetna' where surgeonid=709
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Excludes Aetna' where surgeonid=710
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Excludes Aetna' where surgeonid=711
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Excludes Aetna' where surgeonid=712
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Excludes Aetna' where surgeonid=713
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Excludes Aetna' where surgeonid=714
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Excludes Aetna' where surgeonid=715
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=779
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Excludes Aetna' where surgeonid=716
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Excludes Aetna' where surgeonid=717
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Excludes Aetna' where surgeonid=1888
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Aetna Only' where surgeonid=314
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=630
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=524
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=437
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=730
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=546
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Elite' where surgeonid=551
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=405
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1875
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1876
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1877
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1878
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1879
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1880
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1881
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1882
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1883
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1884
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1885
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1886
+update surgeonlookup2 set Ranking='General', SurgeonContract='Humana Only' where surgeonid=1887
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1984
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1985
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1994
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1995
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1986
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1987
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1988
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1989
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1990
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1991
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1992
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1993
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=438
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=504
+update surgeonlookup2 set Ranking='General', SurgeonContract='Includes BCBS' where surgeonid=828
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=820
+update surgeonlookup2 set Ranking='Triple VIP', SurgeonContract='Standard Surgeon' where surgeonid=647
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=362
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=466
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=610
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=315
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=317
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=485
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=520
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=436
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=673
+update surgeonlookup2 set Ranking='General', SurgeonContract='Elite' where surgeonid=686
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=412
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=313
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=618
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=782
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=739
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=664
+update surgeonlookup2 set Ranking='Triple VIP', SurgeonContract='JV' where surgeonid=654
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=624
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=642
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=633
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='JV' where surgeonid=553
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=687
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=328
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=650
+update surgeonlookup2 set Ranking='General', SurgeonContract='Includes BCBS' where surgeonid=632
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=452
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=496
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=483
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=726
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1938
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=668
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1973
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=722
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=327
+update surgeonlookup2 set Ranking='Triple VIP', SurgeonContract='JV' where surgeonid=658
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=623
+update surgeonlookup2 set Ranking='Triple VIP', SurgeonContract='Standard Surgeon' where surgeonid=775
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=698
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=321
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=558
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=1849
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=339
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=557
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=443
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=723
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1937
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=330
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=727
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=593
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=640
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=693
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=737
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=644
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=636
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=631
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=318
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=431
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=665
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=733
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=505
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=601
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=755
+update surgeonlookup2 set Ranking='Triple VIP', SurgeonContract='Standard Surgeon' where surgeonid=767
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Elite' where surgeonid=787
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=515
+update surgeonlookup2 set Ranking='', SurgeonContract='Standard Surgeon' where surgeonid=434
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=689
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1936
+update surgeonlookup2 set Ranking='Triple VIP', SurgeonContract='Standard Surgeon' where surgeonid=323
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=510
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=400
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=432
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=719
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=669
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=325
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=326
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=522
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=678
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1968
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=720
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=583
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Elite' where surgeonid=616
+update surgeonlookup2 set Ranking='General', SurgeonContract='Includes BCBS' where surgeonid=646
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=409
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=595
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Elite' where surgeonid=607
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=320
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=529
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=568
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=648
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=655
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='JV' where surgeonid=667
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=596
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=567
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=626
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=629
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=547
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=316
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=530
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=435
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=565
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=597
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=772
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=747
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Elite' where surgeonid=579
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=735
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=674
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1935
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=563
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=562
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=638
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=634
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=645
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=740
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=581
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Standard Surgeon' where surgeonid=591
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=410
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=413
+update surgeonlookup2 set Ranking='General', SurgeonContract='Includes BCBS' where surgeonid=789
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=750
+update surgeonlookup2 set Ranking='Strike Force', SurgeonContract='Standard Surgeon' where surgeonid=442
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=617
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=675
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Hanover' where surgeonid=734
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1934
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=580
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=559
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=662
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=589
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=411
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=310
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=513
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=540
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=732
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=786
+update surgeonlookup2 set Ranking='General', SurgeonContract='Includes BCBS' where surgeonid=652
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Includes BCBS' where surgeonid=433
+update surgeonlookup2 set Ranking='Dallas', SurgeonContract='Includes BCBS' where surgeonid=721
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=756
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=840
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=608
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Elite' where surgeonid=615
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=759
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Elite' where surgeonid=807
+update surgeonlookup2 set Ranking='Triple VIP', SurgeonContract='Elite' where surgeonid=724
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=771
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=766
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=584
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=620
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1908
+update surgeonlookup2 set Ranking='General', SurgeonContract='Includes BCBS' where surgeonid=813
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=564
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=359
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=464
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=507
+update surgeonlookup2 set Ranking='General', SurgeonContract='Massoudi' where surgeonid=1904
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1912
+update surgeonlookup2 set Ranking='General', SurgeonContract='Massoudi' where surgeonid=1848
+update surgeonlookup2 set Ranking='General', SurgeonContract='Massoudi' where surgeonid=1862
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1895
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1907
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1919
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1889
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1939
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1891
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1940
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Hanover' where surgeonid=842
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1854
+update surgeonlookup2 set Ranking='General', SurgeonContract='Massoudi' where surgeonid=1914
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1921
+update surgeonlookup2 set Ranking='General', SurgeonContract='Massoudi' where surgeonid=1923
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=1924
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1925
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1926
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1927
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1928
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1929
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1930
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1931
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1932
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1933
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1944
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1945
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1946
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1947
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1948
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1949
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1950
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1951
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1952
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1953
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1954
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1955
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1956
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1957
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1958
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1959
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1960
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1961
+update surgeonlookup2 set Ranking='', SurgeonContract='Standard Surgeon' where surgeonid=2004
+update surgeonlookup2 set Ranking='Inactive', SurgeonContract='Inactive' where surgeonid=1962
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1963
+update surgeonlookup2 set Ranking='General', SurgeonContract='Massoudi' where surgeonid=1964
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Standard Surgeon' where surgeonid=1965
+update surgeonlookup2 set Ranking='VIP', SurgeonContract='Hanover' where surgeonid=1966
+update surgeonlookup2 set Ranking='General', SurgeonContract='Massoudi' where surgeonid=1969
+update surgeonlookup2 set Ranking='General', SurgeonContract='null' where surgeonid=1970
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1971
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1972
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1974
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1975
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1976
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=1981
+update surgeonlookup2 set Ranking='General', SurgeonContract='Standard Surgeon' where surgeonid=1982
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=1996
+update surgeonlookup2 set Ranking='', SurgeonContract='Standard Surgeon' where surgeonid=2002
+update surgeonlookup2 set Ranking='General', SurgeonContract='Massoudi' where surgeonid=2005
+update surgeonlookup2 set Ranking='', SurgeonContract='Standard Surgeon' where surgeonid=2006
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=2007
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=2008
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=2012
+update surgeonlookup2 set Ranking='General', SurgeonContract='Corporate Surgeon' where surgeonid=2013
+update surgeonlookup2 set Ranking='', SurgeonContract='Ohio Health' where surgeonid=2016
+update surgeonlookup2 set Ranking='', SurgeonContract='Ohio Health' where surgeonid=2017
+update surgeonlookup2 set Ranking='', SurgeonContract='Standard Surgeon' where surgeonid=2018
+update surgeonlookup2 set Ranking='', SurgeonContract='Standard Surgeon' where surgeonid=2024
+update surgeonlookup2 set Ranking='General', SurgeonContract='Ohio Health' where surgeonid=2014
+update surgeonlookup2 set Ranking='', SurgeonContract='Corporate Surgeon' where surgeonid=2011
+update surgeonlookup2 set Ranking='', SurgeonContract='Anesthesia' where surgeonid=2009
+update surgeonlookup2 set Ranking='', SurgeonContract='Corporate Surgeon' where surgeonid=2015
+update surgeonlookup2 set Ranking='', SurgeonContract='Corporate Surgeon' where surgeonid=2010
+update surgeonlookup2 set Ranking='', SurgeonContract='Anesthesia' where surgeonid=2019
+update surgeonlookup2 set Ranking='', SurgeonContract='Anesthesia' where surgeonid=2020
+update surgeonlookup2 set Ranking='', SurgeonContract='Anesthesia' where surgeonid=2021
+update surgeonlookup2 set Ranking='', SurgeonContract='Anesthesia' where surgeonid=2022
+update surgeonlookup2 set Ranking='', SurgeonContract='Anesthesia' where surgeonid=2023
+update surgeonlookup2 set Ranking='', SurgeonContract='Corporate Surgeon' where surgeonid=2025
