@@ -162,5 +162,10 @@ insert into CorrectEntityExceptions (ClaimID,PID,CorrectEntity) values ('930530'
 --DR	
 insert into CorrectEntityExceptions (ClaimID,PID,CorrectEntity) values ('969160','766899','Pro Read, LLC')
 
+--DR
+insert into CorrectEntityExceptions (ClaimID, PID, CorrectEntity) values ('946104','783731','Pro Read, LLC')
+insert into CorrectEntityExceptions (ClaimID, PID, CorrectEntity) values ('951711','784986','Pro Read, LLC')
+
+
 
 
