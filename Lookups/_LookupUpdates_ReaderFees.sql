@@ -1397,3 +1397,22 @@ update readers set readername = 'Shawn Masia, M.D.' where reader_id = 43
 
 select * from readers where readername = 'Grant Warmouth, M.D.'
 INSERT INTO READERS (ReaderName, payrollType, Fee1Max, Fee2Max, ReaderGroup, timezone) VALUES ('Grant Warmouth, M.D.','1099',9999,9999,'Rocky Mountain Neurodiagnostics','MST')
+
+ALTER TABLE dbo.ReaderFees
+drop COLUMN Fee2
+
+ALTER TABLE dbo.ReaderFees
+drop COLUMN Fee3
+
+ALTER TABLE dbo.ReaderFees
+add 
+	Group_Member varchar(50),
+	PR_Type varchar(10),
+	Emp_ID varchar(10),
+	Time_Zone varchar(50),
+	OnCall_StartTime Time,
+	OnCall_EndTime Time,
+	SignOff_Reduction varchar(10),
+	Web_User_ID varchar(10)
+
+exec sp_rename '[ReaderFees].Fee1', 'Neuro_Fee','COLUMN'
