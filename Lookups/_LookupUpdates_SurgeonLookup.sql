@@ -4357,3 +4357,9 @@ update surgeonlookup2 set Ranking='', SurgeonContract='Anesthesia' where surgeon
 update surgeonlookup2 set Ranking='', SurgeonContract='Anesthesia' where surgeonid=2022
 update surgeonlookup2 set Ranking='', SurgeonContract='Anesthesia' where surgeonid=2023
 update surgeonlookup2 set Ranking='', SurgeonContract='Corporate Surgeon' where surgeonid=2025
+
+-- Update to Surgeon Specialty and Payor AMM
+update surgeonlookup2 set Specialty='Spine Surgeon', Payor='* ANY *' where surgeonid=2028
+update surgeonlookup2 set Specialty='Spine Surgeon', Payor='* ANY *' where surgeonid=2029
+update surgeonlookup2 set Payor='* ANY *' where surgeonid=2027
+update surgeonlookup2 set Payor='* ANY *' where surgeonid=2030
