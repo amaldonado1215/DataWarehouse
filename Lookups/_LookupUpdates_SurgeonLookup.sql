@@ -3678,3 +3678,7 @@ update surgeonlookup2 set EndDate = '2017-10-31' where SurgeonID = 450
  -- changed column to varchar kim 2/2/2018
   alter table [dbo].[SurgeonLookup2]
   alter column [Ranking] varchar(50)
+  
+
+  --DR corrected duplicate SageID
+  update SurgeonLookup2 set SurgeonNo = '10081' where surgeonid = 372
