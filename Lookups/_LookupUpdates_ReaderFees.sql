@@ -1397,3 +1397,8 @@ update readers set readername = 'Shawn Masia, M.D.' where reader_id = 43
 
 select * from readers where readername = 'Grant Warmouth, M.D.'
 INSERT INTO READERS (ReaderName, payrollType, Fee1Max, Fee2Max, ReaderGroup, timezone) VALUES ('Grant Warmouth, M.D.','1099',9999,9999,'Rocky Mountain Neurodiagnostics','MST')
+
+
+select * from readerfees
+sP_rename 'readerfees.neuro_fee', 'fee1', 'COLUMN';
+select * from vwmaster2
