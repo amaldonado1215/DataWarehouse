@@ -4363,3 +4363,6 @@ update surgeonlookup2 set Specialty='Spine Surgeon', Payor='* ANY *' where surge
 update surgeonlookup2 set Specialty='Spine Surgeon', Payor='* ANY *' where surgeonid=2029
 update surgeonlookup2 set Payor='* ANY *' where surgeonid=2027
 update surgeonlookup2 set Payor='* ANY *' where surgeonid=2030
+
+-- Update Surgeon Name AMM
+  update surgeonlookup2 set Surgeon='Christopher Taylor, M.D.' where surgeonid=1952
