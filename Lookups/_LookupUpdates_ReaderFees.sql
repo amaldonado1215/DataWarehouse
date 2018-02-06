@@ -1405,3 +1405,71 @@ DELETE FROM ReaderFees WHERE Reader_ID=16
 UPDATE ReaderFees SET ReaderName='Michelle Mora, D.O.' WHERE Reader_ID=35
 UPDATE ReaderFees SET ReaderName='William Gulledge Jr, M.D.' WHERE Reader_ID=39
 UPDATE ReaderFees SET [1st Insurance Category]='Medicare' WHERE ReaderFee_ID=557
+
+UPDATE READERFEES SET StartDate='3/1/2011' WHERE Reader_ID=1
+UPDATE READERFEES SET StartDate='3/1/2011' WHERE Reader_ID=2
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=3
+UPDATE READERFEES SET StartDate='4/1/2014', EndDate='5/31/2016' WHERE Reader_ID=4
+UPDATE READERFEES SET StartDate='11/1/2012', EndDate='3/31/2017' WHERE Reader_ID=5
+UPDATE READERFEES SET StartDate='10/1/2011', EndDate='9/30/2014' WHERE Reader_ID=6
+UPDATE READERFEES SET StartDate='3/1/2015', EndDate='6/21/2017' WHERE Reader_ID=7
+UPDATE READERFEES SET StartDate='6/1/2014', EndDate='6/12/2017' WHERE Reader_ID=8
+UPDATE READERFEES SET StartDate='10/1/2015', EndDate='12/31/2015' WHERE Reader_ID=12
+UPDATE READERFEES SET StartDate='3/1/2011', EndDate='8/31/2017' WHERE Reader_ID=13
+UPDATE READERFEES SET StartDate='3/1/2011' WHERE Reader_ID=14
+UPDATE READERFEES SET StartDate='4/30/2016', EndDate='8/31/2016' WHERE Reader_ID=15
+UPDATE READERFEES SET StartDate='8/1/2016' WHERE Reader_ID=17
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=18
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=19
+UPDATE READERFEES SET StartDate='8/1/2016' WHERE Reader_ID=20
+UPDATE READERFEES SET StartDate='7/1/2016', EndDate='7/11/2017' WHERE Reader_ID=22
+UPDATE READERFEES SET StartDate='7/1/2016', EndDate='2/28/2017' WHERE Reader_ID=23
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=24
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=25
+UPDATE READERFEES SET StartDate='6/1/2016', EndDate='7/31/2016' WHERE Reader_ID=27
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=28
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=29
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=30
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=31
+UPDATE READERFEES SET StartDate='3/1/2011' WHERE Reader_ID=34
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=35
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=36
+UPDATE READERFEES SET StartDate='9/1/2016' WHERE Reader_ID=37
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=38
+UPDATE READERFEES SET StartDate='4/1/2016', EndDate='9/4/2017' WHERE Reader_ID=39
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=40
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=41
+UPDATE READERFEES SET StartDate='5/1/2016' WHERE Reader_ID=42
+UPDATE READERFEES SET StartDate='10/1/2016', EndDate='8/6/2017' WHERE Reader_ID=26
+UPDATE READERFEES SET Group_Member='Neurodiagnostics, Rocky Mountain', PR_TYPE='1099', Emp_ID=61082, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=5639 WHERE Reader_ID=1
+UPDATE READERFEES SET Group_Member='Neurodiagnostics, Rocky Mountain', PR_TYPE='1099', Emp_ID=61082, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=388 WHERE Reader_ID=2
+UPDATE READERFEES SET Group_Member='Neurology PS, Seattle', PR_TYPE='1099', Emp_ID=61087, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=1691 WHERE Reader_ID=4
+UPDATE READERFEES SET Group_Member='Wolinsky MD PA, Joel', PR_TYPE='1099', Emp_ID=61049, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=565 WHERE Reader_ID=5
+UPDATE READERFEES SET Group_Member='Keith Preston, M.D.', PR_TYPE='1099', Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=525 WHERE Reader_ID=6
+UPDATE READERFEES SET Group_Member='Mitchell, Thomas A', PR_TYPE='PR', Emp_ID=61119, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=1840 WHERE Reader_ID=7
+UPDATE READERFEES SET Group_Member='High Jr, William L', PR_TYPE='PR', Emp_ID=61122, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=1174 WHERE Reader_ID=8
+UPDATE READERFEES SET Group_Member='nopay', PR_TYPE='no pay', Time_Zone='', OnCall_StartTime='', OnCall_EndTime='', SignOff_Reduction=0, Web_User_Id=391 WHERE Reader_ID=10
+UPDATE READERFEES SET Group_Member='nopay', PR_TYPE='no pay', Time_Zone='', OnCall_StartTime='', OnCall_EndTime='', SignOff_Reduction=0 WHERE Reader_ID=11
+UPDATE READERFEES SET Group_Member='Tarbox, Peter', PR_TYPE='PR', Emp_ID=61099, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=1680 WHERE Reader_ID=12
+UPDATE READERFEES SET Group_Member='The Pain &, Rehab Institute', PR_TYPE='1099', Emp_ID=61100, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=33 WHERE Reader_ID=13
+UPDATE READERFEES SET Group_Member='Neurodiagnostics, Rocky Mountain', PR_TYPE='1099', Emp_ID=61082, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=1818 WHERE Reader_ID=14
+UPDATE READERFEES SET Group_Member='Joseph Acosta, M.D.', PR_TYPE='PR', Emp_ID=61104, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0 WHERE Reader_ID=15
+UPDATE READERFEES SET Group_Member='Sternick, Cary S', PR_TYPE='1099', Emp_ID=61112, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=1186 WHERE Reader_ID=17
+UPDATE READERFEES SET Group_Member='Neiman, Eli S', PR_TYPE='PR', Emp_ID=61106, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=6832 WHERE Reader_ID=20
+UPDATE READERFEES SET Group_Member='Halsell, D.O. PLLC, Jeffrey S', PR_TYPE='1099', Emp_ID=61108, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=1527 WHERE Reader_ID=22
+UPDATE READERFEES SET Group_Member='Callerame, M.D, Kevin', PR_TYPE='PR', Emp_ID=61111, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=6916 WHERE Reader_ID=23
+UPDATE READERFEES SET Group_Member='RTNA, PC', PR_TYPE='1099', Emp_ID=61109, Time_Zone='Hospital', OnCall_StartTime='6:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=739 WHERE Reader_ID=25
+UPDATE READERFEES SET Group_Member='Kutsy, Roman L', PR_TYPE='PR', Emp_ID=61107, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=6766 WHERE Reader_ID=27
+UPDATE READERFEES SET Group_Member='Real Time Neuromonitoring , Associates NV, PC', PR_TYPE='1099', Emp_ID=61113, Time_Zone='Hospital', OnCall_StartTime='6:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=1336 WHERE Reader_ID=28
+UPDATE READERFEES SET Group_Member='RTNA, PC', PR_TYPE='1099', Emp_ID=61109, Time_Zone='Hospital', OnCall_StartTime='6:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=5812 WHERE Reader_ID=29
+UPDATE READERFEES SET Group_Member='RTNA, PC', PR_TYPE='1099', Emp_ID=61109, Time_Zone='Hospital', OnCall_StartTime='6:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=1398 WHERE Reader_ID=30
+UPDATE READERFEES SET Group_Member='RTNA, PC', PR_TYPE='1099', Emp_ID=61109, Time_Zone='Hospital', OnCall_StartTime='6:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=1448 WHERE Reader_ID=31
+UPDATE READERFEES SET Group_Member='Neurodiagnostics, Rocky Mountain', PR_TYPE='1099', Emp_ID=61082, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=7192 WHERE Reader_ID=34
+UPDATE READERFEES SET Group_Member='RTNA, PC', PR_TYPE='1099', Emp_ID=61109, Time_Zone='Hospital', OnCall_StartTime='6:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=6975 WHERE Reader_ID=35
+UPDATE READERFEES SET Group_Member='RTNA, PC', PR_TYPE='1099', Emp_ID=61109, Time_Zone='Hospital', OnCall_StartTime='6:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=498 WHERE Reader_ID=36
+UPDATE READERFEES SET Group_Member='David Adams, M.D.', PR_TYPE='1099', Emp_ID=61116, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=5900 WHERE Reader_ID=37
+UPDATE READERFEES SET Group_Member='RTNA, PC', PR_TYPE='1099', Emp_ID=61109, Time_Zone='Hospital', OnCall_StartTime='6:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=1211 WHERE Reader_ID=38
+UPDATE READERFEES SET Group_Member='Gulledge, M.D, William R', PR_TYPE='PR', Emp_ID=61105, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=670 WHERE Reader_ID=39
+UPDATE READERFEES SET Group_Member='RTNA, PC', PR_TYPE='1099', Emp_ID=61109, Time_Zone='Hospital', OnCall_StartTime='6:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=1421 WHERE Reader_ID=40
+UPDATE READERFEES SET Group_Member='RTNA, PC', PR_TYPE='1099', Emp_ID=61109, Time_Zone='Hospital', OnCall_StartTime='6:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=659 WHERE Reader_ID=42
+UPDATE READERFEES SET Group_Member='Hyson, MD PC, Morton', PR_TYPE='1099', Emp_ID=61114, Time_Zone='Neurologist', OnCall_StartTime='5:00:00 PM', OnCall_EndTime='6:00:00 AM', SignOff_Reduction=0, Web_User_Id=1120 WHERE Reader_ID=26
