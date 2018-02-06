@@ -1397,3 +1397,11 @@ update readers set readername = 'Shawn Masia, M.D.' where reader_id = 43
 
 select * from readers where readername = 'Grant Warmouth, M.D.'
 INSERT INTO READERS (ReaderName, payrollType, Fee1Max, Fee2Max, ReaderGroup, timezone) VALUES ('Grant Warmouth, M.D.','1099',9999,9999,'Rocky Mountain Neurodiagnostics','MST')
+
+--ReaderFees Cleanup
+DELETE FROM ReaderFees WHERE Reader_ID=9
+DELETE FROM ReaderFees WHERE Reader_ID=21
+DELETE FROM ReaderFees WHERE Reader_ID=16
+UPDATE ReaderFees SET ReaderName='Michelle Mora, D.O.' WHERE Reader_ID=35
+UPDATE ReaderFees SET ReaderName='William Gulledge Jr, M.D.' WHERE Reader_ID=39
+UPDATE ReaderFees SET [1st Insurance Category]='Medicare' WHERE ReaderFee_ID=557
