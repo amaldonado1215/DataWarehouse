@@ -2401,3 +2401,11 @@ VALUES
 		('Gordon McKernan Attorneys', 'Attorney Office'),
 		('MSAS', 'Misc Payor'),
 		('STEWART J GUSS ATTORNEY', 'Attorney Office')
+
+--unmatched insurancelookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('FUTURE CARE INC', 'Misc Payor'),
+		('HANOVER LLOYDS INS COMPANY', 'Misc Payor'),
+		('TEXAS GUARANTEE ASSOC', 'Misc Payor'),
+		('Tony Nguyen Law Firm, PLLC', 'Attorney Office')
