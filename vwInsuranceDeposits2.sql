@@ -1,6 +1,7 @@
 ALTER VIEW vwInsuranceDeposits2 as 
 
-select ID.Full_Name,
+select --ID.Full_Name,
+	LEFT(ID.First_Name,1) + '. ' + LEFT(ID.Last_Name,1) + '.' as Full_Name,
 	ID.Region_SHort_Name,
 	ID.claim_seq,
 	ID.check_no,

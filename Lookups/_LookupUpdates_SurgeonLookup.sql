@@ -3682,3 +3682,7 @@ update surgeonlookup2 set EndDate = '2017-10-31' where SurgeonID = 450
 
   --DR corrected duplicate SageID
   update SurgeonLookup2 set SurgeonNo = '10081' where surgeonid = 372
+
+/* ticket 42 kta new field populates whenever record is added or changed via trg_SurgeonLookupChange */
+ALTER TABLE dbo.SurgeonLookup2
+ADD Modify_Date datetime null DEFAULT getdate()  

@@ -1,15 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DataWarehouse",
-    "\\DataWarehouse\\Core-IOM",
-    "\\DataWarehouse\\Emailed Reports",
-    "\\DataWarehouse\\Lookups",
-    "\\DataWarehouse\\NNHIS Interface",
-    "\\DataWarehouse\\obj",
-    "\\DataWarehouse\\obj\\Debug",
-    "\\DataWarehouse\\OnlineReports",
+    "\\DataImports",
     "\\Lookups"
   ],
+  "SelectedNode": "\\Lookups\\_LookupUpdates_SurgeonLookup.sql",
   "PreviewInSolutionExplorer": true
 }
