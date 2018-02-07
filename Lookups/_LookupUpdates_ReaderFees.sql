@@ -1852,3 +1852,10 @@ INSERT INTO READERFEES (Reader_ID,ReaderName,Group_Member,BillingCompany,PR_TYPE
 INSERT INTO READERFEES (Reader_ID,ReaderName,Group_Member,BillingCompany,PR_TYPE,[1st Insurance Category],Emp_ID,fee1,StartDate,EndDate,Time_Zone,OnCall_StartTime,OnCall_EndTime,SignOff_Reduction,Web_User_Id) VALUES(42,'Marcos Cruz, M.D.','RTNA, PC','ABS','1099','Aetna',61109,185,'5/1/2016','12/31/2020','Hospital','6:00:00 PM','6:00:00 AM',0,659)
 INSERT INTO READERFEES (Reader_ID,ReaderName,Group_Member,BillingCompany,PR_TYPE,[1st Insurance Category],Emp_ID,fee1,StartDate,EndDate,Time_Zone,OnCall_StartTime,OnCall_EndTime,SignOff_Reduction,Web_User_Id) VALUES(42,'Marcos Cruz, M.D.','RTNA, PC','ABS','1099','Patient Responsibility',61109,0,'5/1/2016','12/31/2020','Hospital','6:00:00 PM','6:00:00 AM',0,659)
 INSERT INTO READERFEES (Reader_ID,ReaderName,Group_Member,BillingCompany,PR_TYPE,[1st Insurance Category],Emp_ID,fee1,StartDate,EndDate,Time_Zone,OnCall_StartTime,OnCall_EndTime,SignOff_Reduction,Web_User_Id) VALUES(42,'Marcos Cruz, M.D.','RTNA, PC','none','1099','Uninsured',61109,185,'5/1/2016','12/31/2020','Hospital','6:00:00 PM','6:00:00 AM',0,659)
+
+--Duplicates amm
+  DELETE FROM ReaderFees WHERE ReaderFee_ID=470
+  DELETE FROM ReaderFees WHERE ReaderFee_ID=959
+  DELETE FROM ReaderFees WHERE ReaderFee_ID=471
+  DELETE FROM ReaderFees WHERE ReaderFee_ID=543
+  DELETE FROM ReaderFees WHERE ReaderFee_ID=549
