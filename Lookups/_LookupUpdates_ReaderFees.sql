@@ -1398,6 +1398,12 @@ update readers set readername = 'Shawn Masia, M.D.' where reader_id = 43
 select * from readers where readername = 'Grant Warmouth, M.D.'
 INSERT INTO READERS (ReaderName, payrollType, Fee1Max, Fee2Max, ReaderGroup, timezone) VALUES ('Grant Warmouth, M.D.','1099',9999,9999,'Rocky Mountain Neurodiagnostics','MST')
 
+<<<<<<< HEAD
+
+select * from readerfees
+sP_rename 'readerfees.neuro_fee', 'fee1', 'COLUMN';
+select * from vwmaster2
+=======
 CREATE TABLE [dbo].[ReaderFees](
 	[ReaderFee_ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
 	[Reader_ID] [numeric](18, 0) NULL,
@@ -2034,3 +2040,4 @@ values(1, 'Badreldin Ibrahim, M.D.', 'ABS',  'Blue Cross Blue Shield', 210, '01/
 (39, 'William Gulledge, M.D.', 'ABS',  'TRICARE', 225, '01/01/2010', '12/30/2020'),
 (39, 'William Gulledge, M.D.', 'ABS',  'Workmans Comp', 225, '01/01/2010', '12/30/2020'),
 (39, 'William Gulledge, M.D.', 'ABS',  'Federal Plan', 225, '01/01/2010', '12/31/2020')
+>>>>>>> 0ca12ba1c887bd2e4a05183419142f145bd859e9
