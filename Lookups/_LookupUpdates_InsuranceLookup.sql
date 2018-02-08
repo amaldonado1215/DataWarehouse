@@ -2410,3 +2410,19 @@ VALUES
 		('TEXAS GUARANTEE ASSOC', 'Misc Payor'),
 		('Tony Nguyen Law Firm, PLLC', 'Attorney Office')
 
+--unmatched insurancelookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('FUTURE CARE INC', 'Misc Payor'),
+		('HANOVER LLOYDS INS COMPANY', 'Misc Payor'),
+		('TEXAS GUARANTEE ASSOC', 'Misc Payor'),
+		('Tony Nguyen Law Firm, PLLC', 'Attorney Office')
+
+--unmatched insurancelookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('Amerigroup Texas', 'Misc Payor'),
+		('SIMPLIFY STUDY', 'Misc Payor'),
+		('TORRENCE HEALTH IPA', 'Misc Payor'),
+		('USABLE MUTUAL', 'Misc Payor'),
+		('GUERRA,GUERRA, AND ASSOCIATES', 'Attorney Office')
