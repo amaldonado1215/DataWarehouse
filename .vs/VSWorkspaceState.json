@@ -1,9 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DataImports",
-    "\\Lookups"
+    "\\DataWarehouse",
+    "\\DataWarehouse\\DataImports",
+    "\\DataWarehouse\\Emailed Reports",
+    "\\DataWarehouse\\Lookups",
+    "\\DataWarehouse\\OnlineReports",
+    "\\DataWarehouse\\PA",
+    "\\Emailed Reports",
+    "\\OnlineReports",
+    "\\PA"
   ],
-  "SelectedNode": "\\Lookups\\_LookupUpdates_SurgeonLookup.sql",
   "PreviewInSolutionExplorer": true
 }

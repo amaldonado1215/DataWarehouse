@@ -146,3 +146,8 @@ select * from dbo.notes_3300 where web_id in (8699, 8698, 8700, 8701)
 select * from agents where id = 8722
 select * from dbo.notes_3300 where web_id = 8722
 --add these agents Andra Lang 8722
+
+--ticket #54 kta
+select * from agents where id in (9187,9081)
+select * from dbo.notes_3300 where web_id in (9187,9081)
+-- add 9187,9081
