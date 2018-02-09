@@ -306,7 +306,7 @@ SELECT      CR.PID,
 					WHEN CR.surgeon IN ('Arnold Vardiman, M.D.') AND reader IN ('Jane Doe', '* Unassigned *') THEN 'Unbillable: Vardiman No Reader'
 					WHEN CR.Hospital IN ('HonorHealth Deer Valley Medical Center', 'Scottsdale Shea Medical Center') THEN 'Unbillable: Ticket#1723'
 					WHEN CR.Hospital IN ('University of Maryland Baltimore Washington Medical Center', 'Torrance Memorial Medical Center')  then 'Unbillable facilitycontract' -- Ticket #1778
-					
+					WHEN CR.Hospital_ID IN (4550) AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: PI Case per Contract'   -- ticket #55
 					-- STEP 3
 					WHEN CE.ins_folder = 'Closed Billing Claims' THEN 'Closed' 
 
