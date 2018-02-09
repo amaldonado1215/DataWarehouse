@@ -1849,4 +1849,6 @@ VALUES	('Great Lakes Neuromonitoring, PLLC', 'Great Lakes Neuromonitoring, PLLC'
 		('Camden Anesthesia, PLLC', 'Camden Anesthesia, PLLC', 'No', 'ANES-DFW', 'Anesthesia', 'Active', 0.32, 'CAM', '12/19/2017', '12/1/2017', NULL, 'Melanie Kinchen, M.D.', NULL),
 		('Integrated Anesthesia Services, PLLC', 'Integrated Anesthesia Services, PLLC', 'No', 'ANES-DFW', 'Anesthesia', 'Active', 0.32, 'IAS', '12/11/2017', '12/1/2017', NULL, 'Brian Snell, M.D.', NULL)
 
-
+--New Entities amm
+INSERT INTO EntityLookup (client_name,Entity,S#C,Region,clm_billing_type,status,SOS_Date,BillingDate,BillingFee,SurgeonOwners) VALUES ('Midwest Monitoring, LLC','Midwest Monitoring, LLC','Yes','Wisconsin','Pro Only','Active','11/15/2017','11/1/2017',0.08,'David C. Dewitt, M.D.')
+INSERT INTO EntityLookup (client_name,Entity,S#C,Region,clm_billing_type,status,SOS_Date,BillingDate,BillingFee,SurgeonOwners) VALUES ('KKMMCB Medical, PLLC','KKMMCB Medical, PLLC','Yes','Utah','Pro Only','Active','12/20/2017','12/1/2017',0.08,'Kade Huntsman, M.D.')
