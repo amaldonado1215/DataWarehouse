@@ -114,7 +114,7 @@ select CR.PID,
 				when CR.DOS <'2015-07-23' and CR.Region_Short_Name = 'PA - South Texas' then 'Precision Assist of San Antonio'
 				when CR.DOS <'2015-07-23' and CR.Region_Short_Name = 'PA - Austin' then 'Precision Assist of San Antonio'
 				when CR.DOS <'2015-07-23' and CR.Region_Short_Name = 'PA - DFW' then 'Precision Assist of Dallas'
-				when cr.dos > '2016-12-31' and (cr.tech like '%CSFA%' or cr.tech like '%LSA%') then 'Precision Assist of Dallas'-- ticket 49 kta
+				when cr.dos > '2016-12-31' and (cr.tech like '%CSFA%' or cr.tech like '%LSA%') or (cr.Tech like 'Jerold Greer%') then 'Precision Assist of Dallas'-- ticket 49 kta -- #56 kta
 				when CR.DOS >='2015-07-23' then 'NPPA Services'
 				else rtrim(SL.Entity)
 				end
