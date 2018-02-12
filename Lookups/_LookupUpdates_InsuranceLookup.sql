@@ -2425,3 +2425,35 @@ VALUES
 		('AETNA BETTER HEALTH OF OHIO', 'Aetna'),
 		('HASTINGS MUTUAL INSURANCE COMPANY', 'Misc Payor'),
 		('MISSISSIPPI HEALTH PARTNERS', 'Misc Payor')
+
+--PAMaster blank Consolidated Payors amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('Allied National-Global Care', 'Misc Payor'),
+		('Ambetter from Health Net', 'Misc Payor'),
+		('ANTHEM CALIFORNIA', 'Blue Cross Blue Shield'),
+		('BCBS of Maryland', 'Blue Cross Blue Shield'),
+		('BCBS Virginia', 'Blue Cross Blue Shield'),
+		('BLUE CROSS BLUE SHIELD OF AZ', 'Blue Cross Blue Shield'),
+		('HEALTH-NET COMMERCIAL CLAIMS', 'Misc Payor'),
+		('InsuranceTPA', 'Misc Payor'),
+		('MHBP', 'Misc Payor'),
+		('Molina', 'Misc Payor'),
+		('NATIONAL INTERSTATE INSURANCE CO', 'Misc Payor'),
+		('OPTUMCARE', 'Misc Payor'),
+		('OSCAR INSURANCE COMPANY OF TEXAS', 'Misc Payor'),
+		('RAILROAD MEDICARE PALMETTO GBA', 'Misc Payor'),
+		('Service LLoyd Workmancomp', 'Misc Payor'),
+		('The Ferraro Law Fimr, PC', 'Attorney Office'),
+		('TREVINO LAW, PLLC', 'Attorney Office'),
+		('UHC AARP MEDICARE COMPLETE', 'United Healthcare'),
+		('UHC Medicare Solutions', 'United Healthcare'),
+		('Cigna HealthSpring Star Plus', 'Misc Payor')
+
+UPDATE [dbo].[InsuranceLookup]
+SET InsuranceCompany = 'BCBS Virgina'
+WHERE InsuranceCompany = 'BCBS Virginia'
+
+UPDATE [dbo].[InsuranceLookup]
+SET InsuranceCompany = 'The Ferraro Law Firm, PC'
+WHERE InsuranceCompany = 'The Ferraro Law Fimr, PC'
