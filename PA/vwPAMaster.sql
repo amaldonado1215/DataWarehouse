@@ -89,7 +89,8 @@ select CR.PID,
 				--when cr.dos > '2016-12-31' and (cr.tech like '%CSFA%' or cr.tech like '%LSA%') then 'Precision Assist of Dallas'--ticket 18 kta  -- ticket 49 kta
 				--when cr.DOS > '2016-12-31'  and cr.Tech like 'Steve Greer%' or cr.Tech like 'Jerold Greer%' then 'Precision Assist of Dallas'
 
-				WHEN sl.ContractType = 'Hybrid' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield'  and RL.Status = 'SurgeonPA' then rtrim(SL.Entity)  --#30 kta
+				--WHEN sl.ContractType = 'Hybrid' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield'  and RL.Status = 'SurgeonPA' then rtrim(SL.Entity)  --#30 kta
+				WHEN sl.ContractType = 'Hybrid' and RL.Status = 'SurgeonPA' and (CR.[Primary Insurance] like '%Blue Cross%' or CR.[Primary Insurance] like '%BCBS%') then rtrim(SL.Entity) --#57 kta
 				when cr.surgeon = 'Desh Sahni, M.D.' and cr.[1st Insurance Category] = 'Self Pay' then rtrim(SL.Entity)				-- #43 kta
 				when cr.surgeon = 'Sean Jones-Quaidoo, M.D.' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity)
 				When cr.surgeon = 'Josue Gabriel, M.D.' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity)

@@ -27,7 +27,8 @@ SELECT        CR.PID,
 				Case
 					WHEN CR.PID = 682891 THEN 'NPPA Services' -- Ticket 2319 lauren
 					when CR.DOS <'2017-10-01' and CR.surgeon = 'Edward Seade, M.D.' and cr.[1st Insurance Category] = 'Letter of Protection'  then 'NPPA Services' --ticket 2386 lauren
-					WHEN sl.ContractType = 'Hybrid' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield'  and RL.Status = 'SurgeonPA' then rtrim(SL.Entity)  --#30 kta
+				--WHEN sl.ContractType = 'Hybrid' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield'  and RL.Status = 'SurgeonPA' then rtrim(SL.Entity)  --#30 kta
+					WHEN sl.ContractType = 'Hybrid' and RL.Status = 'SurgeonPA' and (CR.[Primary Insurance] like '%Blue Cross%' or CR.[Primary Insurance] like '%BCBS%') then rtrim(SL.Entity) --#57 kta
 				--ticket 2246 lauren: If the surgeon = Adam Bruggeman, M.D. and the Insurance Type = Letter of Protection,
 				--and the Tech does not equal "Kim Stewart, PA-C" then the correct entity is NPPA Services
 				    when cr.surgeon = 'Adam Bruggeman, M.D.' and cr.[1st Insurance Category] = 'Letter of Protection' and cr.tech <> 'Kim Stewart, PA-C' then 'NPPA Services'
@@ -47,7 +48,8 @@ SELECT        CR.PID,
 					when CR.DOS <'2015-07-23' and CR.Region_Short_Name = 'PA - South Texas' then 'Precision Assist of San Antonio'
 					when CR.DOS <'2015-07-23' and CR.Region_Short_Name = 'PA - Austin' then 'Precision Assist of San Antonio'
 					when CR.DOS <'2015-07-23' and CR.Region_Short_Name = 'PA - DFW' then 'Precision Assist of Dallas'
-					when cr.dos > '2016-12-31' and (cr.tech like '%CSFA%' or cr.tech like '%LSA%') then 'Precision Assist of Dallas'--ticket 18 kta ticket 49 kta
+					--when cr.dos > '2016-12-31' and (cr.tech like '%CSFA%' or cr.tech like '%LSA%') then 'Precision Assist of Dallas'--ticket 18 kta ticket 49 kta
+					when cr.dos > '2016-12-31' and (cr.tech like '%CSFA%' or cr.tech like '%LSA%') or (cr.Tech like 'Jerold Greer%') then 'Precision Assist of Dallas'
 					when CR.DOS >='2015-07-23' then 'NPPA Services'
 					else rtrim(SL.Entity)
 					end
