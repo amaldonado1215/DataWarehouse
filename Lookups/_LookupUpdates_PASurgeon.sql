@@ -868,3 +868,13 @@ UPDATE PASURGEONLOOKUP SET IOMSurgeonName='11522' WHERE SurgeonID=112
 UPDATE PASURGEONLOOKUP SET IOMSurgeonName='14185' WHERE SurgeonID=113
 UPDATE PASURGEONLOOKUP SET IOMSurgeonName='4428' WHERE SurgeonID=114
 UPDATE PASURGEONLOOKUP SET IOMSurgeonName='11518' WHERE SurgeonID=116
+
+--unmatched PASurgeonLookup & tckt 58 closed amm
+insert into PASurgeonLookup (Surgeon,Entity,StartDate,EndDate,Region,SurgeonOwnd,IOMSurgeonName,SurgeonNo,CoAbbr,SOS_Date,MngFee,ContractType) values ('David Kim','NPPA Services','03/01/2018','12/31/2020','PA - DFW','No',16596,(select max(SurgeonNo) from PASurgeonLookup) + 2,'NPP','07/23/2015',0.3,'Corp')
+insert into PASurgeonLookup (Surgeon,Entity,StartDate,EndDate,Region,SurgeonOwnd,IOMSurgeonName,SurgeonNo,CoAbbr,SOS_Date,MngFee,BillingFee,FirstDOS,ContractType) values ('Michael Leonard, M.D.','Select PA Solutions, PLLC','12/01/2017','12/31/2020','PA - South Texas','Yes',372,(select max(SurgeonNo) from PASurgeonLookup) + 2,'SPA','12/14/2017',0.35,0.08,'2/13/2018','Classic')
+insert into PASurgeonLookup (Surgeon,Entity,StartDate,EndDate,Region,SurgeonOwnd,SurgeonNo,CoAbbr,SOS_Date,MngFee,FirstDOS,ContractType) values ('Vincent Calderola, M.D.','NPPA Services','02/01/2018','12/31/2020','PA - South Texas','No',(select max(SurgeonNo) from PASurgeonLookup) + 2,'NPP','07/23/2015',0.3,'2/1/2018','Corp')
+insert into PASurgeonLookup (Surgeon,Entity,StartDate,EndDate,Region,SurgeonOwnd,IOMSurgeonName,SurgeonNo,CoAbbr,SOS_Date,MngFee,FirstDOS,ContractType) values ('Vivek Kushwaha','NPPA Services','02/01/2018','12/31/2020','PA - DFW','No',10698,(select max(SurgeonNo) from PASurgeonLookup) + 2,'NPP','07/23/2015',0.3,'2/14/2018','Corp')
+
+UPDATE PASURGEONLOOKUP SET ContractType='Hybrid NoBC' WHERE SurgeonID=81
+UPDATE PASURGEONLOOKUP SET ContractType='Hybrid NoBC' WHERE SurgeonID=91
+UPDATE PASURGEONLOOKUP SET ContractType='Hybrid NoBC' WHERE SurgeonID=102
