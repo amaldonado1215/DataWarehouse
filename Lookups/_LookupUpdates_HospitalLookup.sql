@@ -1326,3 +1326,20 @@ update HospitalLookup set hospital = 'Baylor Scott & White Surgical Hospital at 
 		leadsourcecommission =  'Novation/Vizient/MedAssets'  where Hospital_ID = 395
 
 delete from [dbo].[HospitalLookup] where Hospital_ID = 147
+
+--hospitallookup cleanup amm
+UPDATE HOSPITALLOOKUP SET [Hospital] = 'Seton Medical Center Austin'  WHERE HOSPITAL_ID = 221
+UPDATE HOSPITALLOOKUP SET [Hospital] = 'Baylor Medical Center at Trophy Club'  WHERE HOSPITAL_ID = 400
+UPDATE HOSPITALLOOKUP SET [Hospital] = 'Medical City Las Colinas'  WHERE HOSPITAL_ID = 440
+UPDATE HOSPITALLOOKUP SET [Hospital] = 'Medical City Denton'  WHERE HOSPITAL_ID = 443
+
+INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'North Pines Surgery Center','','5604',(select max(hospital_nbr) from hospitallookup) + 2,'')
+INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Seton Medical Center Hays','','5718',(select max(hospital_nbr) from hospitallookup) + 2,'')
+INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Onyx & Pearl Surgical Suites, LLC','','5751',(select max(hospital_nbr) from hospitallookup) + 2,'')
+INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Crescent City Surgical Centre','','5824',(select max(hospital_nbr) from hospitallookup) + 2,'')
+INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Houston Methodist Willowbrook Hospital','','5847',(select max(hospital_nbr) from hospitallookup) + 2,'')
+INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Riverside Outpatient Surgery Center','','5862',(select max(hospital_nbr) from hospitallookup) + 2,'')
+INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Ascension Mercy Hospital','','5863',(select max(hospital_nbr) from hospitallookup) + 2,'')
+INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Houston Methodist St. John Hospital','','5868',(select max(hospital_nbr) from hospitallookup) + 2,'')
+INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Methodist Dallas Medical Center','','5899',(select max(hospital_nbr) from hospitallookup) + 2,'')
+
