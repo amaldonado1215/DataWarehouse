@@ -2457,3 +2457,12 @@ WHERE InsuranceCompany = 'BCBS Virginia'
 UPDATE [dbo].[InsuranceLookup]
 SET InsuranceCompany = 'The Ferraro Law Firm, PC'
 WHERE InsuranceCompany = 'The Ferraro Law Fimr, PC'
+
+--Unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('CCMSI WC', 'Misc Payor'),
+		('GULF SOUTH RISK SERVICES', 'Misc Payor'),
+		('HEALTH SCOPE', 'Misc Payor'),
+		('LSU FIRST CHOICE', 'Misc Payor'),
+		('PATRIOT RISK SERVICES', 'Misc Payor')
