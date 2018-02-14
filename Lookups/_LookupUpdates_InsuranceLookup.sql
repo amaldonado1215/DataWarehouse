@@ -2466,3 +2466,12 @@ VALUES
 		('HEALTH SCOPE', 'Misc Payor'),
 		('LSU FIRST CHOICE', 'Misc Payor'),
 		('PATRIOT RISK SERVICES', 'Misc Payor')
+
+--Unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('COMPANION PTA', 'Misc Payor'),
+		('EMC INSURANCE COMPANY', 'Attorney Office'),
+		('GIANT EAGLE, INC.', 'Misc Payor'),
+		('MAPFRE INSURANCE', 'Misc Payor'),
+		('MPE WORKERS COMP SERVICE', 'Misc Payor')
