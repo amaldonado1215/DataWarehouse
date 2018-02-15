@@ -800,3 +800,5 @@ insert into PASurgeonLookup (surgeon, entity, startdate, enddate, region, surgeo
 	values ('George Tipton, M.D.', 'NPPA Services', '2018-01-01', '2020-12-31','PA - Austin', 'No','George Tipton, M.D.', 40074,'NPP','2015-07-25',.35,.08,'2018-01-09',' ')
 
 UPDATE PASurgeonLookup SET Enddate = '2017-11-30' WHERE SurgeonID in (79,107) --ticket 29 kta
+
+update [dbo].[PASurgeonLookup] set ContractType = 'Hybrid'  where surgeonID=91 -- ticket 67 kta
