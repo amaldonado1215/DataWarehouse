@@ -8,8 +8,8 @@
     "\\DataWarehouse\\Emailed Reports",
     "\\DataWarehouse\\Lookups",
     "\\DataWarehouse\\OnlineReports",
-    "\\DataWarehouse\\PA",
-    "\\OnlineReports"
+    "\\Emailed Reports",
+    "\\Lookups"
   ],
   "PreviewInSolutionExplorer": true
 }

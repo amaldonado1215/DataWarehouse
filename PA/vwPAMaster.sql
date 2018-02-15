@@ -93,7 +93,7 @@ select CR.PID,
 				WHEN sl.ContractType = 'Hybrid' and RL.Status = 'SurgeonPA' and (CR.[Primary Insurance] like '%Blue Cross%' or CR.[Primary Insurance] like '%BCBS%') then rtrim(SL.Entity) --#57 kta
 				when cr.surgeon = 'Desh Sahni, M.D.' and cr.[1st Insurance Category] = 'Self Pay' then rtrim(SL.Entity)				-- #43 kta
 				when cr.surgeon = 'Sean Jones-Quaidoo, M.D.' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity)
-				When cr.surgeon = 'Josue Gabriel, M.D.' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity)
+		-- ticket 65 kta --		WHEN cr.surgeon = 'Josue Gabriel, M.D.' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity)
 				when cr.tech = 'Jose Fuentez, PA-C'and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity) --ticket 2375 lauren
 		--ticket 2271 lauren: For all encounters in this year, when the surgeon is Adam Bruggeman, M.D. 
 		--and the Tech is Kim Stewart, and the 1st ins type = BCBS then the case defers to SL  else NPPA (current default)
