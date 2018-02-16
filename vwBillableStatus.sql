@@ -5,6 +5,8 @@ as
 SELECT CE.claim_seq,
 	CASE	WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Uninsured', 'Self Pay','Federal Plan', 'Medicaid Advantage Plan') THEN 'Unbillable' --#26 kta added federal plan, map
 			WHEN CR.PID IN (652556,679177) THEN 'Unbillable: Pro Bono'
+			WHEN CR.PID IN (867659, 62885, 852057, 794804, 826029, 776057) THEN 'Unbillable: SimplifyStudy'		--#64 kta
+			WHEN CR.hospital_ID = 4550 AND CR.[1st Insurance Category] = 'Other' then 'Unbillable HospContract'	--#64 kta
 			WHEN CR.DOS < '2013-05-01' THEN 'Appealed' 
 			WHEN CR.Reader IN ('* Unassigned *', 'Jane Doe') THEN 'Unbillable' 
 			WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND CR.DOS >= '2017-01-01' THEN 'Unbillable'
@@ -27,10 +29,13 @@ SELECT CE.claim_seq,
 			WHEN CR.DOS > getdate() THEN 'Future Case' 
 		-- STEP 2
 			WHEN CR.PID IN (652556,679177) THEN 'Unbillable: Pro Bono'
+			WHEN CR.PID IN (867659, 62885, 852057, 794804, 826029, 776057) THEN 'Unbillable: SimplifyStudy'		--#64 kta
+			WHEN CR.hospital_ID = 4550 AND CR.[1st Insurance Category] = 'Other' then 'Unbillable HospContract'	--#64 kta
 			WHEN CR.[1st Insurance Category] IN ('Medicare', 'Medicaid', 'Medicaid Advantage Plan', 'Blue Cross Blue Shield')  THEN 'Unbillable: MC/MAP' 
 			WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan','Federal Plan') 
 					AND CR.DOS >= '2017-01-01' THEN 'Unbillable: TRI-MRP-CHAMPVA'
 			WHEN CR.[Primary Insurance] like '%Aetna%' AND CR.DOS >= '2017-01-01' THEN 'Unbillable: Aetna'
+			When CR.[1st Insurance Category] = 'Cigna' and CR.DOS >='2018-02-01' then 'Unbillable: Cigna'		--#64 kta
 			WHEN CR.[1st Insurance Category] = 'OTHER' AND CR.[Primary Insurance] LIKE '%Indigent%' THEN 'Unbillable: INDIGENT' 
 			WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' and CR.[Primary Insurance] like '%kempton%' then 'Unbillable'
 			WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital'  AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case' 

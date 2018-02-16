@@ -43,6 +43,9 @@ SELECT DISTINCT
 	CASE 
 		WHEN CR.DOS > getdate() THEN 'Future Case' 
 		WHEN CR.PID IN (652556,679177) THEN 'Unbillable: Pro Bono' --#26 kta added 679177
+		WHEN CR.PID IN (652556,679177) THEN 'Unbillable: Pro Bono'
+		WHEN CR.PID IN (867659, 62885, 852057, 794804, 826029, 776057) THEN 'Unbillable: SimplifyStudy'		--#64 kta
+		WHEN CR.hospital_ID = 4550 AND CR.[1st Insurance Category] = 'Other' then 'Unbillable HospContract'	--#64 kta
 		WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Medicaid Advantage Plan', 'Uninsured', 'Self Pay','Federal Plan') THEN 'Unbillable: Insurance' --#26 kta added federal plan 
 		WHEN CR.Reader IN ('* Unassigned *', 'Jane Doe') THEN 'Unbillable: Reader' 
 		
@@ -66,10 +69,14 @@ SELECT DISTINCT
     CASE 
 		WHEN CR.DOS > getdate() THEN 'Future Case' 
 		WHEN CR.PID IN (652556) THEN 'Unbillable: Pro Bono'
+		WHEN CR.PID IN (652556,679177) THEN 'Unbillable: Pro Bono'
+		WHEN CR.PID IN (867659, 62885, 852057, 794804, 826029, 776057) THEN 'Unbillable: SimplifyStudy'		--#64 kta
+		WHEN CR.hospital_ID = 4550 AND CR.[1st Insurance Category] = 'Other' then 'Unbillable HospContract'	--#64 kta
 		WHEN CR.[1st Insurance Category] IN ('Medicare', 'Medicaid', 'Medicaid Advantage Plan', 'Blue Cross Blue Shield') THEN 'Unbillable: Disqualifying Insurance' 
 		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan','Federal Plan') AND DOS >= '2017-01-01' THEN 'Unbillable: TRI-MRP-CHAMPVA'
 	-- #2034	WHEN ([Primary Insurance] like '%Blue Cross Blue Shield%' or [Primary Insurance] like '%BCBS%') THEN 'Unbillable: Disqualifying Insurance'
 		WHEN CR.[Primary Insurance] like '%Aetna%' AND DOS >= '2017-01-01' THEN 'Unbillable: Aetna'
+		When CR.[1st Insurance Category] = 'Cigna' and CR.DOS >='2018-02-01' then 'Unbillable: Cigna'		--#64 kta
 		--WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' and CR.[Primary Insurance] like '%kempton%' then 'Unbillable: mcbride/Kempton'
 		WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital'  AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case' 
 		WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case'
