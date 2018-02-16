@@ -227,7 +227,7 @@ SELECT      CR.PID,
 					--ticket 2469 lauren
 					--WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.Surgeon IN ('Dr. C Gilberto Brito, M.D.', 'Kendrick Thomas, M.D.', 'Joshua Levy, D.O.', 'Jeffrey Wingate, M.D.')  and SL1.proentity is not null and CR.DOS < '2017-08-30' then SL1.ProEntity -- (Grand Canyon Neurology, PLLC)  Ticket #1652
 					--WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.Surgeon IN ('Dr. C Gilberto Brito, M.D.', 'Kendrick Thomas, M.D.', 'Joshua Levy, D.O.', 'Jeffrey Wingate, M.D.')  and SL1.proentity is not null and CR.DOS >= '2017-08-30' then 'AccuZone Diagnostics, LLC' --Ticket #2411
-					
+					WHEN cR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND cR.SURGEON in ('Carl Bischoff, M.D.','David Cuellar, M.D.') and cR.DOS >= '2017-11-14' AND SL1.Proentity IS NOT NULL THEN Sl1.Proentity  -- Ticket #63
 					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.SURGEON = 'Kendall Carll, M.D.' and CR.DOS >= '2017-07-01' THEN SL1.Proentity -- Ticket #2209
 					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.SURGEON = 'Lewis Frazier, M.D.' and CR.DOS >= '2017-07-01' THEN SL1.Proentity -- Ticket #2209
 					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.Surgeon = 'Richard Westmark, M.D.' AND CR.DOS >= '2017-12-01' THEN SL1.Proentity  -- 2018-01-03 JTB Per #6 Github Issue
