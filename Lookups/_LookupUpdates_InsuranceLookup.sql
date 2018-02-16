@@ -2475,3 +2475,8 @@ VALUES
 		('GIANT EAGLE, INC.', 'Misc Payor'),
 		('MAPFRE INSURANCE', 'Misc Payor'),
 		('MPE WORKERS COMP SERVICE', 'Misc Payor')
+
+--Unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('HEALTH CARE HIGHWAYS', 'Misc Payor')

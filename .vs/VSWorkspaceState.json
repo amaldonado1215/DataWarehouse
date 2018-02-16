@@ -4,8 +4,9 @@
     "\\DataImports",
     "\\DataWarehouse",
     "\\Emailed Reports",
-    "\\Lookups"
+    "\\Lookups",
+    "\\OnlineReports",
+    "\\PA"
   ],
-  "SelectedNode": "\\Lookups\\_LookupUpdates_InsuranceLookup.sql",
   "PreviewInSolutionExplorer": true
 }
