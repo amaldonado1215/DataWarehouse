@@ -169,5 +169,8 @@ insert into CorrectEntityExceptions (ClaimID, PID, CorrectEntity) values ('95171
 --DR correct spelling
 UPDATE CorrectEntityExceptions set CorrectEntity = 'Greene Monitoring, PLLC' where ClaimID = 1039704
 
-
+-- ticket #68 kta
+insert into [dbo].[CorrectEntityExceptions]
+values	(1078066,908309,'Greene Monitoring, PLLC'),
+		(1078067,908309,'Greene Monitoring, PLLC')
 
