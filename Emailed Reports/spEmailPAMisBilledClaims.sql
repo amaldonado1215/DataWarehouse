@@ -35,7 +35,7 @@ EXEC msdb.dbo.sp_send_dbmail
 @profile_name = 'SendGrid', -- replace with your SQL Database Mail Profile 
 @body = @body,
 @body_format ='HTML',
-@recipients = 'Deborah.Reinagel@md-management.net;Kim.Anderson@md-management.net;Matthew.Nartz@md-management.net;Ryan.LaRoque@precisionassist.us;lisa.weldon@acquisitionbilling.com;roshan.shah@precisionassist.net;michelle.silva@acquisitionbilling.com;sandra.garcia@acquisitionbilling.com',
+@recipients = 'Deborah.Reinagel@md-management.net;Kim.Anderson@md-management.net;Matthew.Nartz@md-management.net;Ryan.LaRoque@precisionassist.us;lisa.weldon@acquisitionbilling.com;roshan.shah@precisionassist.net;michelle.silva@acquisitionbilling.com;sandra.garcia@acquisitionbilling.com;Angelica.Maldonado@mpowerpractice.net',
 @subject = @subjectline ;
 
 --@recipients = 'alla.kosova@md-management.net;scott@nationalneuro.net;Ryan.LaRoque@nationalneuro.net;angelica.maldonado@md-management.net;thomas.herrera@acquisitionbilling.com;sandra.garcia@acquisitionbilling.com;michelle.silva@acquisitionbilling.com;Makeba.Potter@md-management.net;Bill.Murray@md-management.net;Kim.Anderson@md-management.net;Roshan.Shah@precisionassist.us;Deborah.Reinagel@md-management.net;lisa.weldon@acquisitionbilling.com', 
@@ -43,4 +43,6 @@ EXEC msdb.dbo.sp_send_dbmail
 --ticket 2030 Lauren, per Deborah, add Kim.Anderson@md-management.net; Roshan.Shah@precisionassist.us
 --ticket 2044, and kim and deborah.  but kim already on?  changing to be all one line again and see if that solves it
 --ticket 2063, lauren, adding lisa.weldon@acquisitionbilling.com
+--@recipients = 'Deborah.Reinagel@md-management.net;Kim.Anderson@md-management.net;Matthew.Nartz@md-management.net;Ryan.LaRoque@precisionassist.us;lisa.weldon@acquisitionbilling.com;roshan.shah@precisionassist.net;michelle.silva@acquisitionbilling.com;sandra.garcia@acquisitionbilling.com',
+
 
