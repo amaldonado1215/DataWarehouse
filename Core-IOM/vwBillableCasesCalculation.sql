@@ -14,10 +14,14 @@ SELECT DISTINCT
 	CR.Biller, 
 	CASE 
 		WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' and CR.[Primary Insurance] like '%kempton%' then 'diagnostics & Neuromonitoring Institute, Inc.'
-		WHEN CR.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance') 
+	--	WHEN CR.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance') 
+	--			AND SL1.Proentity is not null THEN SL1.Proentity 
+	--	WHEN CR.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance') 
+	--			AND SL2.Proentity is not null THEN SL2.Proentity 
+		WHEN CR.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance', 'Cigna', 'Aetna')	--ticket 63 kta
 				AND SL1.Proentity is not null THEN SL1.Proentity 
-		WHEN CR.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance') 
-				AND SL2.Proentity is not null THEN SL2.Proentity 
+		WHEN CR.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance', 'Cigna', 'Aetna') 
+				AND SL2.Proentity is not null THEN SL2.Proentity	
 		WHEN CR.[1st Insurance Category] IN ('Workmans Comp') 
 				AND Region_short_name IN ('Louisiana') 
 				AND SL1.Proentity is not null THEN SL1.Proentity 

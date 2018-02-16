@@ -75,7 +75,8 @@ SELECT c.PID,
 		WHEN c.Surgeon = 'Mark Silver, M.D.' AND sl1.proentity = 'Texoma IOM, PLLC' AND
 				[1st Insurance Category] = 'Blue Cross Blue Shield' THEN 'Eligible'
 		WHEN c.Surgeon = 'Ram Vasudevan, M.D.' AND c.pid IN (461920, 475127, 504144, 521290) THEN 'Eligible'
-		WHEN [1st Insurance Category] in ( 'Private Insurance','Letter of Protection','Lein Case') THEN 'Eligible'
+	--	WHEN [1st Insurance Category] in ( 'Private Insurance','Letter of Protection','Lein Case') THEN 'Eligible'
+		WHEN [1st Insurance Category] in ( 'Private Insurance','Letter of Protection','Lein Case', 'Cigna', 'Aetna') THEN 'Eligible'  -- ticket #63 kta
 		WHEN SL1.ProEntity = 'Neuroguide IOM, PLLC' AND [1st insurance Category] = 'Blue Cross Blue Shield' THEN 'Private'
 		ELSE 'Other' 
 	END AS DashboardInsuranceType,

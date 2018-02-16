@@ -238,8 +238,8 @@ SELECT      CR.PID,
 					
 					-- Ticket #1217 When the Surgeon is Michael Rimlawi, D.O. and the "Insurance Type column is = Blue Cross Blue Shield then the "CorrectEntity" should be his Neuroguide IOM, PLLC (SL2)					
 					WHEN IL.InsuranceGroup = 'Blue Cross Blue Shield' AND  CR.hospital IN ('The Spine Hospital of Louisiana ', 'Cypress Pointe Surgical Hospital ') AND Reader IN('David Adams, M.D.') THEN 'Pro Read, LLC'
-					WHEN CR.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance', 'Aetna') AND SL1.Proentity is not null THEN SL1.Proentity -- Ticket #2186 added Aetna
-					WHEN CR.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance', 'Aetna') AND SL2.Proentity is not null THEN SL2.Proentity -- Ticket #2186 added Aetna
+					WHEN CR.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance', 'Aetna', 'Cigna') AND SL1.Proentity is not null THEN SL1.Proentity -- Ticket #2186 added Aetna -- Ticket #63 added Cigna
+					WHEN CR.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance', 'Aetna', 'Cigna') AND SL2.Proentity is not null THEN SL2.Proentity -- Ticket #2186 added Aetna -- Ticket #63 added Cigna
 					WHEN CR.[1st Insurance Category] IN ('Workmans Comp') AND Region_short_name IN ('Louisiana') AND SL1.Proentity is not null THEN SL1.Proentity 
 					WHEN CR.[1st Insurance Category] IN ('Workmans Comp') AND Region_short_name IN ('Louisiana') AND SL2.Proentity is not null THEN SL2.Proentity	
 					WHEN Region_short_name in ('Louisiana', 'Mississippi - South') AND CE.ins_folder not in ('Closed Billing Claims') AND CE.claim_date >'2017-04-01' THEN 'Neuroplexus, LLC'	
