@@ -1852,3 +1852,6 @@ VALUES	('Great Lakes Neuromonitoring, PLLC', 'Great Lakes Neuromonitoring, PLLC'
 --New Entities amm
 INSERT INTO EntityLookup (client_name,Entity,S#C,Region,clm_billing_type,status,SOS_Date,BillingDate,BillingFee,SurgeonOwners) VALUES ('Midwest Monitoring, LLC','Midwest Monitoring, LLC','Yes','Wisconsin','Pro Only','Active','11/15/2017','11/1/2017',0.08,'David C. Dewitt, M.D.')
 INSERT INTO EntityLookup (client_name,Entity,S#C,Region,clm_billing_type,status,SOS_Date,BillingDate,BillingFee,SurgeonOwners) VALUES ('KKMMCB Medical, PLLC','KKMMCB Medical, PLLC','Yes','Utah','Pro Only','Active','12/20/2017','12/1/2017',0.08,'Kade Huntsman, M.D.')
+
+--request from Danny amm
+UPDATE dbo.EntityLookup SET SurgeonOwners = 'Rajesh Bindal, M.D.' WHERE Entity_ID = '46'
