@@ -881,3 +881,6 @@ UPDATE PASURGEONLOOKUP SET ContractType='Hybrid NoBC' WHERE SurgeonID=102
 
 --unmatched PASurgeonLookup amm
 insert into PASurgeonLookup (Surgeon,Entity,StartDate,EndDate,Region,SurgeonOwnd,IOMSurgeonName,SurgeonNo,CoAbbr,SOS_Date,MngFee,ContractType) values ('Vudhi Slabisak, M.D.','NPPA Services','03/01/2018','12/31/2020','PA - DFW','No',11277,(select max(SurgeonNo) from PASurgeonLookup) + 2,'NPP','07/23/2015',0.3,'Corp')
+
+--unmatched PASurgeonLookup amm
+UPDATE PASURGEONLOOKUP SET StartDate='02/01/2018' WHERE SurgeonID=121
