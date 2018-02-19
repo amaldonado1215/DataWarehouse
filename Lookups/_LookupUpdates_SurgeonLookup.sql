@@ -4371,3 +4371,9 @@ update surgeonlookup2 set Payor='* ANY *' where surgeonid=2030
 insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,Ranking,SurgeonContract,SurgeonNo) values ('Qualls Stevens, D.O.','Professional Connections Analysis, PLLC','2/1/2018','12/31/2020','Spine Surgeon','* ANY *','Oklahoma','Dallas','Standard Surgeon',20892)
 insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,Ranking,SurgeonContract,SurgeonNo) values ('Arthur Chou, M.D.','Neurodiagnostics & Neuromonitoring Institute, Inc.','2/1/2018','12/31/2020','Neurosurgery','* ANY *','California','','Standard Surgeon',20894)
 insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,Ranking,SurgeonContract,SurgeonNo) values ('Max De Carvalho, M.D.','Neurodiagnostics & Neuromonitoring Institute, Inc.','2/1/2018','12/31/2020','Orthopedic Surgeon','* ANY *','Kansas','','Standard Surgeon',20896)
+
+--Update unmatched surgeon report AMM
+insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,Ranking,SurgeonContract,SurgeonNo) values ('Najeeb Thomas, M.D.','Neuroplexus, LLC','2/1/2018','12/31/2020','Spine Surgeon','* ANY *','Louisiana','','Standard Surgeon',(select max(SurgeonNo) from surgeonlookup2) + 2)
+insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,Ranking,SurgeonContract,SurgeonNo) values ('William Banister, M.D.','Neurodiagnostics & Neuromonitoring Institute, Inc.','2/1/2018','12/31/2020','Neurosurgery','* ANY *','Texas - DFW','','Standard Surgeon',(select max(SurgeonNo) from surgeonlookup2) + 2)
+update surgeonlookup2 set SurgeonNo=20898 where surgeonid=2035
+update surgeonlookup2 set SurgeonNo=20900 where surgeonid=2034
