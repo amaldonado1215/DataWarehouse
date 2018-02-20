@@ -47,6 +47,51 @@ INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) Values ('Sandra B
 Update PARegionLookup set Status = 'Not Active' where PAName = 'Jeffery Perkins'
 Update PARegionLookup set Status = 'Not Active' where PAName = 'Kimmy Nguyen'
 
+ALTER TABLE [dbo].[PARegionLookup]
+ADD Tech_Web_ID int
+
+ALTER TABLE [dbo].[PARegionLookup]
+ADD Proliant_ID int
+
+Update [dbo].[PARegionLookup] SET Proliant_ID = 14751 WHERE PA = 'Stephanie Choi, PA-C'
+Update [dbo].[PARegionLookup] SET Proliant_ID = 14755 WHERE PA = 'Shaun Shore, PA-C'  
+Update [dbo].[PARegionLookup] SET Proliant_ID = 14756 WHERE PA = 'John Smith, PA-C'   
+Update [dbo].[PARegionLookup] SET Proliant_ID = 14757 WHERE PA = 'Matt Wiggins, PA-C'  
+Update [dbo].[PARegionLookup] SET Proliant_ID = 14758 WHERE PA = 'Don Morris, PA-C' 
+Update [dbo].[PARegionLookup] SET Proliant_ID = 14762 WHERE PA = 'Matt Musick, PA-C' 
+Update [dbo].[PARegionLookup] SET Proliant_ID = 14770 WHERE PA = 'Steve Greer, LSA' 
+Update [dbo].[PARegionLookup] SET Proliant_ID = 14771 WHERE PA = 'Sandra Ballehr, PA-C' 
+Update [dbo].[PARegionLookup] SET Proliant_ID = 14772 WHERE PA = 'Helena Bruce' 
+Update [dbo].[PARegionLookup] SET Proliant_ID = 14773 WHERE PA = 'Darren Richards, PA-C' 
+Update [dbo].[PARegionLookup] SET Proliant_ID = 14774 WHERE PA = 'Nickolas Garcia, PA-C' 
+
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 3266 WHERE PAName = 'Chris Perez'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 9027 WHERE PAName = 'Christi Robbins'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 7621 WHERE PAName = 'Corey McClellan'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 8864 WHERE PAName = 'Darren Richards'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 7002 WHERE PAName = 'Don Morris'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 8719 WHERE PAName = 'Helena Bruce'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 6219 WHERE PAName = 'James Jelen, Ph.D.'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 7999 WHERE PAName = 'Jeffery Perkins'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 6576 WHERE PAName = 'John Smith'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 8779 WHERE PAName = 'Jose Fuentez'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 6951 WHERE PAName = 'Kimberly Stewart'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 6583 WHERE PAName = 'Kimmy Nguyen'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 8068 WHERE PAName = 'Kyle Bartschmid'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 7843 WHERE PAName = 'Matt Musick'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 6986 WHERE PAName = 'Matt Wiggins'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 8876 WHERE PAName = 'Nickolas Garcia'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 6183 WHERE PAName = 'Paula Harrison'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 8629 WHERE PAName = 'Sandra Ballehr'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 8849 WHERE PAName = 'Scott Naples'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 5772 WHERE PAName = 'Selena Vela'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 3265 WHERE PAName = 'Shaun Shore'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 5674 WHERE PAName = 'Stephanie Choi'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 6093 WHERE PAName = 'Steve Greer'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 8988 WHERE PAName = 'Vanessa Scialom'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 8937 WHERE PAName = 'Chris Perez'
+Update [dbo].[PARegionLookup] Set Tech_Web_ID = 3266 WHERE PAName = 'William Gronberg'
+
 
 
 
