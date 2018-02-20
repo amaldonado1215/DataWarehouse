@@ -4377,3 +4377,7 @@ insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,
 insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,Ranking,SurgeonContract,SurgeonNo) values ('William Banister, M.D.','Neurodiagnostics & Neuromonitoring Institute, Inc.','2/1/2018','12/31/2020','Neurosurgery','* ANY *','Texas - DFW','','Standard Surgeon',(select max(SurgeonNo) from surgeonlookup2) + 2)
 update surgeonlookup2 set SurgeonNo=20898 where surgeonid=2035
 update surgeonlookup2 set SurgeonNo=20900 where surgeonid=2034
+
+--Surgeon Entity name change amm
+  insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,Ranking,SurgeonContract,SurgeonNo) values ('Andrew Indresano, M.D.','Nizuc Care, PLLC','2/7/2018','12/31/2020','Spine Surgeon','* ANY *','Texas - DFW','Dallas','Standard Surgeon',20110)
+  update surgeonlookup2 set EndDate='2/6/2018' where surgeonid=725
