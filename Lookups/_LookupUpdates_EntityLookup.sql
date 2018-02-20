@@ -1855,3 +1855,7 @@ INSERT INTO EntityLookup (client_name,Entity,S#C,Region,clm_billing_type,status,
 
 --request from Danny amm
 UPDATE dbo.EntityLookup SET SurgeonOwners = 'Rajesh Bindal, M.D.' WHERE Entity_ID = '46'
+
+--Entity name change amm
+INSERT INTO EntityLookup (client_name,Entity,S#C,Region,clm_billing_type,status,MgmtFee,CoAbbr,SOS_Date,BillingDate,BillingFee,SurgeonOwners) VALUES ('Nizuc Care, PLLC','Nizuc Care, PLLC','Yes','Texas - DFW','Pro Only','Active',0.30,'AIN','2/7/2018','2/7/2018',0.08,'Andrew Indresano, M.D.')
+UPDATE dbo.EntityLookup SET status = 'Inactive' WHERE Entity_ID = '9'
