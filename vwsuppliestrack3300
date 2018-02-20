@@ -1,0 +1,2 @@
+CREATE VIEW dbo.vwsuppliestrack3300 as
+Select * from supplies_track_3300
