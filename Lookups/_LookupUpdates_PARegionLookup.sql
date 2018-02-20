@@ -31,6 +31,8 @@ INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) VALUES ('Helena B
 
 Update PARegionLookup set Status = 'Not Active' where PA = 'Steve Greer, LSA'		--#30 kta
 
+--Hybrid Tech Unassigned amm
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) VALUES ('* Unassigned *','ALL','* Unassigned *','SurgeonPA')
 
 
 
