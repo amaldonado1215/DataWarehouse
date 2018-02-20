@@ -888,3 +888,7 @@ UPDATE PASURGEONLOOKUP SET StartDate='02/01/2018' WHERE SurgeonID=121
 --Hybrid Rule update amm
 UPDATE PASURGEONLOOKUP SET ContractType='Hybrid' WHERE SurgeonID=81
 UPDATE PASURGEONLOOKUP SET ContractType='Hybrid' WHERE SurgeonID=102
+
+--Arizona Rule amm
+UPDATE PASURGEONLOOKUP SET Entity='Precision Assist of Dallas' WHERE SurgeonID=106
+UPDATE PASURGEONLOOKUP SET Entity='Precision Assist of Dallas' WHERE SurgeonID=116
