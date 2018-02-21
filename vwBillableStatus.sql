@@ -9,6 +9,8 @@ SELECT CE.claim_seq,
 			WHEN CR.hospital_ID = 4550 AND CR.[1st Insurance Category] = 'Other' then 'Unbillable HospContract'	--#64 kta
 			WHEN CR.DOS < '2013-05-01' THEN 'Appealed' 
 			WHEN CR.Reader IN ('* Unassigned *', 'Jane Doe') THEN 'Unbillable' 
+			WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND CR.DOS >= '2017-01-01' 
+				AND HL.[Contract Type] <> 'No Contract' and CR.Region_Short_Name not in ('California','Maryland')THEN 'Unbillable: TRI-MRP-CHAMPVA'  --#73 kta
 			WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND CR.DOS >= '2017-01-01' THEN 'Unbillable'
 			WHEN CR.hospital_ID = 3403 AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable Bundled Case' 
 			WHEN CR.hospital_ID in (4457,4550) THEN 'Unbillable: Bundled Case' 
@@ -32,8 +34,8 @@ SELECT CE.claim_seq,
 			WHEN CR.PID IN (867659, 62885, 852057, 794804, 826029, 776057) THEN 'Unbillable: SimplifyStudy'		--#64 kta
 			WHEN CR.hospital_ID = 4550 AND CR.[1st Insurance Category] = 'Other' then 'Unbillable HospContract'	--#64 kta
 			WHEN CR.[1st Insurance Category] IN ('Medicare', 'Medicaid', 'Medicaid Advantage Plan', 'Blue Cross Blue Shield')  THEN 'Unbillable: MC/MAP' 
-			WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan','Federal Plan') 
-					AND CR.DOS >= '2017-01-01' THEN 'Unbillable: TRI-MRP-CHAMPVA'
+			WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND CR.DOS >= '2017-01-01' 
+				AND HL.[Contract Type] <> 'No Contract' and CR.Region_Short_Name not in ('California','Maryland')THEN 'Unbillable: TRI-MRP-CHAMPVA'  --#73 kta
 			WHEN CR.[Primary Insurance] like '%Aetna%' AND CR.DOS >= '2017-01-01' THEN 'Unbillable: Aetna'
 			When CR.[1st Insurance Category] = 'Cigna' and CR.DOS >='2018-02-01' then 'Unbillable: Cigna'		--#64 kta
 			WHEN CR.[1st Insurance Category] = 'OTHER' AND CR.[Primary Insurance] LIKE '%Indigent%' THEN 'Unbillable: INDIGENT' 

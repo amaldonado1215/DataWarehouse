@@ -231,11 +231,12 @@ SELECT      CR.PID,
 					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.SURGEON = 'Kendall Carll, M.D.' and CR.DOS >= '2017-07-01' THEN SL1.Proentity -- Ticket #2209
 					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.SURGEON = 'Lewis Frazier, M.D.' and CR.DOS >= '2017-07-01' THEN SL1.Proentity -- Ticket #2209
 					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.Surgeon = 'Richard Westmark, M.D.' AND CR.DOS >= '2017-12-01' THEN SL1.Proentity  -- 2018-01-03 JTB Per #6 Github Issue
-					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND Region_Short_Name = 'Maryland' then SL1.ProEntity
+					--WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND Region_Short_Name = 'Maryland' then SL1.ProEntity -- #73 kta
 
 					WHEN Region_Short_Name in ('Maryland', 'California') AND SL1.Proentity is not null THEN SL1.ProEntity
 					WHEN Region_short_name in ('Maryland', 'California') AND SL2.Proentity is not null then SL2.ProEntity
-					
+					WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND cr.DOS >= '2017-01-01' 
+							AND HL.[Contract Type] <> 'No Contract' THEN 'Neurodiagnostics & Neuromonitoring Institute, Inc.'  --#73 kta
 					-- Ticket #1217 When the Surgeon is Michael Rimlawi, D.O. and the "Insurance Type column is = Blue Cross Blue Shield then the "CorrectEntity" should be his Neuroguide IOM, PLLC (SL2)					
 					WHEN IL.InsuranceGroup = 'Blue Cross Blue Shield' AND  CR.hospital IN ('The Spine Hospital of Louisiana ', 'Cypress Pointe Surgical Hospital ') AND Reader IN('David Adams, M.D.') THEN 'Pro Read, LLC'
 					WHEN CR.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance', 'Aetna', 'Cigna') AND SL1.Proentity is not null THEN SL1.Proentity -- Ticket #2186 added Aetna -- Ticket #63 added Cigna

@@ -55,7 +55,8 @@ SELECT DISTINCT
 		WHEN CR.hospital_ID = 3403 AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case' 
 		--WHEN CR.hospital = 'Dublin Surgery Center' THEN 'Unbillable: Bundled Case'  --#26 kta commented out, joined on hospitalID below
 		WHEN CR.hospital_ID in (4457,4550) THEN 'Unbillable: Bundled Case' --#26 added 4450
-		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND DOS >= '2017-01-01' THEN 'Unbillable: TRI-MRP-CHAMPVA' --#26 kta removed federal plan
+		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND DOS >= '2017-01-01' 
+			AND HL.[Contract Type] <> 'No Contract' and CR.Region_Short_Name not in ('California','Maryland') THEN 'Unbillable: TRI-MRP-CHAMPVA' --#26 kta removed federal plan --#73 added contract type
 		WHEN HL7.[SecondaryGroupID] = 'PB' AND  CR.Reader = 'William VanNess, M.D.' THEN 'Unbillable' -- ticket #22 kta
 	/*	WHEN CR.[1st Insurance Category] = 'TRICARE' AND CR.Reader NOT IN ('Bjorn Krane, M.D.', 'Bruce Katuna, M.D.', 'Badreldin Ibrahim, M.D.', 
 					'Chuong Le, M.D.', 'Peter Tarbox, M.D.', 'Craig Carroll, D.O.') THEN 'Unbillable: TRICARE/Docs' 
@@ -73,7 +74,8 @@ SELECT DISTINCT
 		WHEN CR.PID IN (867659, 62885, 852057, 794804, 826029, 776057) THEN 'Unbillable: SimplifyStudy'		--#64 kta
 		WHEN CR.hospital_ID = 4550 AND CR.[1st Insurance Category] = 'Other' then 'Unbillable HospContract'	--#64 kta
 		WHEN CR.[1st Insurance Category] IN ('Medicare', 'Medicaid', 'Medicaid Advantage Plan', 'Blue Cross Blue Shield') THEN 'Unbillable: Disqualifying Insurance' 
-		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan','Federal Plan') AND DOS >= '2017-01-01' THEN 'Unbillable: TRI-MRP-CHAMPVA'
+		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND DOS >= '2017-01-01' 
+			AND HL.[Contract Type] <> 'No Contract' and CR.Region_Short_Name not in ('California','Maryland') THEN 'Unbillable: TRI-MRP-CHAMPVA' --#26 kta removed federal plan --#73 added contract type
 	-- #2034	WHEN ([Primary Insurance] like '%Blue Cross Blue Shield%' or [Primary Insurance] like '%BCBS%') THEN 'Unbillable: Disqualifying Insurance'
 		WHEN CR.[Primary Insurance] like '%Aetna%' AND DOS >= '2017-01-01' THEN 'Unbillable: Aetna'
 		When CR.[1st Insurance Category] = 'Cigna' and CR.DOS >='2018-02-01' then 'Unbillable: Cigna'		--#64 kta

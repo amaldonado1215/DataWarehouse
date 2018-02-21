@@ -34,6 +34,8 @@ SELECT c.PID,
 		WHEN c.hospital = 'McBride Clinic Orthopedic Hospital' AND c.[Primary Insurance] LIKE '%kempton%' THEN 'Neurodiagnostics & Neuromonitoring Institute, Inc.'		
 		WHEN c.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance', 'Aetna', 'Cigna') AND SL1.Proentity IS NOT NULL THEN Sl1.Proentity -- Ticket #2186 Added Aetna as an Insurance category -- ticket 63 added Cigna
 		WHEN c.[1st Insurance Category] IN ('Workmans Comp') AND Region_short_name IN ('Louisiana') AND SL1.Proentity IS NOT NULL THEN Sl1.Proentity 
+		WHEN c.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND c.DOS >= '2017-01-01' 
+				AND h.[Contract Type] <> 'No Contract' AND c.Region_Short_Name not in ('Maryland', 'California')  THEN 'Neurodiagnostics & Neuromonitoring Institute, Inc.'  --#73 kta
 		WHEN c.Region_Short_Name IN ('Louisiana','Mississippi - South') AND c.dos >'2017-04-01' then 'Neuroplexus, LLC'
 		WHEN c.Region_Short_Name in ('Maryland', 'California') AND SL1.Proentity is not null THEN SL1.ProEntity
 		WHEN c.Region_short_name in ('Arizona') AND DOS > '2017-06-01' Then 'AccuZone Diagnostics, LLC'
