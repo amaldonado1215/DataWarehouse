@@ -3,7 +3,8 @@
     "",
     "\\DataWarehouse",
     "\\Emailed Reports",
-    "\\Lookups"
+    "\\Lookups",
+    "\\SYN"
   ],
   "PreviewInSolutionExplorer": true
 }
