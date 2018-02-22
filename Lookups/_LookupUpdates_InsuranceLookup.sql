@@ -2480,3 +2480,12 @@ VALUES
 INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
 VALUES 
 		('HEALTH CARE HIGHWAYS', 'Misc Payor')
+
+--Unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('HARTFORD', 'Misc Payor'),
+		('HEALTH COST SOLUTIONS', 'Misc Payor'),
+		('HEALTHSCOPE BENEFITS INC', 'Misc Payor'),
+		('KS KANCARE MEDICAID', 'Misc Payor'),
+		('LAWTER & ASSOCIATES', 'Attorney Office')
