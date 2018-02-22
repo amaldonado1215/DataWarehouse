@@ -4381,3 +4381,7 @@ update surgeonlookup2 set SurgeonNo=20900 where surgeonid=2034
 --Surgeon Entity name change amm
   insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,Ranking,SurgeonContract,SurgeonNo) values ('Andrew Indresano, M.D.','Nizuc Care, PLLC','2/7/2018','12/31/2020','Spine Surgeon','* ANY *','Texas - DFW','Dallas','Standard Surgeon',20110)
   update surgeonlookup2 set EndDate='2/6/2018' where surgeonid=725
+
+--Unmatched surgeon report AMM
+insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,SurgeonContract,SurgeonNo) values ('Vudhi Slabisak','Granite Anesthesia','2/1/2018','12/31/2020','Spine Surgeon','* ANY *','ANES-DFW','Corporate Surgeon',60020)
+insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,SurgeonContract,SurgeonNo) values ('John B McGowan, M.D.','Granite Anesthesia','2/1/2018','12/31/2020','Spine Surgeon','* ANY *','ANES-DFW','Corporate Surgeon',60022)
