@@ -34,9 +34,9 @@ Update PARegionLookup set Status = 'Not Active' where PA = 'Steve Greer, LSA'		-
 --Hybrid Tech Unassigned amm
 INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status]) VALUES ('* Unassigned *','ALL','* Unassigned *','SurgeonPA')
 
-
-
-
+--PA new credentials amm
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status],Tech_Web_ID,Proliant_ID) VALUES ('Helena Bruce, PA-C','PA - Austin','Helena Bruce','PA Active','8719','14772')
+INSERT INTO PARegionLookup (PA,AssignedRegion,PAName,[Status],Tech_Web_ID,Proliant_ID) VALUES ('Don Morris, MPAS, PA-C','PA - South Texas','Don Morris','PA ActiveT','7002','14758')
 
 
 
