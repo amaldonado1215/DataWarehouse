@@ -1862,3 +1862,7 @@ UPDATE dbo.EntityLookup SET status = 'Inactive' WHERE Entity_ID = '9'
 
 --Changed Entity_ID for January Month End
 UPDATE dbo.EntityLookup SET status = 'Active' WHERE Entity_ID = '9'
+
+--Updated Mgmt Fees
+UPDATE dbo.EntityLookup SET MgmtFee = '0.20' WHERE Entity_ID = '133'
+UPDATE dbo.EntityLookup SET MgmtFee = '0.27' WHERE Entity_ID = '14'
