@@ -2489,3 +2489,9 @@ VALUES
 		('HEALTHSCOPE BENEFITS INC', 'Misc Payor'),
 		('KS KANCARE MEDICAID', 'Misc Payor'),
 		('LAWTER & ASSOCIATES', 'Attorney Office')
+
+--Unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('RJR MEDICAL MANAGEMENT', 'Misc Payor'),
+		('VA', 'CHAMPVA')
