@@ -55,7 +55,8 @@ SELECT        CR.PID,
 					when CR.DOS >='2015-07-23' then 'NPPA Services'
 					else rtrim(SL.Entity)
 					end
-					as CorrectEntity
+					as CorrectEntity,
+					cr.scheduled_by			--#76 kta
 FROM            dbo.case_report_3350 as CR
 					LEFT OUTER JOIN
 						dbo.pasurgeonlookup sl on CR.surgeon = sl.surgeon and CR.dos >= sl.startdate  and CR.dos <= sl.enddate
