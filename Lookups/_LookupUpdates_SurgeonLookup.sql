@@ -4388,3 +4388,14 @@ insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,
 
 --Unmatched surgeon report AMM
 insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,Ranking,SurgeonContract,SurgeonNo) values ('Tandy Freeman, M.D.','Neurodiagnostics & Neuromonitoring Institute, Inc.','2/1/2018','12/31/2020','Orthopedic Surgeon','* ANY *','Texas - DFW','','Standard Surgeon',20902)
+
+--Unmatched surgeon report AMM
+ insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,Ranking,SurgeonContract,SurgeonNo) values ('Raymond Fulp, D.O.','Neurodiagnostics & Neuromonitoring Institute, Inc.','02/01/2018','12/31/2020','Orthopedic Surgeon','* ANY *','ALL',,'Standard Surgeon','20904')
+ insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,Ranking,SurgeonContract,SurgeonNo) values ('Timothy Jones, M.D.','Neurodiagnostics & Neuromonitoring Institute, Inc.','02/01/2018','12/31/2020','Otolaryngology','* ANY *','ALL',,'Standard Surgeon','20906')
+ update surgeonlookup2 set Region='Texas - DFW' where SurgeonID in (2013,2040)
+ update surgeonlookup2 set SurgeonContract='Corporate Surgeon' where SurgeonID in (2039,2040,2041,2035,2032,2033)
+ update surgeonlookup2 set Ranking='General' where SurgeonID in (2039,2040,2041,2035,2032,2033)
+ update surgeonlookup2 set Region='Texas - DFW' where SurgeonID in (2026,1908,1976)
+ update surgeonlookup2 set Region='Kansas' where SurgeonID in (1892)
+ update surgeonlookup2 set Region='Texas - South Texas' where SurgeonID in (1909)
+ update surgeonlookup2 set Region='Oklahoma' where SurgeonID in (2041)
