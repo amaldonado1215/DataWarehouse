@@ -2495,3 +2495,13 @@ INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
 VALUES 
 		('RJR MEDICAL MANAGEMENT', 'Misc Payor'),
 		('VA', 'CHAMPVA')
+
+--Unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('ALFRED & CLARK LAW OFFICES', 'Attorney Office'),
+		('CRIACO & ASSOCIATES', 'Attorney Office'),
+		('GENERAL CASUALTY OF WISCO','Misc Payor'),
+        ('JEFF MARTIN & ASSOCIATES','Attorney Office'),
+        ('TEXAS HEALTH RESOURCES','Misc Payor'),
+        ('THE HUYNH LAW FIRM, PLLC','Attorney Office')
