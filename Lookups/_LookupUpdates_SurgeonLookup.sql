@@ -4407,3 +4407,4 @@ insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,
 insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,Region,Ranking,SurgeonContract,SurgeonNo) values ('Guntwant Mallik, M.D.','Ohio IOM Services, LLC','01/01/2018','12/31/2020','Neurosurgery','* ANY *','Ohio','General','Ohio Health','20396')
 update surgeonlookup2 set SurgeonContract='Ohio Health' where SurgeonID in (2042)
 update surgeonlookup2 set EndDate='12/31/2017' where SurgeonID in (1930)
+update surgeonlookup2 set Surgeon='Gunwant Mallik, M.D.' where SurgeonID=2043
