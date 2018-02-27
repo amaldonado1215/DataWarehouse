@@ -4408,3 +4408,4 @@ insert into surgeonlookup2 (Surgeon,ProEntity,StartDate,EndDate,Specialty,Payor,
 update surgeonlookup2 set SurgeonContract='Ohio Health' where SurgeonID in (2042)
 update surgeonlookup2 set EndDate='12/31/2017' where SurgeonID in (1930)
 update surgeonlookup2 set Surgeon='Gunwant Mallik, M.D.' where SurgeonID=2043
+update surgeonlookup2 set Surgeon='John Michael Desaloms, M.D.' where SurgeonID=846
