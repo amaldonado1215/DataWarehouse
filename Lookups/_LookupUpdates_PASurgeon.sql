@@ -918,3 +918,6 @@ UPDATE PASURGEONLOOKUP SET IOMSurgeonName='' WHERE SurgeonID=98
 UPDATE PASURGEONLOOKUP SET IOMSurgeonName='' WHERE SurgeonID=100
 UPDATE PASURGEONLOOKUP SET IOMSurgeonName='' WHERE SurgeonID=101
 UPDATE PASURGEONLOOKUP SET IOMSurgeonName='' WHERE SurgeonID=115
+
+--New Entity amm
+insert into PASurgeonLookup (Surgeon,Entity,StartDate,EndDate,Region,SurgeonOwnd,SurgeonNo,SOS_Date,ContractType) values ('Cynthia Voorhees, M.D.','OMDX Assist, PLLC','01/01/2018','12/31/2020','PA - South Texas','Yes',(select max(SurgeonNo) from PASurgeonLookup) + 2,'01/25/2018','Hybrid')
