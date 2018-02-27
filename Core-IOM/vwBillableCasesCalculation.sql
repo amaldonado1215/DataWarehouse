@@ -43,20 +43,20 @@ SELECT DISTINCT
 	CASE 
 		WHEN CR.DOS > getdate() THEN 'Future Case' 
 		WHEN CR.PID IN (652556,679177) THEN 'Unbillable: Pro Bono' --#26 kta added 679177
-		WHEN CR.PID IN (652556,679177) THEN 'Unbillable: Pro Bono'
-		WHEN CR.PID IN (867659, 62885, 852057, 794804, 826029, 776057) THEN 'Unbillable: SimplifyStudy'		--#64 kta
-		WHEN CR.hospital_ID = 4550 AND CR.[1st Insurance Category] = 'Other' then 'Unbillable HospContract'	--#64 kta
-		WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Medicaid Advantage Plan', 'Uninsured', 'Self Pay','Federal Plan') THEN 'Unbillable: Insurance' --#26 kta added federal plan 
+		WHEN CR.PID IN (867659, 62885, 852057, 794804, 826029, 776057) THEN 'Unbillable: SimplifyStudy'		--#64 kta 
 		WHEN CR.Reader IN ('* Unassigned *', 'Jane Doe') THEN 'Unbillable: Reader' 
-		
-		-- Replace with Neuro Fee Table calculation
 		WHEN READERFEES.Fee1 = 0 THEN 'Unbillable: ReaderFee'
-		--WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case' --#26 kta commented out, joined on hospitalID below
-		WHEN CR.hospital_ID = 3403 AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case' 
-		--WHEN CR.hospital = 'Dublin Surgery Center' THEN 'Unbillable: Bundled Case'  --#26 kta commented out, joined on hospitalID below
-		WHEN CR.hospital_ID in (4457,4550) THEN 'Unbillable: Bundled Case' --#26 added 4450
-		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND DOS >= '2017-01-01' THEN 'Unbillable: TRI-MRP-CHAMPVA' --#26 kta removed federal plan
+		WHEN CR.hospital_ID in (3403,4457,4550) AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable Bundled Case' -- #75 kta
+		WHEN CR.hospital_ID in (3403) AND CR.[Primary Insurance] like '%Health Choice%' THEN 'Unbillable Bundled Case' -- #75 kta
+		WHEN CR.hospital_ID in (3403) AND CR.[Primary Insurance] like '%kempton%' THEN 'Unbillable Bundled Case' -- #75 kta
 		WHEN HL7.[SecondaryGroupID] = 'PB' AND  CR.Reader = 'William VanNess, M.D.' THEN 'Unbillable' -- ticket #22 kta
+		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND DOS >= '2017-01-01' 
+			AND HL.[Contract Type] <> 'No Contract' and CR.Region_Short_Name not in ('California','Maryland') THEN 'Unbillable: TRI-MRP-CHAMPVA' --#26 kta removed federal plan --#73 added contract type
+		--WHEN CR.hospital_ID = 4550 AND CR.[1st Insurance Category] = 'Other' then 'Unbillable HospContract'	--#64 kta
+		--WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Medicaid Advantage Plan', 'Uninsured', 'Self Pay','Federal Plan') THEN 'Unbillable: Insurance' --#26 kta added federal plan --#73 kta remove
+		--WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case' --#26 kta commented out, joined on hospitalID below
+		--WHEN CR.hospital = 'Dublin Surgery Center' THEN 'Unbillable: Bundled Case'  --#26 kta commented out, joined on hospitalID below
+		--WHEN CR.hospital_ID in (4457,4550) THEN 'Unbillable: Bundled Case' --#26 added 4450
 	/*	WHEN CR.[1st Insurance Category] = 'TRICARE' AND CR.Reader NOT IN ('Bjorn Krane, M.D.', 'Bruce Katuna, M.D.', 'Badreldin Ibrahim, M.D.', 
 					'Chuong Le, M.D.', 'Peter Tarbox, M.D.', 'Craig Carroll, D.O.') THEN 'Unbillable: TRICARE/Docs' 
 		WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.Reader IN ('William High, M.D.', 'William High, M.D., Ph.D.') THEN 'Unbillable: BCBS/High' 
@@ -68,25 +68,32 @@ SELECT DISTINCT
 
     CASE 
 		WHEN CR.DOS > getdate() THEN 'Future Case' 
-		WHEN CR.PID IN (652556) THEN 'Unbillable: Pro Bono'
 		WHEN CR.PID IN (652556,679177) THEN 'Unbillable: Pro Bono'
 		WHEN CR.PID IN (867659, 62885, 852057, 794804, 826029, 776057) THEN 'Unbillable: SimplifyStudy'		--#64 kta
 		WHEN CR.hospital_ID = 4550 AND CR.[1st Insurance Category] = 'Other' then 'Unbillable HospContract'	--#64 kta
+		WHEN CR.hospital_ID in (3470,3635,4677,4680) THEN 'Unbillable: Contract'	--#75 kta Scottsdale Shea, HonorHealth DV, Torrence Mem, Uni of MD
+		WHEN CR.hospital_ID in (3403,4457) and CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case'  --#75 kta
+		WHEN CR.hospital_ID = 3403 and CR.[Primary Insurance] like '%kempton%' then 'Unbillable: Bundled Case'  --#75 kta
+		WHEN CR.hospital_ID = 3403 and CR.[Primary Insurance] like '%Health Choice%' then 'Unbillable: Bundled Case'
 		WHEN CR.[1st Insurance Category] IN ('Medicare', 'Medicaid', 'Medicaid Advantage Plan', 'Blue Cross Blue Shield') THEN 'Unbillable: Disqualifying Insurance' 
-		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan','Federal Plan') AND DOS >= '2017-01-01' THEN 'Unbillable: TRI-MRP-CHAMPVA'
-	-- #2034	WHEN ([Primary Insurance] like '%Blue Cross Blue Shield%' or [Primary Insurance] like '%BCBS%') THEN 'Unbillable: Disqualifying Insurance'
+		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND DOS >= '2017-01-01' 
+			AND HL.[Contract Type] <> 'No Contract' and CR.Region_Short_Name not in ('California','Maryland')THEN 'Unbillable: TRI-MRP-CHAMPVA' --#26 kta removed federal plan --#73 added contract type
 		WHEN CR.[Primary Insurance] like '%Aetna%' AND DOS >= '2017-01-01' THEN 'Unbillable: Aetna'
-		When CR.[1st Insurance Category] = 'Cigna' and CR.DOS >='2018-02-01' then 'Unbillable: Cigna'		--#64 kta
-		--WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' and CR.[Primary Insurance] like '%kempton%' then 'Unbillable: mcbride/Kempton'
-		WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital'  AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case' 
-		WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case'
-		WHEN CR.hospital = 'Dublin Surgery Center' THEN 'Unbillable: Bundled Case'
+		WHEN CR.[1st Insurance Category] = 'Cigna' and CR.DOS >='2018-02-01' then 'Unbillable: Cigna'		--#64 kta
 		WHEN CR.[1st Insurance Category] = 'OTHER' AND CR.[Primary Insurance] LIKE '%Indigent%' THEN 'Unbillable: Indigent' 
+		
 		WHEN HL.contract_status = 'Services' AND CIM.contract_status = HL.contract_status AND HL.expire_date IS NULL THEN 'Unbillable: Insurance Contract Matrix' 
 		WHEN HL.contract_status = 'Services' AND CIM.contract_status = HL.contract_status THEN 'Unbillable: Insurance Contract Matrix' 
 		WHEN CR.Region_Short_Name IN ('Alaska') AND CR.Tech = 'Kimberly olson' THEN 'Unbillable: Alaska/Olson' 
 		WHEN CR.surgeon IN ('Arnold Vardiman, M.D.') AND reader IN ('Jane Doe', '* Unassigned *') THEN 'Unbillable: Vardiman No Reader' 
 		WHEN Region_Short_Name in ('California', 'Maryland') THEN 'Unbillable: Region'
+
+		--WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' and CR.[Primary Insurance] like '%kempton%' then 'Unbillable: Bundled Case'  --#75 kta
+		--WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' and CR.[Primary Insurance] like '%Health Choice%' then 'Unbillable: Bundled Case'  --#75 kta
+		--WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case'  --#75 kta
+		--When CR.hospital_ID in ( 3470, 3635, 4677) THEN 'UnbillableContract'
+		-- #2034	WHEN ([Primary Insurance] like '%Blue Cross Blue Shield%' or [Primary Insurance] like '%BCBS%') THEN 'Unbillable: Disqualifying Insurance'
+		--WHEN CR.hospital = 'Dublin Surgery Center' THEN 'Unbillable: Bundled Case'
 		
 		ELSE 'Billable' 
 		END AS BillableStatusTech, 

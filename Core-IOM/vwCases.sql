@@ -96,7 +96,8 @@ SELECT c.PID,
 		WHEN c.pro_hosp_close > '1900-01-01 18:00:00' THEN 'Yes' 
 		ELSE '' 
 	END as OnCall_Tech,
-	InsuranceRoundedUnits
+	InsuranceRoundedUnits,
+    c.no_demograph			--#77 kta
 FROM dbo.case_report_3300 c
 	LEFT OUTER JOIN dbo.TechRegionLookup trl ON trl.TECH = c.Tech and c.DOS between trl.StartDate and trl.EndDate
 	LEFT OUTER JOIN dbo.insurancelookup AS IL ON IL.insurancecompany = c.[Primary Insurance]

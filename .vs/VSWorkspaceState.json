@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DataWarehouse",
     "\\Emailed Reports",
-    "\\Lookups"
+    "\\PA"
   ],
+  "SelectedNode": "\\PA\\vwPACases.sql",
   "PreviewInSolutionExplorer": true
 }
