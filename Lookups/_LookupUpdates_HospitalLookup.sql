@@ -1343,3 +1343,6 @@ INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_I
 INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Houston Methodist St. John Hospital','','5868',(select max(hospital_nbr) from hospitallookup) + 2,'')
 INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Methodist Dallas Medical Center','','5899',(select max(hospital_nbr) from hospitallookup) + 2,'')
 
+--hospitallookup cleanup amm
+INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Ohio Health - Marion General Hospital','','5938',(select max(hospital_nbr) from hospitallookup) + 2,'')
+UPDATE HOSPITALLOOKUP SET [Hospital] = 'Medical City of Ft. Worth (Plaza Medical Center of Fort Worth)'  WHERE HOSPITAL_ID = 3925
