@@ -360,6 +360,13 @@ BEGIN TRY
 	select * INTO [USMON_Local].dbo.inv_pay_3300  from [dbconnect.usmon.com].[USMON].dbo.inv_pay_3300 
 END TRY BEGIN CATCH END CATCH
 
+--[dbo].[audit_details_33]
+BEGIN TRY
+	if exists (select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'audit_details_33') and (select count(*) from [dbconnect.usmon.com].[USMON].dbo.audit_details_33 ) > 0
+		drop table audit_details_33 ;
+	select * INTO [USMON_Local].dbo.audit_details_33  from [dbconnect.usmon.com].[USMON].dbo.audit_details_33 
+END TRY BEGIN CATCH END CATCH
+
 -- Indexes
 
 --
