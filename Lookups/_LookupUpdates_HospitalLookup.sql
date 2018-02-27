@@ -1345,4 +1345,12 @@ INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_I
 
 --hospitallookup cleanup amm
 INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Ohio Health - Marion General Hospital','','5938',(select max(hospital_nbr) from hospitallookup) + 2,'')
-UPDATE HOSPITALLOOKUP SET [Hospital] = 'Medical City of Ft. Worth (Plaza Medical Center of Fort Worth)'  WHERE HOSPITAL_ID = 3925
+UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Cynthia Ramirez'  WHERE HOSPITAL_ID = 571
+UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Cynthia Ramirez'  WHERE HOSPITAL_ID = 572
+UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Cynthia Ramirez'  WHERE HOSPITAL_ID = 573
+UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Rita Flores'  WHERE HOSPITAL_ID = 574
+UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Cynthia Ramirez'  WHERE HOSPITAL_ID = 576
+UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Cynthia Ramirez'  WHERE HOSPITAL_ID = 577
+UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Rita Flores'  WHERE HOSPITAL_ID = 578
+UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Rita Flores'  WHERE HOSPITAL_ID = 579
+UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Rita Flores'  WHERE HOSPITAL_ID = 440
