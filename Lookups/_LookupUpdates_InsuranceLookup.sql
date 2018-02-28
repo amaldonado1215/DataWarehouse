@@ -2505,3 +2505,11 @@ VALUES
         ('JEFF MARTIN & ASSOCIATES','Attorney Office'),
         ('TEXAS HEALTH RESOURCES','Misc Payor'),
         ('THE HUYNH LAW FIRM, PLLC','Attorney Office')
+
+--Unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('Bit- Co', 'Misc Payor'),
+		('CLAY ZELBST ATTORNEY', 'Misc Payor'),
+		('GENERAL CASUATLY OF WISCO','Misc Payor')
+
