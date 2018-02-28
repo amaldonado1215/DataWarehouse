@@ -159,3 +159,18 @@ select claimid, count(*) from correctentityexceptions group by claimid order by 
 select * from CorrectEntityExceptions where PID = '930530'
 insert into CorrectEntityExceptions (ClaimID,PID,CorrectEntity) values ('930530','763797','Ahai, PLLC')
 
+--DR	
+insert into CorrectEntityExceptions (ClaimID,PID,CorrectEntity) values ('969160','766899','Pro Read, LLC')
+
+--DR
+insert into CorrectEntityExceptions (ClaimID, PID, CorrectEntity) values ('946104','783731','Pro Read, LLC')
+insert into CorrectEntityExceptions (ClaimID, PID, CorrectEntity) values ('951711','784986','Pro Read, LLC')
+
+--DR correct spelling
+UPDATE CorrectEntityExceptions set CorrectEntity = 'Greene Monitoring, PLLC' where ClaimID = 1039704
+
+-- ticket #68 kta
+insert into [dbo].[CorrectEntityExceptions]
+values	(1078066,908309,'Greene Monitoring, PLLC'),
+		(1078067,908309,'Greene Monitoring, PLLC')
+

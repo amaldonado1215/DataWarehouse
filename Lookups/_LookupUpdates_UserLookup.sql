@@ -216,3 +216,8 @@ SELECT * From userlookup where web_user_id in (8538,3071,370,1558,1733,7470)
 
   --ticket 2499 lauren
  SELECT * from userlookup where web_user_id in (8318, 7753)
+
+ insert into [dbo].[UserLookup] (web_user_id,Payroll_ID) -- #53 kta
+ values (8906,	61258),
+		(8979,	61270),
+		(8305,	61500)

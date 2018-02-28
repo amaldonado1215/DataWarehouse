@@ -86,14 +86,16 @@ select CR.PID,
 										447684,458992,459036,460676,460678,460682,460690,460694,460713,460796,460802,473130,
 										473128,473125,473123,473119) THEN 'NPPA Services'	-- added w/ DR no ticket
 				WHEN PIC.claim_id = 1026774 THEN 'NPPA Services' -- Ticket 43 kta
-				when cr.dos > '2016-12-31' and (cr.tech like '%CSFA%' or cr.tech like '%LSA%') then 'Precision Assist of Dallas'--ticket 18 kta  
-				when cr.DOS > '2016-12-31'  and cr.Tech like 'Steve Greer%' or cr.Tech like 'Jerold Greer%' then 'Precision Assist of Dallas'
+				--when cr.dos > '2016-12-31' and (cr.tech like '%CSFA%' or cr.tech like '%LSA%') then 'Precision Assist of Dallas'--ticket 18 kta  -- ticket 49 kta
+				--when cr.DOS > '2016-12-31'  and cr.Tech like 'Steve Greer%' or cr.Tech like 'Jerold Greer%' then 'Precision Assist of Dallas'
 
-				WHEN sl.ContractType = 'Hybrid' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield'  and RL.Status = 'SurgeonPA' then rtrim(SL.Entity)  --#30 kta
-				when cr.surgeon = 'Desh Sahni, M.D.' and cr.[1st Insurance Category] = 'Self Pay' then rtrim(SL.Entity)				-- #43 kta
+				--WHEN sl.ContractType = 'Hybrid' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield'  and RL.Status = 'SurgeonPA' then rtrim(SL.Entity)  --#30 kta
+				--WHEN sl.ContractType = 'Hybrid' and RL.Status = 'SurgeonPA' and (CR.[Primary Insurance] like '%Blue Cross%' or CR.[Primary Insurance] like '%BCBS%') then rtrim(SL.Entity) --#57 kta --#71 kta
+				WHEN sl.ContractType = 'Hybrid' and RL.Status = 'SurgeonPA' and CR.[1st Insurance Category] in ('Blue Cross Blue Shield','Federal Plan') then rtrim(SL.Entity) --#71 kta
+				--when cr.surgeon = 'Desh Sahni, M.D.' and cr.[1st Insurance Category] = 'Self Pay' then rtrim(SL.Entity)				-- #43 kta --#71 kta
 				when cr.surgeon = 'Sean Jones-Quaidoo, M.D.' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity)
-				When cr.surgeon = 'Josue Gabriel, M.D.' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity)
-				when cr.tech = 'Jose Fuentez, PA-C'and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity) --ticket 2375 lauren
+		-- ticket 65 kta --		WHEN cr.surgeon = 'Josue Gabriel, M.D.' and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity)
+				--when cr.tech = 'Jose Fuentez, PA-C'and cr.[1st Insurance Category] = 'Blue Cross Blue Shield' then rtrim(SL.Entity) --ticket 2375 lauren --#71 kta
 		--ticket 2271 lauren: For all encounters in this year, when the surgeon is Adam Bruggeman, M.D. 
 		--and the Tech is Kim Stewart, and the 1st ins type = BCBS then the case defers to SL  else NPPA (current default)
 	
@@ -114,6 +116,8 @@ select CR.PID,
 				when CR.DOS <'2015-07-23' and CR.Region_Short_Name = 'PA - South Texas' then 'Precision Assist of San Antonio'
 				when CR.DOS <'2015-07-23' and CR.Region_Short_Name = 'PA - Austin' then 'Precision Assist of San Antonio'
 				when CR.DOS <'2015-07-23' and CR.Region_Short_Name = 'PA - DFW' then 'Precision Assist of Dallas'
+				WHEN CR.Region_Short_Name = 'Arizona' then 'Precision Assist of Dallas'	-- #71 kta
+				when cr.dos > '2016-12-31' and (cr.tech like '%CSFA%' or cr.tech like '%LSA%') or (cr.Tech like 'Jerold Greer%') then 'Precision Assist of Dallas'-- ticket 49 kta -- #56 kta
 				when CR.DOS >='2015-07-23' then 'NPPA Services'
 				else rtrim(SL.Entity)
 				end

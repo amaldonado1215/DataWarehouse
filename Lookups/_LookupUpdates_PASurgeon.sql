@@ -801,6 +801,7 @@ insert into PASurgeonLookup (surgeon, entity, startdate, enddate, region, surgeo
 
 UPDATE PASurgeonLookup SET Enddate = '2017-11-30' WHERE SurgeonID in (79,107) --ticket 29 kta
 
+<<<<<<< HEAD
 --IOMSurgeonName column update amm
 UPDATE PASURGEONLOOKUP SET IOMSurgeonName='414' WHERE SurgeonID=1
 UPDATE PASURGEONLOOKUP SET IOMSurgeonName='414' WHERE SurgeonID=2
@@ -923,3 +924,6 @@ UPDATE PASURGEONLOOKUP SET IOMSurgeonName='' WHERE SurgeonID=115
 insert into PASurgeonLookup (Surgeon,Entity,StartDate,EndDate,Region,SurgeonOwnd,SurgeonNo,SOS_Date,ContractType) values ('Cynthia Voorhees, M.D.','OMDX Assist, PLLC','01/01/2018','12/31/2020','PA - South Texas','Yes',(select max(SurgeonNo) from PASurgeonLookup) + 2,'01/25/2018','Hybrid')
 insert into PASurgeonLookup (Surgeon,Entity,StartDate,EndDate,Region,SurgeonOwnd,SurgeonNo,SOS_Date,ContractType) values ('Gunwant Mallik, MD','Ohio PA Services, LLC','01/01/2018','12/31/2020','Ohio','Yes',(select max(SurgeonNo) from PASurgeonLookup) + 2,'01/08/2018','Classic')
 UPDATE PASURGEONLOOKUP SET IOMSurgeonName=16581 WHERE SurgeonID=123
+=======
+update [dbo].[PASurgeonLookup] set ContractType = 'Hybrid'  where surgeonID=91 -- ticket 67 kta
+>>>>>>> ad9952adf2b8134959d2ee4e64a3a1e11baeb889

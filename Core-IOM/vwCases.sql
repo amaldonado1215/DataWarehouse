@@ -1,5 +1,138 @@
 ﻿ALTER VIEW vwCases AS
-SELECT
+
+/********* kta #48 1/31/2018  ********/
+/********* re-write  ********/
+
+SELECT c.PID,
+	CAST(c.DOS AS SMALLDATETIME) AS DOS,
+	c.Patient,
+	c.Region_Short_Name,
+	c.Hospital,
+	c.hospital_id,
+	c.Surgeon,
+	c.pro_hosp_start,
+	c.pro_hosp_close as pro_hosp_end,
+	COALESCE(SL1.specialty, 'Unknown') as Specialty, 
+	c.Closed,
+	CASE
+		WHEN c.PID = '624536' THEN 'Alamo City Neurodiagnostics, PLLC'
+		ELSE COALESCE(SL1.Proentity, 'Neurodiagnostics & Neuromonitoring Institute, Inc.')
+	END AS DefaultEntity,
+	CEE.CorrectProEntity,
+	CEE.CorrectProEntity as ExceptionCorrectEntity,
+	c.Tech,
+	trl.[ASSIGNED REGION] AS TechRegion,
+	trl.TechName AS ConsolidatedTechName,
+	COALESCE(tcl.TechEntity,rtel.TechEntity) as TechEntity,
+	c.Tech2,
+	c.Tech_Sign_Off_Date,
+	tso.[Signoff Date] AS Tech_Sign_Off_Date_First,
+	DATEDIFF(DAY, c.DOS, c.Tech_Sign_Off_Date) AS Tech_Days_to_Sign_Off,
+	DATEDIFF(DAY, c.DOS, tso.[Signoff Date]) AS Tech_Days_to_Sign_Off_2,
+	c.Reader,
+	c.Reader_Sign_Off_Date,
+	DATEDIFF(DAY, c.DOS, c.Reader_Sign_Off_Date) AS Reader_Days_to_SignOff,
+	h.date_changed AS Aud_Sign_Off_Date,
+	DATEDIFF(DAY, tso.[Signoff Date], h.date_changed) as Aud_Days_to_Sign_Off,
+	h.cuser_name as Auditor,
+	c.scheduled_by,
+	c.TechTime,
+	c.ORTime,
+	c.ProTime,
+	c.[Procedure Type],
+	c.OR_Procedure,
+	c.[Primary Insurance],
+	c.[1st Insurance Category],
+	c.[Secondary Insurance],
+	r.[Secondary Policy, Group ID/Secondary ID No] as [Secondary Insurance Group ID],
+	c.[2nd Insurance Category],
+	c.Biller,
+	c.[Second Biller],
+	c.[Invoice #],
+	c.Convert_hookup_time,
+	c.Convert_unhook_time,
+	c.pro_time_start,
+	c.pro_time_end,
+	CASE
+		WHEN c.[1st Insurance Category] = 'Medicare Replacement Plan'
+		THEN (	SELECT count(*)
+				FROM dbo.case_report_3300  cr
+				WHERE c.Reader = cr.reader
+						AND cr.[1st Insurance Category] = 'Medicare Replacement Plan'
+						AND c.dos = cr.dos
+						AND c.pro_time_start < cr.pro_time_end
+						AND cr.pro_time_start < c.pro_time_end
+						AND c.pid <> cr.pid)
+		ELSE 0 
+	END AS MRPOverlap,
+	CASE WHEN hl.PayRate > 0 THEN 'Yes'  ELSE '' END as HolidayPay,
+	CASE WHEN c.Pending_Correction = 'TRUE'	THEN 'Yes' ELSE '' END AS Pending_Correction,
+	IL.insurancegroup AS [consolidated payor],
+	CASE
+		WHEN c.Surgeon IN ('Dr. C Gilberto Brito, M.D.', 'Kendrick Thomas, M.D.', 'Joshua Levy, D.O.', 'Jeffrey Wingate, M.D.')
+				AND [1st Insurance Category] = 'Blue Cross Blue Shield' THEN 'Eligible'
+		WHEN Region_short_name = 'Louisiana' AND [1st Insurance Category] = 'Workmans Comp' THEN 'Eligible'
+		WHEN c.Surgeon = 'Mark Silver, M.D.' AND sl1.proentity = 'Texoma IOM, PLLC' AND
+				[1st Insurance Category] = 'Blue Cross Blue Shield' THEN 'Eligible'
+		WHEN c.Surgeon = 'Ram Vasudevan, M.D.' AND c.pid IN (461920, 475127, 504144, 521290) THEN 'Eligible'
+	--	WHEN [1st Insurance Category] in ( 'Private Insurance','Letter of Protection','Lein Case') THEN 'Eligible'
+		WHEN [1st Insurance Category] in ( 'Private Insurance','Letter of Protection','Lein Case', 'Cigna', 'Aetna') THEN 'Eligible'  -- ticket #63 kta
+		WHEN SL1.ProEntity = 'Neuroguide IOM, PLLC' AND [1st insurance Category] = 'Blue Cross Blue Shield' THEN 'Private'
+		ELSE 'Other' 
+	END AS DashboardInsuranceType,
+	datepart(WEEKDAY, dos) AS DayOfWeek,
+	CASE
+		WHEN datepart(WEEKDAY, dos) IN (1, 7) THEN 'Yes'
+		WHEN try_convert(TIME, pro_time_start) < '06:00' THEN 'Yes'
+		WHEN try_convert(TIME, pro_time_start) >= '17:00' THEN 'Yes'
+		WHEN try_convert(TIME, pro_time_end) >= '18:00' THEN 'Yes'
+		WHEN datepart("D", pro_time_end) = 2 THEN 'Yes'
+		ELSE '' 
+	END AS OnCall_Time,
+	CASE 
+		WHEN datepart(WEEKDAY, dos) IN (1, 7) THEN 'Yes'
+		WHEN c.pro_hosp_start <= '1900-01-01 05:00:00' THEN 'Yes'
+		WHEN c.pro_hosp_start > '1900-01-01 17:00:00' THEN 'Yes'
+		WHEN c.pro_hosp_close > '1900-01-01 18:00:00' THEN 'Yes' 
+		ELSE '' 
+	END as OnCall_Tech,
+	InsuranceRoundedUnits,
+    c.no_demograph			--#77 kta
+FROM dbo.case_report_3300 c
+	LEFT OUTER JOIN dbo.TechRegionLookup trl ON trl.TECH = c.Tech and c.DOS between trl.StartDate and trl.EndDate
+	LEFT OUTER JOIN dbo.insurancelookup AS IL ON IL.insurancecompany = c.[Primary Insurance]
+	LEFT OUTER JOIN dbo.surgeonlookup2 sl1 ON c.surgeon = sl1.surgeon
+						AND c.dos between sl1.startdate and sl1.enddate
+                        AND (sl1.region = c.Region_Short_Name)                                            
+                        AND (sl1.payor = '* ANY *' or sl1.payor = IL.InsuranceGroup )
+	LEFT OUTER JOIN dbo.vwCorrectEntityExceptionsByPID as CEE on c.PID = CEE.pid
+	LEFT OUTER JOIN dbo.RegionTechEntityLookup rtel on rtel.RegionName = c.Region_Short_Name
+						AND c.DOS between rtel.StartDate and rtel.EndDate
+	LEFT OUTER JOIN (		SELECT patient_id, min([Signoff Date]) as [Signoff Date]
+							FROM dbo.Tech_sign_off_3300
+							GROUP BY patient_id ) tso on tso.patient_id = c.pid
+	LEFT OUTER JOIN (	SELECT h2.patient_id, h2.date_changed, min(h2.cuser_name) as cuser_name
+						FROM dbo.history_3300 h2
+							INNER JOIN (	SELECT h1.patient_id, min(h1.date_changed) as date_changed
+											FROM dbo.history_3300 h1
+											WHERE h1.field_changed = 'Auditor Sign Off'
+											GROUP BY patient_id	) x	 on x.patient_id = h2.patient_id and h2.date_changed = x.date_changed
+							WHERE h2.field_changed = 'Auditor Sign Off'
+							GROUP BY h2.patient_id, h2.date_changed) h on h.patient_id = c.PID
+	LEFT OUTER JOIN dbo.holidaylookup hl on hl.HolidayDate = c.dos
+	LEFT OUTER JOIN dbo.TechCompanyLookup tcl on tcl.Surgeon = c.Surgeon 
+						AND c.dos between tcl.StartDate and tcl.EndDate and tcl.region = c.Region_Short_Name
+	--LEFT OUTER JOIN dbo.DefaultEntityLookup del on del.Region = c.Region_Short_Name
+	LEFT OUTER JOIN dbo.hl7_raw_data_3300 r on r.patient_id = c.PID
+WHERE c.Deleted <> 'Yes' 
+	AND c.Cancelled <> 'Yes' 
+	AND c.Patient is NOT NULL 
+	AND c.Patient not like '1, %' 
+	AND c.Patient not like '2, %'
+	AND c.Patient not LIKE 'test, %'
+GO
+
+/*SELECT
 	dbo.case_report_3300.PID,
 	CAST(dbo.case_report_3300.DOS AS SMALLDATETIME) AS DOS,
 	dbo.case_report_3300.Patient,
@@ -23,12 +156,12 @@ SELECT
 		WHEN sl2.Proentity IS NOT NULL
 		THEN sl2.Proentity
 		ELSE 'Neurodiagnostics & Neuromonitoring Institute, Inc.'
-	END AS DefaultEntity,
+	END AS DefaultEntity,*/
 	/* REMOVED PER Ticket #925						 CASE
 				WHEN case_report_3300.surgeon = 'Sean Jones-Quaidoo, M.D.' and IL.InsuranceGroup = 'Blue Cross Blue Shield' and case_report_3300.DOS >='2016-07-07' then 'Cerebral Axis, PLLC'
 				ELSE sl.proentity
 				END as DefaultEntity,*/
-	CASE
+	/*CASE
 		WHEN case_report_3300.PID IN ('461920', '475127', '504144', '521290') THEN 'RRV Neuromonitoring PLLC' -- Ticket #702/819
 		WHEN case_report_3300.PID IN ('347332', '354211', '354292', '347908', '298807', '711162','701379') THEN 'Neurodiagnostics & Neuromonitoring Institute, Inc.'
 		WHEN case_report_3300.PID IN ('521290') AND SL1.Proentity IS NOT NULL THEN SL1.Proentity
@@ -246,4 +379,4 @@ FROM dbo.case_report_3300
                             AND sl2.payor = IL.InsuranceGroup
 	LEFT OUTER JOIN vwCorrectEntityExceptionsByPID as CEE on dbo.case_report_3300.PID = CEE.pid
 	LEFT OUTER JOIN dbo.hl7_raw_data_3300 r on r.patient_id = dbo.case_report_3300.PID -- ticket #22 kta
-WHERE (dbo.case_report_3300.Deleted <> 'Yes') AND (dbo.case_report_3300.Cancelled <> 'Yes')
+WHERE (dbo.case_report_3300.Deleted <> 'Yes') AND (dbo.case_report_3300.Cancelled <> 'Yes')*/

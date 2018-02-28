@@ -3666,6 +3666,7 @@ insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, p
  select * from surgeonlookup2 where surgeonid  = 2014
  update surgeonlookup2 set proentity = 'DASO Neuromonitoring, PLLC ' ,startdate = '2017-12-20' where surgeonid = 2014
  
+<<<<<<< HEAD
  -- Tckt 46 closed AM
 insert into surgeonlookup2 (Surgeon, ProEntity, StartDate, EndDate, Specialty, Payor, Region, Ranking, SurgeonContract, SurgeonNo) values ('Kade Huntsman, M.D.','KKMMCB Meidcal, PLLC','2017-12-01','2020-12-31','Orthopedic Surgeon','* ANY*','Utah','','Standard Surgeon',20888)
 insert into surgeonlookup2 (Surgeon, ProEntity, StartDate, EndDate, Specialty, Payor, Region, Ranking, SurgeonContract, SurgeonNo) values ('Kendall Carll, M.D.','TWHS, PLLC','2017-11-01','2020-12-31','Urology','* ANY*','Texas - DFW','','Referring Surgeon',20040)
@@ -4410,3 +4411,25 @@ update surgeonlookup2 set EndDate='12/31/2017' where SurgeonID in (1930)
 update surgeonlookup2 set Surgeon='Gunwant Mallik, M.D.' where SurgeonID=2043
 update surgeonlookup2 set Surgeon='John Michael Desaloms, M.D.' where SurgeonID=846
 update surgeonlookup2 set Surgeon='John Michael Desaloms, M.D.' where SurgeonID=798
+=======
+ --DR 1/24/18
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ('Huay-Zong Law, M.D.','Granite Anesthesia', '2017-08-01','2020-12-31','Plastic Surgeon', '*ANY*','ANES-DFW','1','60018')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonNo) values ('Peter Grays, M.D.','Neurodiagnostics & Neuromonitoring Institute, Inc.', '2014-09-01', '2020-12-31','General Surgeon','*ANY*','ALL','3','13348')
+
+Update surgeonlookup2 set Surgeon = 'Joseph Boucree, M.D.' where SurgeonID = 1982
+-- DR 1/31/18
+update surgeonlookup2 set EndDate = '2017-10-31' where SurgeonID = 451
+update surgeonlookup2 set EndDate = '2017-10-31' where SurgeonID = 450
+
+ -- changed column to varchar kim 2/2/2018
+  alter table [dbo].[SurgeonLookup2]
+  alter column [Ranking] varchar(50)
+  
+
+  --DR corrected duplicate SageID
+  update SurgeonLookup2 set SurgeonNo = '10081' where surgeonid = 372
+
+/* ticket 42 kta new field populates whenever record is added or changed via trg_SurgeonLookupChange */
+ALTER TABLE dbo.SurgeonLookup2
+ADD Modify_Date datetime null DEFAULT getdate()  
+>>>>>>> ad9952adf2b8134959d2ee4e64a3a1e11baeb889

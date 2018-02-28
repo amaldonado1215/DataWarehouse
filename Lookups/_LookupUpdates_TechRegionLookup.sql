@@ -1408,3 +1408,15 @@ Values ('Hugo Vasquez, MD', 'ANES-DFW', 'Hugo Vasquez', 'Active', '2018-01-07', 
 
 insert into [dbo].[TechRegionLookup] ( [TECH],[ASSIGNED REGION],[TechName],[TechStatus],[StartDate],[EndDate]) --#31 kta
 values('Stacey Darnley, B.S., CNIM', 'Texas - Austin', 'Stacey Darnley', 'Active', '2017-05-30', '2099-12-31')
+
+update TechRegionLookup  -- #53 kta
+set EndDate = '1/6/2018' where techname = 'Satin Bibbs'
+
+insert into TechRegionLookup (TECH,	[ASSIGNED REGION],	TechName,	TechStatus,	StartDate,	EndDate) -- #53 kta
+values('Emma Morris, B.S.', 'Oklahoma', 'Emma Morris', 'Active', '11/26/2017', '12/31/2099'),
+('Genevieve Goulding, CNIM', 'Colorado', 'Genevieve Goulding', 'Active', '1/28/2018', '12/31/2099'),
+('Pamela Hockert', 'ANES-DFW', 'Pamela Hockert', 'Active', '12/10/2015', '12/31/2099'),
+('Pamela Hockert, MD', 'ANES-DFW', 'Pamela Hockert', 'Active', '12/10/2015', '12/31/2099'),
+('Pamela Hockert, MDA', 'ANES-DFW', 'Pamela Hockert', 'Active', '12/10/2015', '12/31/2099'),
+('Satin Bibbs, M.S.', 'Louisiana', 'Satin Bibbs', 'Active', '1/7/2018', '12/31/2099'),
+('Satin Bibbs, M.S., IOMN', 'Louisiana', 'Satin Bibbs', 'Active', '1/7/2018', '12/31/2099')

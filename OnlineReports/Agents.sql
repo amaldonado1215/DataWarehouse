@@ -147,6 +147,13 @@ select * from agents where id = 8722
 select * from dbo.notes_3300 where web_id = 8722
 --add these agents Andra Lang 8722
 
+<<<<<<< HEAD
 --add Christopher Barraza 9189
 
 --add Marisa Gleason-Montez, Diana Lafuente, Theresa Saucedo amm
+=======
+--ticket #54 kta
+select * from agents where id in (9187,9081)
+select * from dbo.notes_3300 where web_id in (9187,9081)
+-- add 9187,9081
+>>>>>>> ad9952adf2b8134959d2ee4e64a3a1e11baeb889
