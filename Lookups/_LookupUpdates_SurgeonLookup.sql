@@ -4433,3 +4433,8 @@ update surgeonlookup2 set EndDate = '2017-10-31' where SurgeonID = 450
 ALTER TABLE dbo.SurgeonLookup2
 ADD Modify_Date datetime null DEFAULT getdate()  
 >>>>>>> ad9952adf2b8134959d2ee4e64a3a1e11baeb889
+
+--unmatched surgeonlookup
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonContract,SurgeonNo) values ('Jean Louise Benae','Horizon Neurodiagnostics, PLLC', '12/14/2016', '03/02/2018','Spine Surgeon','* ANY *','Texas - DFW','Dallas','Standard Surgeon','20020')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonContract,SurgeonNo) values ('Charles Pipkin','CSPNM, PLLC', '01/01/2018', '03/07/2018','Spine Surgeon','* ANY *','Texas - South Texas','Strike Force','Standard Surgeon','20234')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonContract,SurgeonNo) values ('Irvin K Sahni','River Valley Neurophysiology, PLLC', '02/27/2018', '02/27/2018','Spine Surgeon','* ANY *','Texas - Austin','Strike Force','Standard Surgeon','20258')
