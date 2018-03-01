@@ -174,3 +174,18 @@ insert into [dbo].[CorrectEntityExceptions]
 values	(1078066,908309,'Greene Monitoring, PLLC'),
 		(1078067,908309,'Greene Monitoring, PLLC')
 
+--Per Michelle S. all unbilled AINeurology going to new Entity amm
+insert into [dbo].[CorrectEntityExceptions] (PID,CorrectEntity)
+values	(885055,'Nizuc Care, PLLC'),
+		(874349,'Nizuc Care, PLLC'),
+		(894843,'Nizuc Care, PLLC')
+
+insert into [dbo].[CorrectEntityExceptions]
+values	(1043171,874753,'Nizuc Care, PLLC'),
+		(1044374,874762,'Nizuc Care, PLLC'),
+		(1067719,881641,'Nizuc Care, PLLC')
+
+insert into [dbo].[CorrectEntityExceptions]
+values	(1027373,861762,'Nizuc Care, PLLC'),
+		(1046898,868562,'Nizuc Care, PLLC'),
+		(1041530,874519,'Nizuc Care, PLLC')
