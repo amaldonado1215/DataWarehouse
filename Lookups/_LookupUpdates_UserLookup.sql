@@ -221,3 +221,5 @@ SELECT * From userlookup where web_user_id in (8538,3071,370,1558,1733,7470)
  values (8906,	61258),
 		(8979,	61270),
 		(8305,	61500)
+insert into [dbo].[UserLookup](Web_user_id, Payroll_ID) -- kta  add Jason Carolus 
+values (6044,61010)
