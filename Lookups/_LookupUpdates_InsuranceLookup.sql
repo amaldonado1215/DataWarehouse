@@ -2550,3 +2550,11 @@ WHERE InsuranceCompany = 'VA AK- VETERANS HEALTH CARE SYSTEM'
 UPDATE [dbo].[InsuranceLookup]
 SET InsuranceGroup = 'Cigna'
 WHERE InsuranceGroup = 'CIGNA'
+
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('HEALTHNET SR HMO MONARCH', 'Misc Payor'),
+		('SISTERS OF MERCY', 'Misc Payor'),
+		('Sico, Hoelscher, Harris & Braugh LLP','Attorney Office'),
+		('CHRISTIAN CARE MINISTRY','Misc Payor'),
+		('AMTRUST GROUP','Misc Payor')
