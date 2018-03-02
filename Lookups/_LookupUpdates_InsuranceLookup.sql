@@ -2513,3 +2513,40 @@ VALUES
 		('CLAY ZELBST ATTORNEY', 'Misc Payor'),
 		('GENERAL CASUATLY OF WISCO','Misc Payor')
 
+--Unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('Bit- Co', 'Misc Payor'),
+		('CLAY ZELBST ATTORNEY', 'Misc Payor'),
+		('GENERAL CASUATLY OF WISCO','Misc Payor')
+
+--Unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+		('INDEMNITY INSURANCE OF NA', 'Misc Payor'),
+		('VA TRIWEST WPS VAPC3', 'Tricare'),
+		('Anthem BCBS','Blue Cross Blue Shield'),
+		('BATRICE LAW FIRM','Attorney Office'),
+		('CIGNA/SAMBA','Cigna'),
+		('HEB Workers Comp','Misc Payor'),
+		('JUSTINIAN LAW FIRM','Misc Payor'),
+		('TRICARE EAST REGION','Misc Payor'),
+		('UHC/COMMUNITY PLAN','United Healthcare'),
+		('WC TWCC Sedwick','Misc Payor'),
+		('WellMed Networks','United Healthcare')
+
+UPDATE [dbo].[InsuranceLookup]
+SET InsuranceGroup = 'Tricare'
+WHERE InsuranceGroup = 'TRICARE'
+
+UPDATE [dbo].[InsuranceLookup]
+SET InsuranceGroup = 'Tricare'
+WHERE InsuranceCompany = 'TRI WEST  VA CHOICE'
+
+UPDATE [dbo].[InsuranceLookup]
+SET InsuranceGroup = 'CHAMPVA'
+WHERE InsuranceCompany = 'VA AK- VETERANS HEALTH CARE SYSTEM'
+
+UPDATE [dbo].[InsuranceLookup]
+SET InsuranceGroup = 'Cigna'
+WHERE InsuranceGroup = 'CIGNA'
