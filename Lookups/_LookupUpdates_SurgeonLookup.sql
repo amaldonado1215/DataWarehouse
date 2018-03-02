@@ -4438,3 +4438,6 @@ ADD Modify_Date datetime null DEFAULT getdate()
 insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonContract,SurgeonNo) values ('Jean Louise Benae','Horizon Neurodiagnostics, PLLC', '12/14/2016', '03/02/2018','Spine Surgeon','* ANY *','Texas - DFW','Dallas','Standard Surgeon','20020')
 insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonContract,SurgeonNo) values ('Charles Pipkin','CSPNM, PLLC', '01/01/2018', '03/07/2018','Spine Surgeon','* ANY *','Texas - South Texas','Strike Force','Standard Surgeon','20234')
 insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonContract,SurgeonNo) values ('Irvin K Sahni','River Valley Neurophysiology, PLLC', '02/27/2018', '02/27/2018','Spine Surgeon','* ANY *','Texas - Austin','Strike Force','Standard Surgeon','20258')
+
+--unmatched Surgeonlookup
+delete from surgeonlookup2 where SurgeonID in (2044,2045,2046)
