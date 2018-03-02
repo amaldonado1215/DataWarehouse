@@ -2527,7 +2527,7 @@ VALUES
 		('VA TRIWEST WPS VAPC3', 'Tricare'),
 		('Anthem BCBS','Blue Cross Blue Shield'),
 		('BATRICE LAW FIRM','Attorney Office'),
-		('CIGNA/SAMBA','Cigna'),
+		('CIGNA /SAMBA','Cigna'),
 		('HEB Workers Comp','Misc Payor'),
 		('JUSTINIAN LAW FIRM','Misc Payor'),
 		('TRICARE EAST REGION','Misc Payor'),
