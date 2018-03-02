@@ -927,3 +927,7 @@ UPDATE PASURGEONLOOKUP SET IOMSurgeonName=16581 WHERE SurgeonID=123
 =======
 update [dbo].[PASurgeonLookup] set ContractType = 'Hybrid'  where surgeonID=91 -- ticket 67 kta
 >>>>>>> ad9952adf2b8134959d2ee4e64a3a1e11baeb889
+
+
+--unmatched surgeonlookup
+update pasurgeonlookup set Surgeon='Deshdeepak Sahni, M.D.' where SurgeonID in (107,111)
