@@ -49,6 +49,7 @@ SELECT DISTINCT
 		WHEN CR.hospital_ID in (3403,4457,4550) AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable Bundled Case' -- #75 kta
 		WHEN CR.hospital_ID in (3403) AND CR.[Primary Insurance] like '%Health Choice%' THEN 'Unbillable Bundled Case' -- #75 kta
 		WHEN CR.hospital_ID in (3403) AND CR.[Primary Insurance] like '%kempton%' THEN 'Unbillable Bundled Case' -- #75 kta
+		WHEN CR.hospital_ID = 3597 AND CR.[Primary Insurance] like '%Health%Choice%' and CR.[1st Insurance Category] = 'Bundled' THEN 'Billable: Bundled OSH' -- #78 kta OK Spine Hosp
 		WHEN HL7.[SecondaryGroupID] = 'PB' AND  CR.Reader = 'William VanNess, M.D.' THEN 'Unbillable' -- ticket #22 kta
 		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND DOS >= '2017-01-01' 
 			AND HL.[Contract Type] <> 'No Contract' and CR.Region_Short_Name not in ('California','Maryland') THEN 'Unbillable: TRI-MRP-CHAMPVA' --#26 kta removed federal plan --#73 added contract type
@@ -75,6 +76,7 @@ SELECT DISTINCT
 		WHEN CR.hospital_ID in (3403,4457) and CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case'  --#75 kta
 		WHEN CR.hospital_ID = 3403 and CR.[Primary Insurance] like '%kempton%' then 'Unbillable: Bundled Case'  --#75 kta
 		WHEN CR.hospital_ID = 3403 and CR.[Primary Insurance] like '%Health Choice%' then 'Unbillable: Bundled Case'
+		WHEN CR.hospital_ID = 3597 AND CR.[Primary Insurance] like '%Health%Choice%' and CR.[1st Insurance Category] = 'Bundled' THEN 'Unbillable: Bundled OSH' -- #78 kta OK Spine Hosp
 		WHEN CR.[1st Insurance Category] IN ('Medicare', 'Medicaid', 'Medicaid Advantage Plan', 'Blue Cross Blue Shield') THEN 'Unbillable: Disqualifying Insurance' 
 		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND DOS >= '2017-01-01' 
 			AND HL.[Contract Type] <> 'No Contract' and CR.Region_Short_Name not in ('California','Maryland')THEN 'Unbillable: TRI-MRP-CHAMPVA' --#26 kta removed federal plan --#73 added contract type
