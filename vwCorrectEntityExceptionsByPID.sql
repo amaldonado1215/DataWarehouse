@@ -32,6 +32,7 @@ SELECT c.PID,
 		WHEN c.[1st Insurance Category] = 'Blue Cross Blue Shield' AND c.Surgeon = 'Richard Westmark, M.D.' AND c.DOS >= '2017-12-01' AND SL1.Proentity IS NOT NULL THEN Sl1.Proentity  -- 2018-01-03 JTB Per #6 Github Issue
 		WHEN IL.InsuranceGroup = 'Blue Cross Blue Shield' AND  c.hospital IN ('The Spine Hospital of Louisiana ', 'Cypress Pointe Surgical Hospital ') AND c.Reader IN('David Adams, M.D.') THEN 'Pro Read, LLC'
 		WHEN c.hospital = 'McBride Clinic Orthopedic Hospital' AND c.[Primary Insurance] LIKE '%kempton%' THEN 'Neurodiagnostics & Neuromonitoring Institute, Inc.'		
+		WHEN c.hospital_ID = 3597 AND c.[Primary Insurance] like '%Health%Choice%' and c.[1st Insurance Category] = 'Bundled' AND SL1.Proentity IS NOT NULL THEN Sl1.Proentity -- #78 kta OK Spine Hosp
 		WHEN c.[1st Insurance Category] IN ('Lein Case', 'Letter of Protection', 'Private Insurance', 'Aetna', 'Cigna') AND SL1.Proentity IS NOT NULL THEN Sl1.Proentity -- Ticket #2186 Added Aetna as an Insurance category -- ticket 63 added Cigna
 		WHEN c.[1st Insurance Category] IN ('Workmans Comp') AND Region_short_name IN ('Louisiana') AND SL1.Proentity IS NOT NULL THEN Sl1.Proentity 
 		WHEN c.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND c.DOS >= '2017-01-01' 

@@ -213,6 +213,7 @@ SELECT      CR.PID,
 		-- #30	kta	WHEN CR.surgeon = 'Kevin James, M.D.' and IL.InsuranceGroup = 'Aetna' and CR.[1st Insurance Category]  = 'Private Insurance' and CR.surgeon = 'Kevin James, M.D.' and cr.dos > '2016-04-22' THEN 'Andaz Monitoring, PLLC' 
 					WHEN CR.surgeon = 'Kevin James, M.D.' and IL.InsuranceGroup = 'Aetna' and CR.[1st Insurance Category]  in ('Private Insurance', 'Aetna') and CR.surgeon = 'Kevin James, M.D.' and cr.dos > '2016-04-22' THEN 'Andaz Monitoring, PLLC' 
 					WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' and CR.[Primary Insurance] like '%kempton%' then 'Neurodiagnostics & Neuromonitoring Institute, Inc.'
+					WHEN cr.hospital_ID = 3597 AND cr.[Primary Insurance] like '%Health%Choice%' and cr.[1st Insurance Category] = 'Bundled' AND SL1.Proentity IS NOT NULL THEN Sl1.Proentity -- #78 kta OK Spine Hosp
 		--			WHEN CR.surgeon = 'Melanie Kinchen, M.D.' and IL.InsuranceGroup = 'Aetna' and CR.DOS >= '2016-06-28' then  'Wilcox Neuromonitoring, PLLC'
 		--			WHEN CR.surgeon = 'Sean Jones-Quaidoo, M.D.' and IL.InsuranceGroup = 'Blue Cross Blue Shield' and CR.DOS >='2016-07-07' then 'Cerebral Axis, PLLC'
 		--ticket 2284 lauren: Palmetto Axon Neuromonitoring, LLC will begin billing for BCBS (1st Insurance Type)  for all encounters >=DOS 9/1/2017
