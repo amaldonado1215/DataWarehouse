@@ -2,3 +2,7 @@
 .vs/NationalNeuroDB/v15/.suo
 .vs/NationalNeuroDB/v15/.suo
 .vs/slnx.sqlite
+*.dbmdl
+.vs/NationalNeuroDB/v15/.suo
+*.jfm
+*.dbmdl
