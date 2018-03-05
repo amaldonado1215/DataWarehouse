@@ -376,7 +376,7 @@ END TRY BEGIN CATCH END CATCH
 
 --[dbo].[surgeon_history_33]
 BEGIN TRY
-	if exists (select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'surgeon_history_33') and (select count(*) from [dbconnect.usmon.com].[USMON].surgeon_history_33 ) > 0
+	if exists (select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'surgeon_history_33') and (select count(*) from [dbconnect.usmon.com].[USMON].dbo.surgeon_history_33 ) > 0
 		drop table surgeon_history_33 ;
 	select * INTO [USMON_Local].dbo.surgeon_history_33  from [dbconnect.usmon.com].[USMON].dbo.surgeon_history_33 
 END TRY BEGIN CATCH END CATCH
