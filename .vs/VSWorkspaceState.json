@@ -1,13 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DataImports",
-    "\\Emailed Reports",
-    "\\Lookups",
-    "\\Lookups\\Templates",
-    "\\PA",
-    "\\SYN"
+    "\\Core-IOM",
+    "\\Emailed Reports"
   ],
+<<<<<<< HEAD
   "SelectedNode": "\\Lookups\\_LookupUpdates_SurgeonLookup.sql",
+=======
+  "SelectedNode": "\\Core-IOM\\vwMaster2.sql",
+>>>>>>> 73c434d9fefc8e89f480615f60bde4ab36189e2f
   "PreviewInSolutionExplorer": false
 }
