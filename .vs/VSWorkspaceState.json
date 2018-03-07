@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Core-IOM",
-    "\\Emailed Reports"
+    "\\Emailed Reports",
+    "\\Lookups"
   ],
-  "SelectedNode": "\\Core-IOM\\vwMaster2.sql",
   "PreviewInSolutionExplorer": false
 }

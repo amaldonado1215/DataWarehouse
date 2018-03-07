@@ -1420,3 +1420,16 @@ values('Emma Morris, B.S.', 'Oklahoma', 'Emma Morris', 'Active', '11/26/2017', '
 ('Pamela Hockert, MDA', 'ANES-DFW', 'Pamela Hockert', 'Active', '12/10/2015', '12/31/2099'),
 ('Satin Bibbs, M.S.', 'Louisiana', 'Satin Bibbs', 'Active', '1/7/2018', '12/31/2099'),
 ('Satin Bibbs, M.S., IOMN', 'Louisiana', 'Satin Bibbs', 'Active', '1/7/2018', '12/31/2099')
+
+-- TRL cleanup
+delete from [TechRegionLookup] where TechName = 'Caleb Bonecutter' and StartDate = '2016-04-01'
+delete from [TechRegionLookup] where TechName = 'Margaret Tatum' and [ASSIGNED REGION] = 'Texas - Houston'
+delete from [TechRegionLookup] where TechName = 'Michelle Mickey' 
+delete from [TechRegionLookup] where TechName = 'Sarah Evan' 
+delete from [TechRegionLookup] where TechName = 'Shahna Campbell' and [ASSIGNED REGION] = 'Texas - Houston'
+delete from [TechRegionLookup] where TechName = 'Stephanie Candler' 
+delete from [TechRegionLookup] where TechName = 'Tyler Mahan' and StartDate = '1999-01-01'
+delete from [TechRegionLookup] where TechName = 'Ziegler David' 
+delete from [TechRegionLookup] where TechName = 'Amy Cantwell' 
+insert into  [TechRegionLookup]
+values('Caleb Bonecutter, CNIM', 'Texas - South Texas', 'Caleb Bonecutter','Active', '2016-03-31', '2099-12-31')

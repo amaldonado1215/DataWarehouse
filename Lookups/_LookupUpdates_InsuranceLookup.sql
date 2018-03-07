@@ -2558,3 +2558,15 @@ VALUES
 		('Sico, Hoelscher, Harris & Braugh LLP','Attorney Office'),
 		('CHRISTIAN CARE MINISTRY','Misc Payor'),
 		('AMTRUST GROUP','Misc Payor')
+
+--contained duplicates amm
+DELETE FROM [dbo].[InsuranceLookup]
+WHERE InsuranceCompany IN ('CIGNA/SAMBA')
+
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('CIGNA/SAMBA', 'Cigna')
+
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('AMTRUST', 'Misc Payor')

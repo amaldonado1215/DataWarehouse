@@ -4441,3 +4441,7 @@ insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, p
 
 --unmatched Surgeonlookup
 delete from surgeonlookup2 where SurgeonID in (2044,2045,2046)
+
+--Update per Romeo surgeon part of Ohio Health amm
+update surgeonlookup2 set ProEntity='Central Ohio IOM, LLC' where SurgeonID=2042
+
