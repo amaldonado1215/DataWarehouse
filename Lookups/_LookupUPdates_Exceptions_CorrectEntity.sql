@@ -189,3 +189,8 @@ insert into [dbo].[CorrectEntityExceptions]
 values	(1027373,861762,'Nizuc Care, PLLC'),
 		(1046898,868562,'Nizuc Care, PLLC'),
 		(1041530,874519,'Nizuc Care, PLLC')
+
+--update claim id from null amm
+UPDATE CorrectEntityExceptions set ClaimID=1054140 where PID=885055
+UPDATE CorrectEntityExceptions set ClaimID=1062392 where PID=874349
+UPDATE CorrectEntityExceptions set ClaimID=1071415 where PID=894843
