@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Emailed Reports",
-    "\\Lookups"
+    "\\DataImports",
+    "\\obj\\Debug"
   ],
+  "SelectedNode": "\\DataImports\\spRefreshDataFTP1.sql",
   "PreviewInSolutionExplorer": false
 }

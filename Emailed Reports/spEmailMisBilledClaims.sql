@@ -33,7 +33,8 @@ EXEC msdb.dbo.sp_send_dbmail
 @profile_name = 'SendGrid', -- replace with your SQL Database Mail Profile 
 @body = @body,
 @body_format ='HTML',
-@recipients = 'alla.kosova@md-management.net;scott@nationalneuro.net;Deborah.Reinagel@md-management.net;Timothy.DeLong@Acquisitionbilling.com;sandra.garcia@acquisitionbilling.com;Makeba.Potter@md-management.net;Bill.Murray@md-management.net;Kim.Anderson@md-management.net;tracey.yamauchi@acquisitionbilling.com;Matthew.Nartz@md-management.net', -- replace with your email address
+--@recipients = 'alla.kosova@md-management.net;scott@nationalneuro.net;Deborah.Reinagel@md-management.net;Timothy.DeLong@Acquisitionbilling.com;sandra.garcia@acquisitionbilling.com;Makeba.Potter@md-management.net;Bill.Murray@md-management.net;Kim.Anderson@md-management.net;tracey.yamauchi@acquisitionbilling.com;Matthew.Nartz@md-management.net', -- replace with your email address
+@recipients = 'alla.kosova@md-management.net;scott@nationalneuro.net;Deborah.Reinagel@md-management.net;Timothy.DeLong@Acquisitionbilling.com;sandra.garcia@acquisitionbilling.com;Makeba.Potter@md-management.net;Bill.Murray@md-management.net;Kim.Anderson@md-management.net;tracey.yamauchi@acquisitionbilling.com;Matthew.Nartz@md-management.net;Angelica.Maldonado@mpowerpractice.net', -- replace with your email address
 @subject = @subjectline ;
 
 --ticket 1995 add angelica.maldonado@md-management.net
