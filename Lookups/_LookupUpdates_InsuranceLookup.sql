@@ -2570,3 +2570,16 @@ VALUES
 INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
 VALUES 
 	('AMTRUST', 'Misc Payor')
+
+--unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('AETNA HMO PPO MEDICARE', 'Aetna'),
+    ('CHRIS JACKSON ATTORNEY AT LAW', 'Attorney Office'),
+    ('DANG LAW GROUP', 'Attorney Office'),
+	('Health Net Medicare','Misc Payor'),
+	('CERES TERMINAL WORKERS COMP ADMIN','Misc Payor'),
+	('LAW OFFICE OF CARL KNICKERBOCKER', 'Attorney Office'),
+	('NATIONWIDE AUTO INSURANCE', 'Misc Payor'),
+	('SEDGWICK CLAIMS (KROGER)', 'Misc Payor'),
+	('UHC MEDICARE COMMUNITY PLAN', 'United Healthcare')
