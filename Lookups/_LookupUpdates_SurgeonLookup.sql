@@ -4445,3 +4445,10 @@ delete from surgeonlookup2 where SurgeonID in (2044,2045,2046)
 --Update per Romeo surgeon part of Ohio Health amm
 update surgeonlookup2 set ProEntity='Central Ohio IOM, LLC' where SurgeonID=2042
 
+--updated EndDate due to misbilled report
+update surgeonlookup2 set EndDate='12/31/2020' where SurgeonID=2001
+update surgeonlookup2 set SurgeonContract='Standard Surgeon' where SurgeonID=2001
+update surgeonlookup2 set Ranking='' where SurgeonID=2001
+
+
+
