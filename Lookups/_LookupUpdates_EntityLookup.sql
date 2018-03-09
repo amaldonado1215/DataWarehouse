@@ -1873,3 +1873,6 @@ UPDATE dbo.EntityLookup SET client_name = 'Greene Monitoring, PLLC' WHERE Entity
 
 --Added New Entity amm
 INSERT INTO EntityLookup (client_name,Entity,S#C,Region,clm_billing_type,status,SOS_Date,BillingDate,BillingFee,SurgeonOwners) VALUES ('Ohio IOM Services, LLC','Ohio IOM Services, LLC','Yes','Ohio','Pro Only','Active','1/9/2018','1/1/2018',0.08,'Gunwant Mallik, M.D.')
+
+--Updated Managment fee per Romeo amm
+UPDATE dbo.EntityLookup SET MgmtFee = 0.34 WHERE Entity_ID = '8'
