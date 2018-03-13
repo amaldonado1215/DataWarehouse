@@ -931,3 +931,16 @@ update [dbo].[PASurgeonLookup] set ContractType = 'Hybrid'  where surgeonID=91 -
 
 --unmatched surgeonlookup
 update pasurgeonlookup set Surgeon='Deshdeepak Sahni, M.D.' where SurgeonID in (107,111)
+
+--update PASurgeonLookup per Kenny and Tyler amm
+UPDATE PASURGEONLOOKUP SET SOS_Date='10/18/2017' WHERE SurgeonID=95
+insert into PASurgeonLookup (Surgeon,Entity,StartDate,EndDate,Region,SurgeonOwnd,IOMSurgeonName,SurgeonNo,SOS_Date,ContractType) values ('James Simmons, III, M.D.','Elite Assist Services, PLLC','12/01/2017','12/31/2020','PA - South Texas','Yes',347,(select max(SurgeonNo) from PASurgeonLookup) + 2,'12/11/2017','Classic')
+insert into PASurgeonLookup (Surgeon,Entity,StartDate,EndDate,Region,SurgeonOwnd,IOMSurgeonName,SurgeonNo,SOS_Date,ContractType) values ('Joel Jenne, M.D.','Elite Assist Services, PLLC','12/01/2017','12/31/2020','PA - South Texas','Yes',3306,(select max(SurgeonNo) from PASurgeonLookup) + 2,'12/11/2017','Classic')
+insert into PASurgeonLookup (Surgeon,Entity,StartDate,EndDate,Region,SurgeonOwnd,IOMSurgeonName,SurgeonNo,SOS_Date,ContractType) values ('Ralph Garza, M.D.','Elite Assist Services, PLLC','12/01/2017','12/31/2020','PA - South Texas','Yes',6775,(select max(SurgeonNo) from PASurgeonLookup) + 2,'12/11/2017','Classic')
+UPDATE PASURGEONLOOKUP SET CoAbbr='DSS' WHERE SurgeonID=108
+UPDATE PASURGEONLOOKUP SET FirstDOS='01/22/2018' WHERE SurgeonID=108
+UPDATE PASURGEONLOOKUP SET MngFee='0.15' WHERE SurgeonID=108
+UPDATE PASURGEONLOOKUP SET ContractType='Hybrid' WHERE SurgeonID=108
+UPDATE PASURGEONLOOKUP SET CoAbbr='PAT' WHERE SurgeonID=104
+UPDATE PASURGEONLOOKUP SET MngFee='0.42' WHERE SurgeonID=104
+UPDATE PASURGEONLOOKUP SET SOS_Date='05/12/2017' WHERE SurgeonID=104
