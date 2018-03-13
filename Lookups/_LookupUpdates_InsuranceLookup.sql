@@ -2592,3 +2592,9 @@ VALUES
     ('OSCAR COMPANY OF TEXAS', 'Attorney Office'),
 	('TRANSOCEAN INC','Misc Payor'),
 	('WELLCARE MEDICAID','Misc Payor')
+
+--unmatched PA InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('COVENANT MANAGEMENT SYSTEM', 'Misc Payor'),
+    ('McMINN LAW FIRM', 'Attorney Office')
