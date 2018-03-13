@@ -2583,3 +2583,12 @@ VALUES
 	('NATIONWIDE AUTO INSURANCE', 'Misc Payor'),
 	('SEDGWICK CLAIMS (KROGER)', 'Misc Payor'),
 	('UHC MEDICARE COMMUNITY PLAN', 'United Healthcare')
+
+--unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('CHRISTENSEN LAW FIRM - 3RD PARTY LIABILITY', 'Attorney Office'),
+    ('HOMEBUILDERS SELF INSURERS FUND', 'Misc Payor'),
+    ('OSCAR COMPANY OF TEXAS', 'Attorney Office'),
+	('TRANSOCEAN INC','Misc Payor'),
+	('WELLCARE MEDICAID','Misc Payor')
