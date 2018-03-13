@@ -1876,3 +1876,23 @@ INSERT INTO EntityLookup (client_name,Entity,S#C,Region,clm_billing_type,status,
 
 --Updated Managment fee per Romeo amm
 UPDATE dbo.EntityLookup SET MgmtFee = 0.34 WHERE Entity_ID = '8'
+
+--Updated Managment fee per Romeo amm
+UPDATE dbo.EntityLookup SET MgmtFee = 0.30 WHERE Entity_ID = '217'
+UPDATE dbo.EntityLookup SET CoAbbr = 'BKH' WHERE Entity_ID = '217'
+UPDATE dbo.EntityLookup SET SOS_Date = '12/08/2017' WHERE Entity_ID = '217'
+UPDATE dbo.EntityLookup SET BillingFee = 0.08 WHERE Entity_ID = '217'
+UPDATE dbo.EntityLookup SET BillingDate = '12/01/2017' WHERE Entity_ID = '217'
+UPDATE dbo.EntityLookup SET MgmtFee = 0.30 WHERE Entity_ID = '229'
+UPDATE dbo.EntityLookup SET CoAbbr = 'OIS' WHERE Entity_ID = '229'
+UPDATE dbo.EntityLookup SET FirstDOS = '02/06/2018' WHERE Entity_ID = '229'
+UPDATE dbo.EntityLookup SET MgmtFee = 0.30 WHERE Entity_ID = '227'
+UPDATE dbo.EntityLookup SET CoAbbr = 'KMB' WHERE Entity_ID = '227'
+UPDATE dbo.EntityLookup SET MgmtFee = 0.27 WHERE Entity_ID = '226'
+UPDATE dbo.EntityLookup SET CoAbbr = 'MWM' WHERE Entity_ID = '226'
+UPDATE dbo.EntityLookup SET MgmtFee = 0.37 WHERE Entity_ID = '216'
+UPDATE dbo.EntityLookup SET CoAbbr = 'GNM' WHERE Entity_ID = '216'
+UPDATE dbo.EntityLookup SET SOS_Date = '12/19/2017' WHERE Entity_ID = '216'
+UPDATE dbo.EntityLookup SET BillingFee = 0.08 WHERE Entity_ID = '216'
+UPDATE dbo.EntityLookup SET BillingDate = '12/01/2017' WHERE Entity_ID = '216'
+UPDATE dbo.EntityLookup SET SurgeonOwners = 'Andrew Morchower, MD; Kendall Carll, MD; Lewis M. Frazier, MD' WHERE Entity_ID = '216'
