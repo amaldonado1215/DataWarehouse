@@ -4451,4 +4451,8 @@ update surgeonlookup2 set SurgeonContract='Standard Surgeon' where SurgeonID=200
 update surgeonlookup2 set Ranking='' where SurgeonID=2001
 
 
-
+--unmatched surgeonlookup
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonContract,SurgeonNo) values ('Matthew Cerniglia, M.D.','Occipital IOM, PLLC', '03/07/2018', '12/31/2020','Podiatrist','* ANY *','Texas - DFW','VIP','Standard Surgeon','20910')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonContract,SurgeonNo) values ('Ying Chen, D.O.','Central Ohio IOM, LLC', '03/08/2018', '12/31/2020','Neurosurgery','* ANY *','Ohio','General','Ohio Health','20912')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, SurgeonContract,SurgeonNo) values ('Daniel Sunwoo, M.D.','Rehabilitation 469, PLLC', '03/14/2018', '12/31/2020','Orthopedic Surgeon','* ANY *','ANES-DFW','Anesthesia','60024')
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, SurgeonContract,SurgeonNo) values ('Bradley Cubitt, M.D.','Rehabilitation 469, PLLC', '03/14/2018', '12/31/2020','Pain Medicine','* ANY *','ANES-DFW','Anesthesia','60026')
