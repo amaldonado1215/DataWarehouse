@@ -944,3 +944,11 @@ UPDATE PASURGEONLOOKUP SET ContractType='Hybrid' WHERE SurgeonID=108
 UPDATE PASURGEONLOOKUP SET CoAbbr='PAT' WHERE SurgeonID=104
 UPDATE PASURGEONLOOKUP SET MngFee='0.42' WHERE SurgeonID=104
 UPDATE PASURGEONLOOKUP SET SOS_Date='05/12/2017' WHERE SurgeonID=104
+
+--unmatched surgeonlookup
+UPDATE PASURGEONLOOKUP SET CoAbbr='PAD' WHERE SurgeonID=106
+UPDATE PASURGEONLOOKUP SET CoAbbr='PAD' WHERE SurgeonID=116
+insert into PASurgeonLookup (Surgeon,Entity,StartDate,EndDate,Region,SurgeonOwnd,IOMSurgeonName,SurgeonNo,SOS_Date,ContractType) values ('Carl Lauryssen, M.D.','NPPA Services','03/13/2018','12/31/2020','PA - Austin','No',17594,(select max(SurgeonNo) from PASurgeonLookup) + 2,'12/04/2015','Corp')
+insert into PASurgeonLookup (Surgeon,Entity,StartDate,EndDate,Region,SurgeonOwnd,IOMSurgeonName,SurgeonNo,SOS_Date,ContractType) values ('Timothy Sandmann, M.D.','NPPA Services','03/13/2018','12/31/2020','PA - DFW','No',17594,(select max(SurgeonNo) from PASurgeonLookup) + 2,'12/04/2015','Corp')
+UPDATE PASURGEONLOOKUP SET CoAbbr='NPP' WHERE SurgeonID=128
+UPDATE PASURGEONLOOKUP SET CoAbbr='NPP' WHERE SurgeonID=127
