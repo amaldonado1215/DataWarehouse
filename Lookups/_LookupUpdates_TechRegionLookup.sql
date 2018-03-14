@@ -1433,3 +1433,6 @@ delete from [TechRegionLookup] where TechName = 'Ziegler David'
 delete from [TechRegionLookup] where TechName = 'Amy Cantwell' 
 insert into  [TechRegionLookup]
 values('Caleb Bonecutter, CNIM', 'Texas - South Texas', 'Caleb Bonecutter','Active', '2016-03-31', '2099-12-31')
+
+UPDATE TechRegionLookup
+SET StartDate = '12/10/2017' WHERE TechName = 'Hugo Vasquez'
