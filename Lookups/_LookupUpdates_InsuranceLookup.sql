@@ -2598,3 +2598,9 @@ INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
 VALUES 
 	('COVENANT MANAGEMENT SYSTEM', 'Misc Payor'),
     ('McMINN LAW FIRM', 'Attorney Office')
+
+--unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('AMBETTER', 'Misc Payor'),
+    ('D.Miller & Associates, PLLC', 'Attorney Office')
