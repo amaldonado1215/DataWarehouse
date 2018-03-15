@@ -1436,3 +1436,5 @@ values('Caleb Bonecutter, CNIM', 'Texas - South Texas', 'Caleb Bonecutter','Acti
 
 UPDATE TechRegionLookup
 SET StartDate = '12/10/2017' WHERE TechName = 'Hugo Vasquez'
+insert into dbo.techregionlookup(TECH, [ASSIGNED REGION],	TechName,	TechStatus,	StartDate,	EndDate)
+  values ('Hugo Vazquez, M.D.',	'ANES-DFW',	'Hugo Vasquez',	'Active' , '2017-12-10','2099-12-31')
