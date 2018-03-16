@@ -2610,3 +2610,13 @@ INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
 VALUES 
 	('BCBS of MI', 'Blue Cross Blueshield'),
     ('DUDLEY DEBOSIER INJURY ATTORNEY', 'Attorney Office')
+
+--unmatched PAInsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('MCD-MERCY CARE PLAN', 'Misc Payor')
+
+--unmatched PAInsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('DUDLEY DEBOSIER INURY ATTORNEY', 'Misc Payor')
