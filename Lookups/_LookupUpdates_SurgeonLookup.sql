@@ -4456,3 +4456,6 @@ insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, p
 insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking,SurgeonContract,SurgeonNo) values ('Ying Chen, D.O.','Central Ohio IOM, LLC', '03/08/2018', '12/31/2020','Neurosurgery','* ANY *','Ohio','General','Ohio Health','20912')
 insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, SurgeonContract,SurgeonNo) values ('Daniel Sunwoo, M.D.','Rehabilitation 469, PLLC', '03/14/2018', '12/31/2020','Orthopedic Surgeon','* ANY *','ANES-DFW','Anesthesia','60024')
 insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, SurgeonContract,SurgeonNo) values ('Bradley Cubitt, M.D.','Rehabilitation 469, PLLC', '03/14/2018', '12/31/2020','Pain Medicine','* ANY *','ANES-DFW','Anesthesia','60026')
+
+--unmatched surgeonlookup
+insert into surgeonlookup2 (surgeon, proentity, startdate, enddate, specialty, payor, region, ranking, SurgeonContract,SurgeonNo) values ('Scott Phillips, M.D.','Neurodiagnostics & Neuromonitoring Institute, Inc.', '09/01/2014', '12/31/2020','Neurosurgery','* ANY *','Texas - South Texas','Corporate Surgeon','20914')
