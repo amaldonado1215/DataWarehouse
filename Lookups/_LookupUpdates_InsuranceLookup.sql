@@ -2604,3 +2604,9 @@ INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
 VALUES 
 	('AMBETTER', 'Misc Payor'),
     ('D.Miller & Associates, PLLC', 'Attorney Office')
+
+--unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('BCBS of MI', 'Blue Cross Blueshield'),
+    ('DUDLEY DEBOSIER INJURY ATTORNEY', 'Attorney Office')
