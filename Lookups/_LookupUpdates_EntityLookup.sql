@@ -1896,3 +1896,58 @@ UPDATE dbo.EntityLookup SET SOS_Date = '12/19/2017' WHERE Entity_ID = '216'
 UPDATE dbo.EntityLookup SET BillingFee = 0.08 WHERE Entity_ID = '216'
 UPDATE dbo.EntityLookup SET BillingDate = '12/01/2017' WHERE Entity_ID = '216'
 UPDATE dbo.EntityLookup SET SurgeonOwners = 'Andrew Morchower, MD; Kendall Carll, MD; Lewis M. Frazier, MD' WHERE Entity_ID = '216'
+
+--Updated Anesthesia Entities
+UPDATE dbo.EntityLookup SET S#C = 'Yes' WHERE Entity_ID = '218' or Entity_ID = '220' or Entity_ID = '221' or Entity_ID = '223' or Entity_ID = '224' or Entity_ID = '225'
+
+--updated Blank CoAbbr & MgmtFee in EntityLookup
+UPDATE dbo.EntityLookup SET CoAbbr = 'GRA' WHERE Entity_ID = '219'
+UPDATE dbo.EntityLookup SET MgmtFee = .30 WHERE Entity_ID = '183'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '109'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '161'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '184'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '188'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '3'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '106'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '79'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '28'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '128'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '11'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '32'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '90'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '15'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '61'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '41'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '146'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '97'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '171'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '16'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '67'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '222'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '101'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '68'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '47'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '113'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '65'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '78'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '12'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '39'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '37'
+UPDATE dbo.EntityLookup SET MgmtFee = .25 WHERE Entity_ID = '19'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '128'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '104'
+UPDATE dbo.EntityLookup SET MgmtFee = .30 WHERE Entity_ID = '119'
+
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '150'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '173'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '115'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '42'
+UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '125'
+UPDATE dbo.EntityLookup SET MgmtFee = .30 WHERE Entity_ID = '2'
+UPDATE dbo.EntityLookup SET BillingDate = '7/1/2016' WHERE Entity_ID = '146'
+
+
+
+
+
+
