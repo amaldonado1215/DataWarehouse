@@ -2620,3 +2620,10 @@ VALUES
 INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
 VALUES 
 	('DUDLEY DEBOSIER INURY ATTORNEY', 'Misc Payor')
+
+--unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('Agee Clymer Mitchell & Portman', 'Attorney Office'),
+    ('ANDREW GASS', 'Attorney Office'),
+	('ATTORNEY WILLIAM HALL', 'Attorney Office')
