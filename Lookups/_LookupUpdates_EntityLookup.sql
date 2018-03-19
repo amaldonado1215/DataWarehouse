@@ -1946,6 +1946,39 @@ UPDATE dbo.EntityLookup SET MgmtFee = 0 WHERE Entity_ID = '125'
 UPDATE dbo.EntityLookup SET MgmtFee = .30 WHERE Entity_ID = '2'
 UPDATE dbo.EntityLookup SET BillingDate = '7/1/2016' WHERE Entity_ID = '146'
 
+--Updated First DOS & First Collection Blanks
+UPDATE dbo.EntityLookup SET FirstDOS = '11/4/2015' WHERE Entity_ID = 33
+UPDATE dbo.EntityLookup SET FirstDOS = '12/21/2015' WHERE Entity_ID = 110
+UPDATE dbo.EntityLookup SET FirstDOS = '8/31/2016' WHERE Entity_ID = 198
+UPDATE dbo.EntityLookup SET FirstDOS = '9/21/2016' WHERE Entity_ID = 195
+UPDATE dbo.EntityLookup SET FirstDOS = '2/7/2017' WHERE Entity_ID = 129
+UPDATE dbo.EntityLookup SET FirstDOS = '11/13/2017' WHERE Entity_ID = 213
+UPDATE dbo.EntityLookup SET FirstDOS = '12/15/2017' WHERE Entity_ID = 218
+UPDATE dbo.EntityLookup SET FirstDOS = '1/24/2018' WHERE Entity_ID = 84
+UPDATE dbo.EntityLookup SET FirstDOS = '1/11/2018' WHERE Entity_ID = 220
+UPDATE dbo.EntityLookup SET FirstDOS = '8/22/2017' WHERE Entity_ID = 221
+UPDATE dbo.EntityLookup SET FirstDOS = '3/14/2018' WHERE Entity_ID = 223
+UPDATE dbo.EntityLookup SET FirstDOS = '2/6/2018' WHERE Entity_ID = 224
+UPDATE dbo.EntityLookup SET FirstDOS = '2/8/2018' WHERE Entity_ID = 228
+UPDATE dbo.EntityLookup SET FirstDOS = '2/6/2017' WHERE Entity_ID = 79
+UPDATE dbo.EntityLookup SET FirstDOS = '2/6/2017' WHERE Entity_ID = 28
+UPDATE dbo.EntityLookup SET FirstDOS = '7/31/2017' WHERE Entity_ID = 16
+UPDATE dbo.EntityLookup SET FirstDOS = '6/23/2017' WHERE Entity_ID = 65
+UPDATE dbo.EntityLookup SET FirstDOS = '8/1/2017' WHERE Entity_ID = 37
+UPDATE dbo.EntityLookup SET FirstCollection = '2/18/2014' WHERE Entity_ID = 82
+UPDATE dbo.EntityLookup SET FirstCollection = '2/23/2018' WHERE Entity_ID = 160
+UPDATE dbo.EntityLookup SET FirstCollection = '10/27/2017' WHERE Entity_ID = 198
+UPDATE dbo.EntityLookup SET FirstCollection = '3/2/2018' WHERE Entity_ID = 143
+UPDATE dbo.EntityLookup SET FirstCollection = '9/12/2017' WHERE Entity_ID = 108
+UPDATE dbo.EntityLookup SET FirstCollection = '2/8/2018' WHERE Entity_ID = 167
+UPDATE dbo.EntityLookup SET FirstCollection = '3/16/2018' WHERE Entity_ID = 228
+UPDATE dbo.EntityLookup SET FirstCollection = '8/28/2017' WHERE Entity_ID = 202
+UPDATE dbo.EntityLookup SET FirstCollection = '2/18/2014' WHERE Entity_ID = 81
+UPDATE dbo.EntityLookup SET FirstCollection ='2/18/2014' WHERE Entity_ID = 104
+UPDATE dbo.EntityLookup SET FirstCollection = '1/8/2014' WHERE Entity_ID = 173
+
+
+
 
 
 
