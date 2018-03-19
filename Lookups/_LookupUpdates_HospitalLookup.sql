@@ -1354,3 +1354,9 @@ UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Cynthia Ramirez'  WHERE HOSPITAL_I
 UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Rita Flores'  WHERE HOSPITAL_ID = 578
 UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Rita Flores'  WHERE HOSPITAL_ID = 579
 UPDATE HOSPITALLOOKUP SET [A/R Specialist] = 'Rita Flores'  WHERE HOSPITAL_ID = 440
+
+--unmatched hospitals report amm
+INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Houston Methodist The Woodlands Hospital','Novation/Vizient/MedAssets','5980',(select max(hospital_nbr) from hospitallookup) + 2,'')
+INSERT INTO HOSPITALLOOKUP (Hospital_ID, Hospital, LeadSourceCommission, USMON_ID, hospital_nbr, [A/R Specialist]) VALUES((select max(hospital_id) from hospitallookup) + 1,'Baylor Surgical Hospital At Las Colinas','','6011',(select max(hospital_nbr) from hospitallookup) + 2,'')
+UPDATE HOSPITALLOOKUP SET [Hospital] = 'Mercy Medical Center of Oshkosh'  WHERE HOSPITAL_ID = 577
+
