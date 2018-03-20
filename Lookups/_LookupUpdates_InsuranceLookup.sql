@@ -2627,3 +2627,10 @@ VALUES
 	('Agee Clymer Mitchell & Portman', 'Attorney Office'),
     ('ANDREW GASS', 'Attorney Office'),
 	('ATTORNEY WILLIAM HALL', 'Attorney Office')
+
+--unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('CIGNA SAICOHEALTH', 'Cigna'),
+    ('VETERANS AFFAIRS', 'CHAMPVA'),
+	('WC. TEX. E. TWCC', 'Misc Payor')
