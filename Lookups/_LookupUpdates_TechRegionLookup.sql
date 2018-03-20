@@ -1438,3 +1438,5 @@ UPDATE TechRegionLookup
 SET StartDate = '12/10/2017' WHERE TechName = 'Hugo Vasquez'
 insert into dbo.techregionlookup(TECH, [ASSIGNED REGION],	TechName,	TechStatus,	StartDate,	EndDate)
   values ('Hugo Vazquez, M.D.',	'ANES-DFW',	'Hugo Vasquez',	'Active' , '2017-12-10','2099-12-31')
+insert into dbo.techregionlookup(TECH, [ASSIGNED REGION],	TechName,	TechStatus,	StartDate,	EndDate)
+  Values ('Cody Callahan, IONM','Texas - DFW','Cody Callahan','Active','2016-08-03','2099-12-31')
