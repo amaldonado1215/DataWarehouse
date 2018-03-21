@@ -225,3 +225,4 @@ insert into [dbo].[UserLookup](Web_user_id, Payroll_ID) -- kta  add Jason Carolu
 values (6044,61010)
 
 insert into [dbo].[UserLookup](Web_user_id, Payroll_ID)  values (9281, 61053)
+INSERT INTO UserLookup(Web_user_id, Payroll_id) values (8902,61267)
