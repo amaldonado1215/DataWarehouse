@@ -260,8 +260,8 @@ SELECT      CR.PID,
 			CE.ins_folder AS Folder, 
 			HL.contract_status as ContractType, 
 		CASE	
-					--WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Uninsured', 'Self Pay','Federal Plan', 'Medicaid Advantage Plan') THEN 'Unbillable' --#26 kta added federal plan, map
-					WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Medicaid Advantage Plan', 'Uninsured', 'Federal Plan') THEN 'Unbillable: Insurance'
+					--WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Uninsured', 'Self Pay','Federal Plan', 'Medicaid Advantage Plan') THEN 'Unbillable' --#26 kta added federal plan, map --added self pay back amm
+					WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Medicaid Advantage Plan', 'Uninsured', 'Federal Plan', 'Self Pay') THEN 'Unbillable: Insurance'
 					WHEN CR.PID IN (652556,679177) THEN 'Unbillable: Pro Bono'
 					WHEN CR.PID IN (867659, 62885, 852057, 794804, 826029, 776057) THEN 'Unbillable: SimplifyStudy'		--#64 kta
 					WHEN CR.Reader IN ('* Unassigned *', 'Jane Doe') THEN 'Unbillable' 
@@ -307,8 +307,8 @@ SELECT      CR.PID,
 					WHEN CR.hospital_ID = 3403 and CR.[Primary Insurance] like '%kempton%' then 'Unbillable: Bundled Case'  --#75 kta
 					WHEN CR.hospital_ID = 3403 and CR.[Primary Insurance] like '%Health Choice%' then 'Unbillable: Bundled Case'
 					WHEN CR.hospital_ID = 3597 AND CR.[Primary Insurance] like '%Health%Choice%' and CR.[1st Insurance Category] = 'Bundled' THEN 'Unbillable: Bundled OSH' -- #78 kta OK Spine Hosp
-					--WHEN CR.[1st Insurance Category] IN ('Medicare', 'Medicaid', 'Medicaid Advantage Plan', 'Blue Cross Blue Shield')  THEN 'Unbillable: MC/MAP' 
-					WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Medicaid Advantage Plan', 'Uninsured', 'Federal Plan') THEN 'Unbillable: Insurance'
+					--WHEN CR.[1st Insurance Category] IN ('Medicare', 'Medicaid', 'Medicaid Advantage Plan', 'Blue Cross Blue Shield')  THEN 'Unbillable: MC/MAP'
+					WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Medicaid Advantage Plan', 'Blue Cross Blue Shield') THEN 'Unbillable: Insurance'
 					WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND CR.DOS >= '2017-01-01' 
 						AND HL.[Contract Type] <> 'No Contract'  and CR.Region_Short_Name not in ('California','Maryland') THEN 'Unbillable: TRI-MRP-CHAMPVA'  --#73 kta
 					When CR.[Primary Insurance] like '%Aetna%' AND CR.DOS >= '2017-01-01' THEN 'Unbillable: Aetna'
