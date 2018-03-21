@@ -80,7 +80,7 @@ SELECT DISTINCT
 		WHEN CR.hospital_ID = 3597 AND CR.[Primary Insurance] like '%Health%Choice%' and CR.[1st Insurance Category] = 'Bundled' THEN 'Unbillable: Bundled OSH' -- #78 kta OK Spine Hosp
 		--WHEN CR.[1st Insurance Category] IN ('Medicare', 'Medicaid', 'Medicaid Advantage Plan', 'Blue Cross Blue Shield') THEN 'Unbillable: Disqualifying Insurance' 
 		WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Medicaid Advantage Plan', 'Blue Cross Blue Shield') THEN 'Unbillable: Insurance'
-		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND DOS >= '2017-01-01' 
+		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan','Federal Plan') AND DOS >= '2017-01-01' 
 			AND HL.[Contract Type] <> 'No Contract' and CR.Region_Short_Name not in ('California','Maryland')THEN 'Unbillable: TRI-MRP-CHAMPVA' --#26 kta removed federal plan --#73 added contract type
 		WHEN CR.[Primary Insurance] like '%Aetna%' AND DOS >= '2017-01-01' THEN 'Unbillable: Aetna'
 		WHEN CR.[1st Insurance Category] = 'Cigna' and CR.DOS >='2018-02-01' then 'Unbillable: Cigna'		--#64 kta
