@@ -194,3 +194,27 @@ values	(1027373,861762,'Nizuc Care, PLLC'),
 UPDATE CorrectEntityExceptions set ClaimID=1054140 where PID=885055
 UPDATE CorrectEntityExceptions set ClaimID=1062392 where PID=874349
 UPDATE CorrectEntityExceptions set ClaimID=1071415 where PID=894843
+
+--exceptions per Sandra Email for Pro Read 03/20/2018 amm
+insert into [dbo].[CorrectEntityExceptions]
+values	(988525,822064,'Neuroplexus, LLC'),
+		(996956,784687,'Neuroplexus, LLC'),
+		(998206,800462,'Neuroplexus, LLC'),
+		(1025681,854197,'Neuroplexus, LLC'),
+		(1051460,803389,'Neuroplexus, LLC'),
+		(1057414,817537,'Neuroplexus, LLC'),
+		(1031367,809992,'Neuroplexus, LLC'),
+		(1031374,817522,'Neuroplexus, LLC'),
+		(1014302,783701,'Neuroplexus, LLC'),
+		(1015927,800476,'Neuroplexus, LLC'),
+		(1022513,785818,'Neuroplexus, LLC'),
+		(1022858,793055,'Neuroplexus, LLC'),
+		(1025004,800527,'Neuroplexus, LLC'),
+		(1025669,854444,'Neuroplexus, LLC'),
+		(1025679,854314,'Neuroplexus, LLC'),
+		(1050114,880722,'Neuroplexus, LLC'),
+		(1052655,877360,'Neuroplexus, LLC'),
+		(1029977,809823,'Neuroplexus, LLC'),
+		(1030658,842348,'Neuroplexus, LLC'),
+		(1057356,892596,'Neuroplexus, LLC'),
+		(958248,756047,'Neuroplexus, LLC')
