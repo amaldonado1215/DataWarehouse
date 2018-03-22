@@ -218,3 +218,4 @@ values	(988525,822064,'Neuroplexus, LLC'),
 		(1030658,842348,'Neuroplexus, LLC'),
 		(1057356,892596,'Neuroplexus, LLC'),
 		(958248,756047,'Neuroplexus, LLC')
+UPDATE CorrectEntityExceptions set ClaimID=1054139 where PID=885055
