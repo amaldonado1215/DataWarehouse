@@ -2640,3 +2640,10 @@ INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
 VALUES 
 	('CAREGUARD', 'Misc Payor'),
     ('Synergy Health', 'Misc Payor')
+
+--unmatched PA InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('LAW OFFICE OF JOE LOPEZ', 'Attorney Office'),
+    ('SIMON GREENSTONE PANATIER BARLETT, PC', 'Attorney Office'),
+	('UTICA NATIONAL INSURANCE', 'Misc Payor')
