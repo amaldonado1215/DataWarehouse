@@ -2634,3 +2634,9 @@ VALUES
 	('CIGNA SAICOHEALTH', 'Cigna'),
     ('VETERANS AFFAIRS', 'CHAMPVA'),
 	('WC. TEX. E. TWCC', 'Misc Payor')
+
+--unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('CAREGUARD', 'Misc Payor'),
+    ('Synergy Health', 'Misc Payor')
