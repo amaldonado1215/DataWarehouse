@@ -347,11 +347,41 @@ BEGIN TRY
 END TRY BEGIN CATCH END CATCH
 
 --[dbo].[[clinc33]]
+/*
 BEGIN TRY
 	if exists (select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'clinc33') and (select count(*) from [dbconnect.usmon.com].[USMON].dbo.clinc33 ) > 0
 		drop table clinc33 ;
 	select * INTO [USMON_Local].dbo.clinc33  from [dbconnect.usmon.com].[USMON].dbo.clinc33 
 END TRY BEGIN CATCH END CATCH
+*/
+BEGIN TRY
+	if exists (select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'clinc33') and (select count(*) from [dbconnect.usmon.com].[USMON].dbo.clinc33 ) > 0
+		drop table clinc33 ;
+	select 
+	
+			[Hospital]
+			,[MR#],[PID],[DOS],[Closed Status],[case-day],[Insurance_Type],[Region],[Profesional Oversight]
+			,[Case Type],[Procedure1],[Procedure2],[Tech],[IP],[Surgeon],[# Modality],[Unreliable Anthesthetic],[Requested Anthesthetic Used]
+			,[Un-Requested Anthesthetic Used],[Surgeon Informted data changes],[UnResolved Changes],[resolved Changes],[# Spine Screws],[# Alerted Screws ]
+			,[Spine Level],[Left Screw Alert],[Right Screw Alert]
+			,[Surgical Intervention]      ,[Unresolved Alerts], [ Motor Change],[ Sensory Change ],[Immediate Post OP Change ],[Unresolved Modality Alert END Of Case ]
+			,[No Changes Noted Post-OP ],[Unable to Assess Patient ],[Adverse Changes ]   ,[Adverse Comments ]
+			,[TO4 Unreliable],[bite_block],[bite_block_comments],[Upper SSEP],[Unreliable Upper SSEP Data]
+			,[Unresolved Upper SSEP Alert],[Lower SSEP],[Unreliable Lower SSEP Data],[Unresolved Lower SSEP Alert],[Upper MEP],[Unreliable Upper MEP Data]
+		--	,[Unresolved Upper MEP Alert],[Lower MEP],[Unreliable Lower MEP Data],[Unresolved Lower MEP Alert],[Upper EMG],[Unreliable Upper EMG Data]
+		--     ,[Unresolved Upper EMG Alert] ,[EEG],[Unreliable EEG Data],[Unresolved EEG Alert],[BAER],[Unreliable BAER Data]
+		--    ,[Unresolved BAER Alert],[Crani],[Unreliable Crani Data],[Unresolved Crani Alert],[Abs/Axial]
+		   --  ,[Unreliable Abs/Axial Data],[Unresolved Abs/Axial Alert],[Lower EMG],[Unreliable Lower EMG Data]
+			--  ,[Unresolved Lower EMG Alert],[NCT],[Unreliable NCT Data],[Unresolved NCT Alert],[TO4],[Unreliable TO4 Data]
+			--  ,[Unresolved TO4 Alert],[Lateral Approach],[Unreliable Lateral Approach Data],[Unresolved Lateral Approach Alert]
+		 --     ,[Other],[Unreliable Other Data],[Unresolved Other Alert],[Anal Sph],[H-Reflex]
+			  ,[Unreliable H-Reflex Data],[Unresolved H-Reflex Alert],[SNAP],[Unreliable SNAP Data]
+			  ,[Unresolved SNAP Alert],[VER],[Unreliable VER Data],[Unresolved VER Alert],[DSSEP],[Unreliable DSSEP Data],[Unresolved DSSEP Alert]
+	
+		INTO [USMON_Local].dbo.clinc33  from [dbconnect.usmon.com].[USMON].dbo.clinc33 
+END TRY BEGIN CATCH END CATCH
+
+
 
 --[dbo].[[inv_pay_3300]]
 BEGIN TRY
