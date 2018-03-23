@@ -2647,3 +2647,8 @@ VALUES
 	('LAW OFFICE OF JOE LOPEZ', 'Attorney Office'),
     ('SIMON GREENSTONE PANATIER BARLETT, PC', 'Attorney Office'),
 	('UTICA NATIONAL INSURANCE', 'Misc Payor')
+
+--unmatched InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('TRICARE EAST', 'TRICARE')
