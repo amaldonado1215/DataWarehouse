@@ -2652,3 +2652,12 @@ VALUES
 INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
 VALUES 
 	('TRICARE EAST', 'TRICARE')
+
+--unmatched PA InsuranceLookup amm
+INSERT INTO [dbo].[InsuranceLookup] ([InsuranceCompany],[InsuranceGroup])
+VALUES 
+	('RISING MEDICAL SOLUTION C/O COPPERPOINT INSURANCE', 'Misc Payor')
+
+UPDATE [dbo].[InsuranceLookup]
+SET InsuranceGroup = 'Tricare'
+WHERE InsuranceGroup = 'TRICARE'
