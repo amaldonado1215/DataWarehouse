@@ -54,6 +54,7 @@ SELECT DISTINCT
 		WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND DOS >= '2017-01-01' 
 			AND HL.[Contract Type] <> 'No Contract' and CR.Region_Short_Name not in ('California','Maryland') THEN 'Unbillable: TRI-MRP-CHAMPVA' --#26 kta removed federal plan --#73 added contract type
 		WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Medicaid Advantage Plan', 'Uninsured', 'Federal Plan','Self Pay') THEN 'Unbillable: Insurance'
+		WHEN ([Primary Insurance] like 'surgery%' or [Primary Insurance] like 'surgicare%') and cr.[1st Insurance Category] = 'Private Insurance' THEN 'Unbillable:Funding'  --funding type insurance
 		--WHEN CR.hospital_ID = 4550 AND CR.[1st Insurance Category] = 'Other' then 'Unbillable HospContract'	--#64 kta
 		--WHEN CR.[1st Insurance Category] IN ('Medicaid', 'Medicare', 'Medicaid Advantage Plan', 'Uninsured', 'Self Pay','Federal Plan') THEN 'Unbillable: Insurance' --#26 kta added federal plan --#73 kta remove
 		--WHEN CR.hospital = 'McBride Clinic Orthopedic Hospital' AND CR.[1st Insurance Category] = 'Other' THEN 'Unbillable: Bundled Case' --#26 kta commented out, joined on hospitalID below
@@ -85,7 +86,7 @@ SELECT DISTINCT
 		WHEN CR.[Primary Insurance] like '%Aetna%' AND DOS >= '2017-01-01' THEN 'Unbillable: Aetna'
 		WHEN CR.[1st Insurance Category] = 'Cigna' and CR.DOS >='2018-02-01' then 'Unbillable: Cigna'		--#64 kta
 		WHEN CR.[1st Insurance Category] = 'OTHER' AND CR.[Primary Insurance] LIKE '%Indigent%' THEN 'Unbillable: Indigent' 
-		
+		WHEN ([Primary Insurance] like 'surgery%' or [Primary Insurance] like 'surgicare%') and cr.[1st Insurance Category] = 'Private Insurance' THEN 'Billable:Funding'  --funding type insurance
 		WHEN HL.contract_status = 'Services' AND CIM.contract_status = HL.contract_status AND HL.expire_date IS NULL THEN 'Unbillable: Insurance Contract Matrix' 
 		WHEN HL.contract_status = 'Services' AND CIM.contract_status = HL.contract_status THEN 'Unbillable: Insurance Contract Matrix' 
 		WHEN CR.Region_Short_Name IN ('Alaska') AND CR.Tech = 'Kimberly olson' THEN 'Unbillable: Alaska/Olson' 

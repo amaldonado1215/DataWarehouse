@@ -233,7 +233,7 @@ SELECT      CR.PID,
 					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.SURGEON = 'Lewis Frazier, M.D.' and CR.DOS >= '2017-07-01' THEN SL1.Proentity -- Ticket #2209
 					WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND CR.Surgeon = 'Richard Westmark, M.D.' AND CR.DOS >= '2017-12-01' THEN SL1.Proentity  -- 2018-01-03 JTB Per #6 Github Issue
 					--WHEN CR.[1st Insurance Category] = 'Blue Cross Blue Shield' AND Region_Short_Name = 'Maryland' then SL1.ProEntity -- #73 kta
-
+					WHEN ([Primary Insurance] like 'surgery%' or [Primary Insurance] like 'surgicare%') and cr.[1st Insurance Category] = 'Private Insurance' THEN 'Neurodiagnostics & Neuromonitoring Institute, Inc.'  --funding type insurance
 					WHEN Region_Short_Name in ('Maryland', 'California') AND SL1.Proentity is not null THEN SL1.ProEntity
 					WHEN Region_short_name in ('Maryland', 'California') AND SL2.Proentity is not null then SL2.ProEntity
 					WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND cr.DOS >= '2017-01-01' 
@@ -274,6 +274,7 @@ SELECT      CR.PID,
 					WHEN HL7.[SecondaryGroupID] = 'PB' AND  CR.Reader = 'William VanNess, M.D.' THEN 'Unbillable' -- ticket #22 kta
 					WHEN CR.[1st Insurance Category] in ('TRICARE', 'CHAMPVA', 'Medicare Replacement Plan') AND CR.DOS >= '2017-01-01' 
 						AND HL.[Contract Type] <> 'No Contract'  and CR.Region_Short_Name not in ('California','Maryland') THEN 'Unbillable: TRI-MRP-CHAMPVA' --#26 kta removed federal plan --#73 added contract type, region
+					WHEN ([Primary Insurance] like 'surgery%' or [Primary Insurance] like 'surgicare%') and cr.[1st Insurance Category] = 'Private Insurance' THEN 'Unbillable:Funding'  --funding type insurance
 					WHEN ins_folder NOT IN ('New Insurance Billing') AND (PIC.clm_billing_type = 'Tech Only' OR EL.clm_billing_type = 'Tech Only') THEN 'Unbillable' 
 					WHEN CE.ins_folder = 'Closed Billing Claims' THEN 'Closed' 
 					WHEN CR.biller = '' AND CE.biller IS NULL AND CE.ins_folder = 'Ongoing Insurance Billing' THEN 'Closed' 
@@ -314,6 +315,7 @@ SELECT      CR.PID,
 					When CR.[Primary Insurance] like '%Aetna%' AND CR.DOS >= '2017-01-01' THEN 'Unbillable: Aetna'
 					When CR.[1st Insurance Category] = 'Cigna' and CR.DOS >='2018-02-01' THEN 'Unbillable: Cigna'		--#64 kta
 					WHEN CR.[1st Insurance Category] = 'OTHER' AND CR.[Primary Insurance] LIKE '%Indigent%' THEN 'Unbillable: INDIGENT' 
+					WHEN ([Primary Insurance] like 'surgery%' or [Primary Insurance] like 'surgicare%') and cr.[1st Insurance Category] = 'Private Insurance' THEN 'Billable:Funding'  --funding type insurance
 					WHEN PIC.clm_billing_type IN ('Pro Only') OR EL.clm_billing_type = 'Pro Only' THEN 'Unbillable: Pro' 
 					WHEN HL.contract_status = 'Services' AND CIM.contract_status = HL.contract_status AND HL.Expire_date IS NULL THEN 'Unbillable: Insurance Contract Matrix' 
 					WHEN HL.contract_status = 'Services' AND CIM.contract_status = HL.contract_status AND CR.DOS > HL.Expire_date THEN 'Unbillable: Insurance Contract Matrix' 

@@ -19,6 +19,7 @@ SELECT c.PID,
 		WHEN c.PID in (529219,548266,530012) THEN 'Neurodiagnostics & Neuromonitoring Institute, Inc.'
 		WHEN c.PID = 624536 THEN 'Alamo City Neurodiagnostics, PLLC'
 		WHEN c.surgeon = 'Kevin James, M.D.' AND IL.InsuranceGroup = 'Aetna' AND c.[1st Insurance Category] = 'Private Insurance' AND c.dos > '2016-04-22' THEN 'Andaz Monitoring, PLLC'
+		WHEN ([Primary Insurance] like 'surgery%' or [Primary Insurance] like 'surgicare%') and c.[1st Insurance Category] = 'Private Insurance' THEN 'Neurodiagnostics & Neuromonitoring Institute, Inc.'  --funding type insurance
 		WHEN c.[1st Insurance Category] = 'Blue Cross Blue Shield' AND c.Surgeon IN ('Mike Tyler, M.D.', 'Jason Highsmith, M.D.', 'Sabino D''Agostino, D.O. ', 'William Wilson, M.D.','Don Stovall, M.D.') AND c.DOS >= '2017-09-01' THEN SL1.Proentity 
 		WHEN c.[1st Insurance Category] = 'Blue Cross Blue Shield' AND c.SURGEON = 'Mark Silver, M.D.' THEN SL1.Proentity
 		WHEN c.[1st Insurance Category] = 'Blue Cross Blue Shield' AND c.SURGEON = 'Robert Urrea, M.D.' AND c.DOS >= '2016-09-21' AND SL1.Proentity IS NOT NULL THEN Sl1.Proentity 
