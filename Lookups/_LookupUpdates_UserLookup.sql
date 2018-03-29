@@ -226,3 +226,8 @@ values (6044,61010)
 
 insert into [dbo].[UserLookup](Web_user_id, Payroll_ID)  values (9281, 61053)
 INSERT INTO UserLookup(Web_user_id, Payroll_id) values (8902,61267)
+
+INSERT INTO UserLookup(Web_user_id, Payroll_id) values (8901,61261)
+INSERT INTO UserLookup(Web_user_id, Payroll_id) values (8903,61281)
+INSERT INTO UserLookup(Web_user_id, Payroll_id) values (8907,61263)
+INSERT INTO UserLookup(Web_user_id, Payroll_id) values (9423,61264)
