@@ -1442,3 +1442,8 @@ insert into dbo.techregionlookup(TECH, [ASSIGNED REGION],	TechName,	TechStatus,	
   Values ('Cody Callahan, IONM','Texas - DFW','Cody Callahan','Active','2016-08-03','2099-12-31')
 Insert into TechRegionLookup(TECH, [ASSIGNED REGION],	TechName,	TechStatus,	StartDate,	EndDate)
   values ('Denise Mora','Arizona','Denise Mora','Active','2017-11-26','2099-12-31')
+  
+Insert into TechRegionLookup(TECH, [ASSIGNED REGION],	TechName,	TechStatus,	StartDate,	EndDate)
+values	('Anna Rosado','Texas - DFW','Anna Rosado','Active','2017-11-19','2099-12-31'),
+		('Shante Dove, B.S.','Louisiana','Shante Dove','Active','2017-11-19','2099-12-31'),
+		('Xitlali Ramirez','California','Xitlali Ramirez','Active','2017-11-26','2099-12-31')
