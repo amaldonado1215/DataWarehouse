@@ -97,7 +97,8 @@ SELECT c.PID,
 		ELSE '' 
 	END as OnCall_Tech,
 	InsuranceRoundedUnits,
-    c.no_demograph			--#77 kta
+    c.no_demograph,			--#77 kta
+	trl.adusername
 FROM dbo.case_report_3300 c
 	LEFT OUTER JOIN dbo.TechRegionLookup trl ON trl.TECH = c.Tech and c.DOS between trl.StartDate and trl.EndDate
 	LEFT OUTER JOIN dbo.insurancelookup AS IL ON IL.insurancecompany = c.[Primary Insurance]
